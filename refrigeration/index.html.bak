@@ -1,0 +1,2341 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+	<meta charset="UTF-8" />
+
+	<script type="text/javascript">
+		document.documentElement.className = 'js';
+
+	</script>
+	<meta name="format-detection" content="telephone=no">
+
+
+   
+	
+
+
+
+<link rel="alternate" type="application/rss+xml" title="Küppersbusch Global &raquo; KÜPPERSBUSCH-ColdLine Categoría Feed" href="/refrigeration/feed/" />
+
+
+
+
+
+
+
+
+
+<link rel='stylesheet' id='wp-pagenavi-css' href='../wp-content/plugins/wp-pagenavi/pagenavi-css.css' type='text/css' media='all' />
+<link rel='stylesheet' id='customize-product-css' href='../css/customize-product.css' type='text/css' media='all' />
+<link rel='stylesheet' id='fontelo-css' href='../fonts/fontello.css' type='text/css' media='all' />
+<link rel='stylesheet' id='fontawesome-brands-css' href='../fonts/brands.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='select2-css' href='../js/select2/css/select2.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='slick-css' href='../js/slick/slick.css' type='text/css' media='all' />
+<link rel='stylesheet' id='slick-theme-css' href='../js/slick/slick-theme.css' type='text/css' media='all' />
+<link rel='stylesheet' id='featherlight-css' href='../js/featherlight/featherlight.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='featherlight-gallery-css' href='../js/featherlight/featherlight.gallery.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='tooltipster-css' href='../js/tooltipster/css/tooltipster.bundle.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='jssocials-css' href='../js/jssocials/jssocials.css' type='text/css' media='all' />
+<link rel='stylesheet' id='jssocials-flattheme-css' href='../js/jssocials/jssocials-theme-flat.css' type='text/css' media='all' />
+<link rel='stylesheet' id='admin-styles-css' href='../style-admin.css' type='text/css' media='all' />
+<link rel='stylesheet' id='divi-style-css' href='../style.css' type='text/css' media='all' />
+<link rel='stylesheet' id='product-cat-css' href='../css/style-product-cat.css' type='text/css' media='all' />
+
+
+<link rel="https://api.w.org/" href="../wp-json/index.json" /><link rel="alternate" title="JSON" type="application/json" href="/wp-json/wp/v2/product_cat/8712" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc.php%EF%B9%96rsd.xml" />
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" /><script type="text/javascript" src="../../../script.crazyegg.com/pages/scripts/0113/4991.js" async="async"></script><style id="et-divi-customizer-cpt-global-cached-inline-styles">body,.et-db #et-boc .et-l .et_pb_column_1_2 .et_quote_content blockquote cite,.et-db #et-boc .et-l .et_pb_column_1_2 .et_link_content a.et_link_main_url,.et-db #et-boc .et-l .et_pb_column_1_3 .et_quote_content blockquote cite,.et-db #et-boc .et-l .et_pb_column_3_8 .et_quote_content blockquote cite,.et-db #et-boc .et-l .et_pb_column_1_4 .et_quote_content blockquote cite,.et-db #et-boc .et-l .et_pb_blog_grid .et_quote_content blockquote cite,.et-db #et-boc .et-l .et_pb_column_1_3 .et_link_content a.et_link_main_url,.et-db #et-boc .et-l .et_pb_column_3_8 .et_link_content a.et_link_main_url,.et-db #et-boc .et-l .et_pb_column_1_4 .et_link_content a.et_link_main_url,.et-db #et-boc .et-l .et_pb_blog_grid .et_link_content a.et_link_main_url,body.et-db #et-boc .et-l .et_pb_bg_layout_light .et_pb_post p,body.et-db #et-boc .et-l .et_pb_bg_layout_dark .et_pb_post p{font-size:14px}.et-db #et-boc .et-l .et_pb_slide_content,.et-db #et-boc .et-l .et_pb_best_value{font-size:15px}body{color:#000000}h1,.et-db #et-boc .et-l h1,h2,.et-db #et-boc .et-l h2,h3,.et-db #et-boc .et-l h3,h4,.et-db #et-boc .et-l h4,h5,.et-db #et-boc .et-l h5,h6,.et-db #et-boc .et-l h6{color:#222222}#et_search_icon:hover,.mobile_menu_bar:before,.mobile_menu_bar:after,.et_toggle_slide_menu:after,.et-social-icon a:hover,.et_pb_sum,.et-db #et-boc .et-l .et_pb_sum,.et-db #et-boc .et-l .et_pb_pricing li a,.et-db #et-boc .et-l .et_pb_pricing_table_button,.et_overlay:before,.et-db #et-boc .et-l .et_overlay:before,.entry-summary p.price ins,.et-db #et-boc .et-l .entry-summary p.price ins,.et-db #et-boc .et-l .et_pb_member_social_links a:hover,.et_pb_widget li a:hover,.et-db #et-boc .et-l .et_pb_widget li a:hover,.et-db #et-boc .et-l .et_pb_filterable_portfolio .et_pb_portfolio_filters li a.active,.et-db #et-boc .et-l .et_pb_filterable_portfolio .et_pb_portofolio_pagination ul li a.active,.et-db #et-boc .et-l .et_pb_gallery .et_pb_gallery_pagination ul li a.active,.wp-pagenavi span.current,.wp-pagenavi a:hover,.nav-single a,.et-db #et-boc .et-l .nav-single a,.tagged_as a,.et-db #et-boc .et-l .tagged_as a,.posted_in a,.et-db #et-boc .et-l .posted_in a{color:#c8102e}.et-db #et-boc .et-l .et_pb_contact_submit,.et-db #et-boc .et-l .et_password_protected_form .et_submit_button,.et-db #et-boc .et-l .et_pb_bg_layout_light .et_pb_newsletter_button,.et-db #et-boc .et-l .comment-reply-link,.et-db .form-submit #et-boc .et-l .et_pb_button,.et-db #et-boc .et-l .et_pb_bg_layout_light .et_pb_promo_button,.et-db #et-boc .et-l .et_pb_bg_layout_light .et_pb_more_button,.et-db #et-boc .et-l .et_pb_contact p input[type="checkbox"]:checked+label i:before,.et-db #et-boc .et-l .et_pb_bg_layout_light.et_pb_module.et_pb_button{color:#c8102e}.footer-widget h4,.et-db #et-boc .et-l .footer-widget h4{color:#c8102e}.et-search-form,.et-db #et-boc .et-l .et-search-form,.nav li ul,.et-db #et-boc .et-l .nav li ul,.et_mobile_menu,.et-db #et-boc .et-l .et_mobile_menu,.footer-widget li:before,.et-db #et-boc .et-l .footer-widget li:before,.et-db #et-boc .et-l .et_pb_pricing li:before,blockquote,.et-db #et-boc .et-l blockquote{border-color:#c8102e}.et-db #et-boc .et-l .et_pb_counter_amount,.et-db #et-boc .et-l .et_pb_featured_table .et_pb_pricing_heading,.et_quote_content,.et-db #et-boc .et-l .et_quote_content,.et_link_content,.et-db #et-boc .et-l .et_link_content,.et_audio_content,.et-db #et-boc .et-l .et_audio_content,.et-db #et-boc .et-l .et_pb_post_slider.et_pb_bg_layout_dark,.et_slide_in_menu_container,.et-db #et-boc .et-l .et_slide_in_menu_container,.et-db #et-boc .et-l .et_pb_contact p input[type="radio"]:checked+label i:before{background-color:#c8102e}.container,.et-db #et-boc .et-l .container,.et-db #et-boc .et-l .et_pb_row,.et-db #et-boc .et-l .et_pb_slider .et_pb_container,.et-db #et-boc .et-l .et_pb_fullwidth_section .et_pb_title_container,.et-db #et-boc .et-l .et_pb_fullwidth_section .et_pb_title_featured_container,.et-db #et-boc .et-l .et_pb_fullwidth_header:not(.et_pb_fullscreen) .et_pb_fullwidth_header_container{max-width:1380px}.et_boxed_layout #page-container,.et_boxed_layout.et_non_fixed_nav.et_transparent_nav #page-container #top-header,.et_boxed_layout.et_non_fixed_nav.et_transparent_nav #page-container #main-header,.et_fixed_nav.et_boxed_layout #page-container #top-header,.et_fixed_nav.et_boxed_layout #page-container #main-header,.et_boxed_layout #page-container .container,.et_boxed_layout.et-db #et-boc .et-l #page-container .et_pb_row{max-width:1540px}a,.et-db #et-boc .et-l a{color:#c8102e}#main-header,#main-header .nav li ul,.et-search-form,#main-header .et_mobile_menu{background-color:rgba(33,33,33,0)}#main-header .nav li ul{background-color:#ffffff}.nav li ul,.et-db #et-boc .et-l .nav li ul{border-color:#ffffff}.et_secondary_nav_enabled #page-container #top-header{background-color:#222222!important}#et-secondary-nav li ul{background-color:#222222}.et_header_style_centered .mobile_nav .select_page,.et_header_style_split .mobile_nav .select_page,.et_nav_text_color_light #top-menu>li>a,.et_nav_text_color_dark #top-menu>li>a,#top-menu a,.et_mobile_menu li a,.et-db #et-boc .et-l .et_mobile_menu li a,.et_nav_text_color_light .et_mobile_menu li a,.et-db #et-boc .et-l .et_nav_text_color_light .et_mobile_menu li a,.et_nav_text_color_dark .et_mobile_menu li a,.et-db #et-boc .et-l .et_nav_text_color_dark .et_mobile_menu li a,#et_search_icon:before,.et_search_form_container input,span.et_close_search_field:after,#et-top-navigation .et-cart-info{color:#ffffff}.et_search_form_container input::-moz-placeholder{color:#ffffff}.et_search_form_container input::-webkit-input-placeholder{color:#ffffff}.et_search_form_container input:-ms-input-placeholder{color:#ffffff}#top-header,#top-header a,#et-secondary-nav li li a,#top-header .et-social-icon a:before{font-weight:normal;font-style:normal;text-transform:uppercase;text-decoration:none}#top-menu li a{font-size:15px}body.et_vertical_nav .container.et_search_form_container .et-search-form input{font-size:15px!important}#top-menu li.current-menu-ancestor>a,#top-menu li.current-menu-item>a,#top-menu li.current_page_item>a{color:#ffffff}#main-footer{background-color:#0e0e0e}#main-footer .footer-widget h4,#main-footer .widget_block h1,#main-footer .widget_block h2,#main-footer .widget_block h3,#main-footer .widget_block h4,#main-footer .widget_block h5,#main-footer .widget_block h6{color:#c8102e}.footer-widget li:before{border-color:#c8102e}.footer-widget,.footer-widget li,.footer-widget li a,#footer-info{font-size:16px}.footer-widget .et_pb_widget div,.footer-widget .et_pb_widget ul,.footer-widget .et_pb_widget ol,.footer-widget .et_pb_widget label{line-height:1.7em}#footer-widgets .footer-widget li:before{top:10.6px}#et-footer-nav .bottom-nav li.current-menu-item a{color:#c8102e}#footer-bottom{background-color:#0e0e0e}#main-header{box-shadow:none}body .et_pb_button,body.et-db #et-boc .et-l .et_pb_button{}body.et_pb_button_helper_class .et_pb_button,body.et_pb_button_helper_class.et-db #et-boc .et-l .et_pb_button,body.et_pb_button_helper_class .et_pb_module.et_pb_button,body.et_pb_button_helper_class.et-db #et-boc .et-l .et_pb_module.et_pb_button{color:#ffffff}body .et_pb_bg_layout_light.et_pb_button:hover,body.et-db #et-boc .et-l .et_pb_bg_layout_light.et_pb_button:hover,body .et_pb_bg_layout_light .et_pb_button:hover,body.et-db #et-boc .et-l .et_pb_bg_layout_light .et_pb_button:hover,body .et_pb_button:hover,body.et-db #et-boc .et-l .et_pb_button:hover{color:#ffffff!important;border-radius:0px}@media only screen and (min-width:981px){.et_header_style_left #et-top-navigation,.et_header_style_split #et-top-navigation{padding:15px 0 0 0}.et_header_style_left #et-top-navigation nav>ul>li>a,.et_header_style_split #et-top-navigation nav>ul>li>a{padding-bottom:15px}.et_header_style_split .centered-inline-logo-wrap{width:30px;margin:-30px 0}.et_header_style_split .centered-inline-logo-wrap #logo{max-height:30px}.et_pb_svg_logo.et_header_style_split .centered-inline-logo-wrap #logo{height:30px}.et_header_style_centered #top-menu>li>a{padding-bottom:5px}.et_header_style_slide #et-top-navigation,.et_header_style_fullscreen #et-top-navigation{padding:6px 0 6px 0!important}.et_header_style_centered #main-header .logo_container{height:30px}#logo{max-height:30%}.et_pb_svg_logo #logo{height:30%}.et_header_style_centered.et_hide_primary_logo #main-header:not(.et-fixed-header) .logo_container,.et_header_style_centered.et_hide_fixed_logo #main-header.et-fixed-header .logo_container{height:5.4px}.et_fixed_nav #page-container .et-fixed-header#top-header{background-color:#222222!important}.et_fixed_nav #page-container .et-fixed-header#top-header #et-secondary-nav li ul{background-color:#222222}.et-fixed-header#main-header,.et-fixed-header#main-header .nav li ul,.et-fixed-header .et-search-form{background-color:#212121}.et-fixed-header #top-menu a,.et-fixed-header #et_search_icon:before,.et-fixed-header #et_top_search .et-search-form input,.et-fixed-header .et_search_form_container input,.et-fixed-header .et_close_search_field:after,.et-fixed-header #et-top-navigation .et-cart-info{color:#515151!important}.et-fixed-header .et_search_form_container input::-moz-placeholder{color:#515151!important}.et-fixed-header .et_search_form_container input::-webkit-input-placeholder{color:#515151!important}.et-fixed-header .et_search_form_container input:-ms-input-placeholder{color:#515151!important}.et-fixed-header #top-menu li.current-menu-ancestor>a,.et-fixed-header #top-menu li.current-menu-item>a,.et-fixed-header #top-menu li.current_page_item>a{color:#515151!important}}@media only screen and (min-width:1725px){.et-db #et-boc .et-l .et_pb_row{padding:34px 0}.et-db #et-boc .et-l .et_pb_section{padding:69px 0}.single.et_pb_pagebuilder_layout.et_full_width_page .et_post_meta_wrapper{padding-top:103px}.et-db #et-boc .et-l .et_pb_fullwidth_section{padding:0}}h1,.et-db #et-boc .et-l h1,h1.et_pb_contact_main_title,.et-db #et-boc .et-l h1.et_pb_contact_main_title,.et_pb_title_container h1,.et-db #et-boc .et-l .et_pb_title_container h1{font-size:50px}h2,.et-db #et-boc .et-l h2,.product .related h2,.et-db #et-boc .et-l .product .related h2,.et-db #et-boc .et-l .et_pb_column_1_2 .et_quote_content blockquote p{font-size:43px}h3,.et-db #et-boc .et-l h3{font-size:36px}h4,.et-db #et-boc .et-l h4,.et-db #et-boc .et-l .et_pb_circle_counter h3,.et-db #et-boc .et-l .et_pb_number_counter h3,.et-db #et-boc .et-l .et_pb_column_1_3 .et_pb_post h2,.et-db #et-boc .et-l .et_pb_column_1_4 .et_pb_post h2,.et-db #et-boc .et-l .et_pb_blog_grid h2,.et-db #et-boc .et-l .et_pb_column_1_3 .et_quote_content blockquote p,.et-db #et-boc .et-l .et_pb_column_3_8 .et_quote_content blockquote p,.et-db #et-boc .et-l .et_pb_column_1_4 .et_quote_content blockquote p,.et-db #et-boc .et-l .et_pb_blog_grid .et_quote_content blockquote p,.et-db #et-boc .et-l .et_pb_column_1_3 .et_link_content h2,.et-db #et-boc .et-l .et_pb_column_3_8 .et_link_content h2,.et-db #et-boc .et-l .et_pb_column_1_4 .et_link_content h2,.et-db #et-boc .et-l .et_pb_blog_grid .et_link_content h2,.et-db #et-boc .et-l .et_pb_column_1_3 .et_audio_content h2,.et-db #et-boc .et-l .et_pb_column_3_8 .et_audio_content h2,.et-db #et-boc .et-l .et_pb_column_1_4 .et_audio_content h2,.et-db #et-boc .et-l .et_pb_blog_grid .et_audio_content h2,.et-db #et-boc .et-l .et_pb_column_3_8 .et_pb_audio_module_content h2,.et-db #et-boc .et-l .et_pb_column_1_3 .et_pb_audio_module_content h2,.et-db #et-boc .et-l .et_pb_gallery_grid .et_pb_gallery_item h3,.et-db #et-boc .et-l .et_pb_portfolio_grid .et_pb_portfolio_item h2,.et-db #et-boc .et-l .et_pb_filterable_portfolio_grid .et_pb_portfolio_item h2{font-size:30px}h5,.et-db #et-boc .et-l h5{font-size:26px}h6,.et-db #et-boc .et-l h6{font-size:23px}.et-db #et-boc .et-l .et_pb_slide_description .et_pb_slide_title{font-size:76px}.et-db #et-boc .et-l .et_pb_gallery_grid .et_pb_gallery_item h3,.et-db #et-boc .et-l .et_pb_portfolio_grid .et_pb_portfolio_item h2,.et-db #et-boc .et-l .et_pb_filterable_portfolio_grid .et_pb_portfolio_item h2,.et-db #et-boc .et-l .et_pb_column_1_4 .et_pb_audio_module_content h2{font-size:26px}@media only screen and (max-width:980px){#main-header,#main-header .nav li ul,.et-search-form,#main-header .et_mobile_menu{background-color:#ffffff}.et_header_style_centered .mobile_nav .select_page,.et_header_style_split .mobile_nav .select_page,.et_mobile_menu li a,.mobile_menu_bar:before,.et_nav_text_color_light #top-menu>li>a,.et_nav_text_color_dark #top-menu>li>a,#top-menu a,.et_mobile_menu li a,#et_search_icon:before,#et_top_search .et-search-form input,.et_search_form_container input,#et-top-navigation .et-cart-info{color:#515151}.et_close_search_field:after{color:#515151!important}.et_search_form_container input::-moz-placeholder{color:#515151}.et_search_form_container input::-webkit-input-placeholder{color:#515151}.et_search_form_container input:-ms-input-placeholder{color:#515151}body,.et-db #et-boc .et-l .et_pb_column_1_2 .et_quote_content blockquote cite,.et-db #et-boc .et-l .et_pb_column_1_2 .et_link_content a.et_link_main_url,.et-db #et-boc .et-l .et_pb_column_1_3 .et_quote_content blockquote cite,.et-db #et-boc .et-l .et_pb_column_3_8 .et_quote_content blockquote cite,.et-db #et-boc .et-l .et_pb_column_1_4 .et_quote_content blockquote cite,.et-db #et-boc .et-l .et_pb_blog_grid .et_quote_content blockquote cite,.et-db #et-boc .et-l .et_pb_column_1_3 .et_link_content a.et_link_main_url,.et-db #et-boc .et-l .et_pb_column_3_8 .et_link_content a.et_link_main_url,.et-db #et-boc .et-l .et_pb_column_1_4 .et_link_content a.et_link_main_url,.et-db #et-boc .et-l .et_pb_blog_grid .et_link_content a.et_link_main_url{font-size:16px}.et-db #et-boc .et-l .et_pb_slider.et_pb_module .et_pb_slides .et_pb_slide_content,.et-db #et-boc .et-l .et_pb_best_value{font-size:18px}}	#top-header .container{font-family:'Exo',sans-serif}</style>		    <link rel="icon" href="../wp-content/themes/kueppersbusch/img/favicon/favicon.ico" sizes="32x32" />
+	    <script type="text/javascript" async defer>
+	    	 jQuery( document ).ready(function() {
+				if ( jQuery( "#group-menu" ).length ) {
+				    jQuery( "#group-menu > div > div > div > div > ul > li:nth-child(1) > a > img" ).attr("src","");
+				}
+			});
+
+	    </script>
+		</head>
+<body class="archive tax-product_cat term-refrigeration term-8712  new-logo current_site_3 et_pb_button_helper_class et_transparent_nav et_non_fixed_nav et_show_nav et_primary_nav_dropdown_animation_fade et_secondary_nav_dropdown_animation_fade et_header_style_left et_pb_footer_columns_3_4__1_4 et_cover_background et_pb_gutter osx et_pb_gutters3 et_right_sidebar et_divi_theme et-db" >
+	
+
+    <div class="et_search_outer_custom">
+        <div class="__inner">
+            <div class="et_search_form_container_custom">
+                <div class="__inner_2">
+	                <p><div class="asp_w_container asp_w_container_22 asp_w_container_22_1" data-id="22" data-instance="1"><div class='asp_w asp_m asp_m_22 asp_m_22_1 wpdreams_asp_sc wpdreams_asp_sc-22 ajaxsearchpro asp_main_container asp_non_compact' data-id="22" data-name="Search Navbar - GLOBAL" data-instance="1" id='ajaxsearchpro22_1'><div class="probox"><div class='prosettings' style='display:none;' data-opened=0><div class='innericon'><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 512 512"><path d="M170 294c0 33.138-26.862 60-60 60-33.137 0-60-26.862-60-60 0-33.137 26.863-60 60-60 33.138 0 60 26.863 60 60zm-60 90c-6.872 0-13.565-.777-20-2.243V422c0 11.046 8.954 20 20 20s20-8.954 20-20v-40.243c-6.435 1.466-13.128 2.243-20 2.243zm0-180c6.872 0 13.565.777 20 2.243V90c0-11.046-8.954-20-20-20s-20 8.954-20 20v116.243c6.435-1.466 13.128-2.243 20-2.243zm146-7c12.13 0 22 9.87 22 22s-9.87 22-22 22-22-9.87-22-22 9.87-22 22-22zm0-38c-33.137 0-60 26.863-60 60 0 33.138 26.863 60 60 60 33.138 0 60-26.862 60-60 0-33.137-26.862-60-60-60zm0-30c6.872 0 13.565.777 20 2.243V90c0-11.046-8.954-20-20-20s-20 8.954-20 20v41.243c6.435-1.466 13.128-2.243 20-2.243zm0 180c-6.872 0-13.565-.777-20-2.243V422c0 11.046 8.954 20 20 20s20-8.954 20-20V306.757c-6.435 1.466-13.128 2.243-20 2.243zm146-75c-33.137 0-60 26.863-60 60 0 33.138 26.863 60 60 60 33.138 0 60-26.862 60-60 0-33.137-26.862-60-60-60zm0-30c6.872 0 13.565.777 20 2.243V90c0-11.046-8.954-20-20-20s-20 8.954-20 20v116.243c6.435-1.466 13.128-2.243 20-2.243zm0 180c-6.872 0-13.565-.777-20-2.243V422c0 11.046 8.954 20 20 20s20-8.954 20-20v-40.243c-6.435 1.466-13.128 2.243-20 2.243z"/></svg></div></div><div class='proinput'><form role="search" action='#' autocomplete="off" aria-label="Search form"><input type='search' class='orig' placeholder='Find results...' name='phrase' value='' aria-label="Search input" autocomplete="off"/><input type='text' class='autocomplete' name='phrase' value='' aria-label="Search autocomplete input" aria-hidden="true" tabindex="-1" autocomplete="off" disabled/></form></div><button class='promagnifier' aria-label="Search magnifier button"><span class='asp_text_button hiddend'> Search </span><span class='innericon hiddend'><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 512 512"><path d="M448.225 394.243l-85.387-85.385c16.55-26.08 26.146-56.986 26.146-90.094 0-92.99-75.652-168.64-168.643-168.64-92.988 0-168.64 75.65-168.64 168.64s75.65 168.64 168.64 168.64c31.466 0 60.94-8.67 86.176-23.734l86.14 86.142c36.755 36.754 92.355-18.783 55.57-55.57zm-344.233-175.48c0-64.155 52.192-116.35 116.35-116.35s116.353 52.194 116.353 116.35S284.5 335.117 220.342 335.117s-116.35-52.196-116.35-116.352zm34.463-30.26c34.057-78.9 148.668-69.75 170.248 12.863-43.482-51.037-119.984-56.532-170.248-12.862z"/></svg></span><span class="asp_clear"></span></button><div class='proloading'><div class="asp_loader"><div class="asp_loader-inner asp_simple-circle"></div></div></div></div></div><div class='asp_data_container' style="display:none !important;"><div class="asp_init_data" style="display:none !important;" id="asp_init_id_22_1" data-asp-id="22" data-asp-instance="1" data-aspdata="eyJob21ldXJsIjoiaHR0cHM6XC9cL3d3dy5ob21lLWt1ZXBwZXJzYnVzY2guY29tXC9nbG9iYWxcLyIsImlzX3Jlc3VsdHNfcGFnZSI6MCwicmVzdWx0c3R5cGUiOiJ2ZXJ0aWNhbCIsInJlc3VsdHNwb3NpdGlvbiI6ImhvdmVyIiwicmVzdWx0c1NuYXBUbyI6ImxlZnQiLCJyZXN1bHRzIjp7IndpZHRoIjoiYXV0byIsIndpZHRoX3RhYmxldCI6ImF1dG8iLCJ3aWR0aF9waG9uZSI6ImF1dG8ifSwiaXRlbXNjb3VudCI6MTAsImNoYXJjb3VudCI6MCwiaGlnaGxpZ2h0IjowLCJoaWdobGlnaHRXaG9sZXdvcmRzIjoxLCJzaW5nbGVIaWdobGlnaHQiOjAsInNjcm9sbFRvUmVzdWx0cyI6eyJlbmFibGVkIjowLCJvZmZzZXQiOjB9LCJhdXRvY29tcGxldGUiOnsiZW5hYmxlZCI6MSwidHJpZ2dlcl9jaGFyY291bnQiOjAsImdvb2dsZU9ubHkiOjAsImxhbmciOiJlbiIsIm1vYmlsZSI6MX0sInRyaWdnZXIiOnsiZGVsYXkiOjMwMCwiYXV0b2NvbXBsZXRlX2RlbGF5IjozMTAsInVwZGF0ZV9ocmVmIjowLCJmYWNldCI6MSwidHlwZSI6MSwiY2xpY2siOiJhamF4X3NlYXJjaCIsImNsaWNrX2xvY2F0aW9uIjoic2FtZSIsInJldHVybiI6ImFqYXhfc2VhcmNoIiwicmV0dXJuX2xvY2F0aW9uIjoic2FtZSIsInJlZGlyZWN0X3VybCI6Ij9zPXtwaHJhc2V9IiwiZWxlbWVudG9yX3VybCI6Imh0dHBzOlwvXC93d3cuaG9tZS1rdWVwcGVyc2J1c2NoLmNvbVwvZ2xvYmFsXC8/YXNwX2xzPXtwaHJhc2V9In0sIm92ZXJyaWRld3BkZWZhdWx0IjoxLCJvdmVycmlkZV9tZXRob2QiOiJnZXQiLCJzZXR0aW5ncyI6eyJ1bnNlbGVjdENoaWxkcmVuIjoxLCJoaWRlQ2hpbGRyZW4iOjB9LCJzZXR0aW5nc2ltYWdlcG9zIjoicmlnaHQiLCJzZXR0aW5nc1Zpc2libGUiOjAsInNldHRpbmdzSGlkZU9uUmVzIjowLCJwcmVzY29udGFpbmVyaGVpZ2h0IjoiNDAwcHgiLCJjbG9zZU9uRG9jQ2xpY2siOjEsImZvY3VzT25QYWdlbG9hZCI6MCwiaXNvdG9waWMiOnsiaXRlbVdpZHRoIjoiMjAwcHgiLCJpdGVtV2lkdGhUYWJsZXQiOiIyMDBweCIsIml0ZW1XaWR0aFBob25lIjoiMjAwcHgiLCJpdGVtSGVpZ2h0IjoiMjAwcHgiLCJpdGVtSGVpZ2h0VGFibGV0IjoiMjAwcHgiLCJpdGVtSGVpZ2h0UGhvbmUiOiIyMDBweCIsInBhZ2luYXRpb24iOjEsInJvd3MiOjIsImd1dHRlciI6NSwic2hvd092ZXJsYXkiOjEsImJsdXJPdmVybGF5IjoxLCJoaWRlQ29udGVudCI6MX0sImxvYWRlckxvY2F0aW9uIjoicmVzdWx0cyIsInNob3dfbW9yZSI6eyJlbmFibGVkIjowLCJ1cmwiOiI/cz17cGhyYXNlfSIsImVsZW1lbnRvcl91cmwiOiJodHRwczpcL1wvd3d3LmhvbWUta3VlcHBlcnNidXNjaC5jb21cL2dsb2JhbFwvP2FzcF9scz17cGhyYXNlfSIsImFjdGlvbiI6ImFqYXgiLCJsb2NhdGlvbiI6InNhbWUiLCJpbmZpbml0ZSI6MX0sIm1vYmlsZSI6eyJ0cmlnZ2VyX29uX3R5cGUiOjEsImNsaWNrX2FjdGlvbiI6ImFqYXhfc2VhcmNoIiwicmV0dXJuX2FjdGlvbiI6ImFqYXhfc2VhcmNoIiwiY2xpY2tfYWN0aW9uX2xvY2F0aW9uIjoic2FtZSIsInJldHVybl9hY3Rpb25fbG9jYXRpb24iOiJzYW1lIiwicmVkaXJlY3RfdXJsIjoiP3M9e3BocmFzZX0iLCJlbGVtZW50b3JfdXJsIjoiaHR0cHM6XC9cL3d3dy5ob21lLWt1ZXBwZXJzYnVzY2guY29tXC9nbG9iYWxcLz9hc3BfbHM9e3BocmFzZX0iLCJtZW51X3NlbGVjdG9yIjoiI21lbnUtdG9nZ2xlIiwiaGlkZV9rZXlib2FyZCI6MSwiZm9yY2VfcmVzX2hvdmVyIjowLCJmb3JjZV9zZXR0X2hvdmVyIjowLCJmb3JjZV9zZXR0X3N0YXRlIjoiY2xvc2VkIn0sImNvbXBhY3QiOnsiZW5hYmxlZCI6MCwiZm9jdXMiOjEsIndpZHRoIjoiMTAwJSIsIndpZHRoX3RhYmxldCI6IjQ4MHB4Iiwid2lkdGhfcGhvbmUiOiIzMjBweCIsImNsb3NlT25NYWduaWZpZXIiOjEsImNsb3NlT25Eb2N1bWVudCI6MCwicG9zaXRpb24iOiJzdGF0aWMiLCJvdmVybGF5IjowfSwic2IiOnsicmVkaXJlY3RfYWN0aW9uIjoiYWpheF9zZWFyY2giLCJyZWRpcmVjdF9sb2NhdGlvbiI6InNhbWUiLCJyZWRpcmVjdF91cmwiOiI/cz17cGhyYXNlfSIsImVsZW1lbnRvcl91cmwiOiJodHRwczpcL1wvd3d3LmhvbWUta3VlcHBlcnNidXNjaC5jb21cL2dsb2JhbFwvP2FzcF9scz17cGhyYXNlfSJ9LCJyYiI6eyJhY3Rpb24iOiJub3RoaW5nIn0sImFuaW1hdGlvbnMiOnsicGMiOnsic2V0dGluZ3MiOnsiYW5pbSI6ImZhZGVkcm9wIiwiZHVyIjozMDB9LCJyZXN1bHRzIjp7ImFuaW0iOiJmYWRlZHJvcCIsImR1ciI6MzAwfSwiaXRlbXMiOiJmYWRlSW5Eb3duIn0sIm1vYiI6eyJzZXR0aW5ncyI6eyJhbmltIjoiZmFkZWRyb3AiLCJkdXIiOjMwMH0sInJlc3VsdHMiOnsiYW5pbSI6ImZhZGVkcm9wIiwiZHVyIjozMDB9LCJpdGVtcyI6InZvaWRhbmltIn19LCJzZWxlY3QyIjp7Im5vcmVzIjoiTm8gcmVzdWx0cyBtYXRjaCJ9LCJkZXRlY3RWaXNpYmlsaXR5IjowLCJhdXRvcCI6eyJzdGF0ZSI6ImRpc2FibGVkIiwicGhyYXNlIjoiIiwiY291bnQiOjEwfSwid29vU2hvcCI6eyJ1c2VBamF4IjowLCJzZWxlY3RvciI6IiNtYWluIiwidXJsIjoiIn0sInRheEFyY2hpdmUiOnsidXNlQWpheCI6MCwic2VsZWN0b3IiOiIjbWFpbiIsInVybCI6Imh0dHBzOlwvXC93d3cuaG9tZS1rdWVwcGVyc2J1c2NoLmNvbVwvZ2xvYmFsXC9yZWZyaWdlcmF0aW9uXC8ifSwiY3B0QXJjaGl2ZSI6eyJ1c2VBamF4IjowLCJzZWxlY3RvciI6IiNtYWluIiwidXJsIjoiaHR0cHM6XC9cL3d3dy5ob21lLWt1ZXBwZXJzYnVzY2guY29tXC9nbG9iYWxcL3JlZnJpZ2VyYXRpb25cLyJ9LCJyZXNQYWdlIjp7InVzZUFqYXgiOjAsInNlbGVjdG9yIjoiI21haW4iLCJ0cmlnZ2VyX3R5cGUiOjEsInRyaWdnZXJfZmFjZXQiOjEsInRyaWdnZXJfbWFnbmlmaWVyIjowLCJ0cmlnZ2VyX3JldHVybiI6MH0sImZzc19sYXlvdXQiOiJmbGV4Iiwic2Nyb2xsQmFyIjp7Imhvcml6b250YWwiOnsiZW5hYmxlZCI6MX19LCJkaXZpIjp7ImJvZHljb21tZXJjZSI6MH0sInByZXZlbnRCb2R5U2Nyb2xsIjowLCJzdGF0aXN0aWNzIjowLCJwcmV2ZW50RXZlbnRzIjowfQ=="></div><div class='asp_hidden_data' style="display:none !important;"><div class='asp_item_overlay'><div class='asp_item_inner'><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 512 512"><path d="M448.225 394.243l-85.387-85.385c16.55-26.08 26.146-56.986 26.146-90.094 0-92.99-75.652-168.64-168.643-168.64-92.988 0-168.64 75.65-168.64 168.64s75.65 168.64 168.64 168.64c31.466 0 60.94-8.67 86.176-23.734l86.14 86.142c36.755 36.754 92.355-18.783 55.57-55.57zm-344.233-175.48c0-64.155 52.192-116.35 116.35-116.35s116.353 52.194 116.353 116.35S284.5 335.117 220.342 335.117s-116.35-52.196-116.35-116.352zm34.463-30.26c34.057-78.9 148.668-69.75 170.248 12.863-43.482-51.037-119.984-56.532-170.248-12.862z"/></svg></div></div></div></div><div id='__original__ajaxsearchprores22_1' class='asp_w asp_r asp_r_22 asp_r_22_1 vertical ajaxsearchpro wpdreams_asp_sc wpdreams_asp_sc-22' data-id="22" data-instance="1"><div class="results"><div class="resdrg"></div></div><div class="asp_res_loader hiddend"><div class="asp_loader"><div class="asp_loader-inner asp_simple-circle"></div></div></div></div><div id='__original__ajaxsearchprosettings22_1' class="asp_w asp_ss asp_ss_22 asp_s asp_s_22 asp_s_22_1 wpdreams_asp_sc wpdreams_asp_sc-22 ajaxsearchpro searchsettings" data-id="22" data-instance="1"><form name='options' class="asp-fss-flex" aria-label="Search settings form" autocomplete = 'off'><input type="hidden" name="current_page_id" value="76163"><input type='hidden' name='qtranslate_lang' value='0'/><input type="hidden" name="filters_changed" value="0"><input type="hidden" name="filters_initial" value="1"><fieldset class="asp_filter_generic asp_filter_id_1 asp_filter_n_0"><legend>Generic filters</legend><div class="asp_option" tabindex="0"><div class="asp_option_inner"><input type="checkbox" value="exact" id="set_exact22_1" aria-label="Exact matches only" name="asp_gen[]" /><div class="asp_option_checkbox"></div></div><div class="asp_option_label"> Exact matches only </div></div></fieldset><div style="clear:both;"></div></form></div></div></p>
+                    <span class="et_close_search_field_custom"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+	<div id="page-container">
+
+	
+			<header id="main-header" data-height-onload="30">
+			<div class="container clearfix et_menu_container">
+							<div class="logo_container">
+					<span class="logo_helper"></span>
+					<a href="../index.html">
+<img src="../img/kuppersbusch.svg" alt="Küppersbusch Global" id="logo" data-height-percentage="30" />
+					</a>
+				</div>
+							<div id="et-top-navigation" data-height="30" data-fixed-height="40">
+											<nav id="top-menu-nav">
+						<ul id="top-menu" class="nav"><li class="menu-principal-productos menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a id="menu-item--first" data-menu="auto" href="">מוצרים</a><ul class="sub-menu"><li id="menu-item-ovens-and-compacts" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-ovens-and-compacts"><a id="menu-item-ovens-and-compacts-first" data-menu="auto" href="../ovens-and-compacts/index.html">תנורים וקומפקטים</a></li><li id="menu-item-hobs" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-hobs"><a id="menu-item-hobs-first" data-menu="auto" href="../hobs/index.html">כיריים</a></li><li id="menu-item-hoods" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-hoods"><a id="menu-item-hoods-first" data-menu="auto" href="../hoods/index.html">סינונים</a></li><li id="menu-item-refrigeration" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-refrigeration"><a id="menu-item-refrigeration-first" data-menu="auto" href="index.html">קירור</a></li><li id="menu-item-dishwashers" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-dishwashers"><a id="menu-item-dishwashers-first" data-menu="auto" href="../dishwashers/index.html">מדיחי כלים</a></li><li id="menu-item-laundry" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-laundry"><a id="menu-item-laundry-first" data-menu="auto" href="../laundry/index.html">כביסה</a></li><li id="menu-item-sinks-and-taps" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-sinks-and-taps"><a id="menu-item-sinks-and-taps-first" data-menu="auto" href="../sinks-and-taps/index.html">כיורים וברזים</a></li></ul></li><li id="menu-item-69858" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-69858"><a href="#">על קופרסבוש</a>
+<ul class="sub-menu">
+	<li id="menu-item-69859" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-69859"><a href="../brand/index.html">מותג</a></li>
+	<li id="menu-item-69860" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-69860"><a href="../design/index.html">עיצוב</a></li>
+	<li id="menu-item-69904" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-69904"><a href="../in-the-world/index.html">KPH ברחבי העולם</a></li>
+	<li id="menu-item-69917" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-69917"><a href="../history/index.html">היסטוריה</a></li>
+	<li id="menu-item-69861" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-69861"><a href="../downloads/index.html">הורדות</a></li>
+</ul>
+</li>
+<li id="menu-item-69862" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-69862"><a href="../service/index.html">שירות</a></li>
+</ul>						</nav>
+					
+					
+					
+					<div id="top-header-right">
+
+												<div id="et-secondary-menu">
+												</div> <!-- #et-secondary-menu -->
+
+												<div id="et_top_search_custom">
+							<span class="itk-buscar-gris-custom"></span>
+						</div>
+												<!-- <a href=""><span class="itk-user-off"></span></a> -->
+						
+
+						
+					</div>
+					<div id="et_mobile_nav_menu">
+				<div class="mobile_nav closed">
+					<span class="select_page">Select Page</span>
+					<span class="mobile_menu_bar mobile_menu_bar_toggle"></span>
+				</div>
+			</div>
+
+				</div> <!-- #et-top-navigation -->
+			</div> <!-- .container -->
+			<div class="et_search_outer">
+				<div class="container et_search_form_container">
+					<form role="search" method="get" class="et-search-form" action="../index.html">
+					<input id="ajaxSearch" type="search" class="et-search-field" placeholder="תוצאות חיפוש..." value="" name="s" title="חפש עבור:" />					<div id="ajaxSearchResult" style="display: none;">
+
+						<div id="ajaxSearchProductCat" style="display: none;">
+							<h5>Product categories</h5>
+							<div></div>
+						</div>
+
+						<div id="ajaxSearchמוצרים" style="display: none;">
+							<h5>מוצרים</h5>
+							<div></div>
+						</div>
+
+						<div id="ajaxSearchמדריכים" style="display: none;">
+							<h5>מדריכים</h5>
+							<div></div>
+						</div>
+
+						<div id="ajaxSearchInspiration" style="display: none;">
+							<h5>Inspiration</h5>
+							<div></div>
+						</div>
+
+						<div id="ajaxSearchNews" style="display: none;">
+							<h5>News</h5>
+							<div></div>
+						</div>
+						<div id="ajaxSearchNoResult" style="display: none;">There are no suggestions for your search</div>
+					</div>
+					</form>
+					<span class="et_close_search_field"></span>
+				</div>
+			</div>
+		</header> <!-- #main-header -->
+			<div id="et-main-area">
+	
+<div id="main-content">
+
+    <article id="post-71" class="post-71 page type-page status-publish hentry">
+        <div class="entry-content">
+            <div id="et-boc" class="et-boc">
+                <div class="et-l">
+                    <div class="et_builder_inner_content et_pb_gutters3">
+
+                        <div id="productos-header" class="et_pb_section et_pb_section_0 et_section_regular">
+
+                            <!-- .et_pb_row -->
+                            <div id="products-header-img" class="" style="background-image: url(https://teka.b-cdn.net/CMP1219/9/KPH-ColdLine-Header.jpg);" >
+
+                            <style>@media (max-width: 425px) {
+                                    #products-header-img {
+                                        background-image: url('https://teka.b-cdn.net/CMP1219/CT4316BI44743_KUPPERSBUSCH_ColdLine_קירור_SZ5.jpg') !important;
+                                    }
+                                }
+                            </style>
+
+                                <div class="texto_cabecera">
+                                                                            <div class="et_pb_row">
+                                            <div class="centered">
+                                                <h1>קירור</h1>
+                                                The Küppersbusch's refrigeration range offers the most advanced technology, with intelligent cooling zones that adapt to your needs.                                            </div>
+                                        </div>
+                                                                                                            <!-- .et_pb_column -->
+                                </div>
+                                <!-- .et_pb_row -->
+                            </div>
+                        </div>
+                        <!-- .et_pb_section -->
+                        <div id="products-container-all" class="et_pb_section et_pb_section_1 et_section_regular">
+
+
+                            
+                            
+
+
+
+
+
+                            <div id="products-container" class="et_pb_row et_pb_row_2 et_pb_row_1-4_3-4">
+                                <div id="menu_lateral" class="et_pb_column et_pb_column_1_4 et_pb_column_2    et_pb_css_mix_blend_mode_passthrough">
+                                    <div class="et_pb_module et_pb_text et_pb_text_2 et_pb_bg_layout_light  et_pb_text_align_left">
+                                        <div class="et_pb_text_inner">
+
+                                            <div id="product-menu-left">
+                                                <span id="product-menu-main-cat" class="product-menu-main-cat-no-mobile">קירור</span><span id="product-menu-main-cat-mobile" class="product-menu-main-cat-mobile">Categories</span><ul id='categories_menu'><li class=""><a href="/refrigeration/fridge-freezers/">Fridge-Freezers</a></li><li class=""><a href="/refrigeration/refrigerators/">Refrigerators</a></li><li class=""><a href="/refrigeration/freezers/">Freezers</a></li><li class=""><a href="/refrigeration/wine-coolers/">Wine coolers</a></li><li class=""><a href="/refrigeration/accessories-for-cooling/">Accessories for cooling</a></li></ul>
+
+
+                                            </div>
+
+
+
+                                            <div id="query-debug"></div>
+
+                                        </div>
+                                    </div>
+                                    <!-- .et_pb_text -->
+                                    <div id="products-filters-mobile">
+                                        <span class="products-filters-title-mobile">Filters</span>
+                                        <div id="products-filters" class="et_pb_module et_pb_text et_pb_text_3 et_pb_bg_layout_light  et_pb_text_align_left">
+                                            <div class="et_pb_text_inner">
+
+                                                
+                                                <form action="admin-ajax.php" method="POST" id="filter">
+                                                                                                        <input type="hidden" id="input_referencia_de_seccion" name="referencia_de_seccion[]" value="8712" />
+                                                    <input type="hidden" class="filter-type-of-appliance" name="type_of_appliance[]" value="" />
+
+
+                                                    
+                                                                                                                <div class="product-filter product-filter-product_lifestyle">
+                                                                <h4 class="familia ">Serie</h4>
+                                                                <div class="product-filter-dropdown">
+                                                                    <div class="childs">
+                                                                    </div>
+                                                                    <span>CLOSE</span>
+                                                                </div>
+                                                            </div>
+                                                                                                                <div class="product-filter product-filter-filter_type_of_fridge">
+                                                                <h4 class="familia len10">Type of Fridge</h4>
+                                                                <div class="product-filter-dropdown">
+                                                                    <div class="childs">
+                                                                    </div>
+                                                                    <span>CLOSE</span>
+                                                                </div>
+                                                            </div>
+                                                                                                                <div class="product-filter product-filter-product_installation">
+                                                                <h4 class="familia len10">Installation</h4>
+                                                                <div class="product-filter-dropdown">
+                                                                    <div class="childs">
+                                                                    </div>
+                                                                    <span>CLOSE</span>
+                                                                </div>
+                                                            </div>
+                                                                                                                <div class="product-filter product-filter-filter_energy_class">
+                                                                <h4 class="familia len10">Energy Class</h4>
+                                                                <div class="product-filter-dropdown">
+                                                                    <div class="childs">
+                                                                    </div>
+                                                                    <span>CLOSE</span>
+                                                                </div>
+                                                            </div>
+                                                                                                                <div class="product-filter product-filter-filter_product_width">
+                                                                <h4 class="familia ">Width</h4>
+                                                                <div class="product-filter-dropdown">
+                                                                    <div class="childs">
+                                                                    </div>
+                                                                    <span>CLOSE</span>
+                                                                </div>
+                                                            </div>
+                                                                                                                <div class="product-filter product-filter-filter_product_height">
+                                                                <h4 class="familia ">Height</h4>
+                                                                <div class="product-filter-dropdown">
+                                                                    <div class="childs">
+                                                                    </div>
+                                                                    <span>CLOSE</span>
+                                                                </div>
+                                                            </div>
+                                                                                                                <div class="product-filter product-filter-color">
+                                                                <h4 class="familia ">צבע</h4>
+                                                                <div class="product-filter-dropdown">
+                                                                    <div class="childs">
+                                                                    </div>
+                                                                    <span>CLOSE</span>
+                                                                </div>
+                                                            </div>
+                                                                                                                <div class="product-filter product-filter-filter_freezing_system">
+                                                                <h4 class="familia len10">Freezing System</h4>
+                                                                <div class="product-filter-dropdown">
+                                                                    <div class="childs">
+                                                                    </div>
+                                                                    <span>CLOSE</span>
+                                                                </div>
+                                                            </div>
+                                                                                                                <div class="product-filter product-filter-filter_doors">
+                                                                <h4 class="familia ">Doors</h4>
+                                                                <div class="product-filter-dropdown">
+                                                                    <div class="childs">
+                                                                    </div>
+                                                                    <span>CLOSE</span>
+                                                                </div>
+                                                            </div>
+                                                    
+
+                                                    <input type="hidden" name="action" id="input_filtrar_productos" value="filtrar_productos">
+                                                </form>
+
+                                                <script type="text/javascript">
+                                                </script>
+
+
+
+                                                <script type="text/javascript">
+                                                    jQuery(document).ready(function() {
+                                                        var stringExcludes = '';
+                                                        var arrayExcludes = stringExcludes.split(",");
+                                                        cargarFiltros(8712, arrayExcludes);
+                                                    });
+                                                </script>
+
+
+                                            </div>
+                                        </div>
+                                        <div>
+                                                                                            <a id="seeMoreFilters" href="#">See more filters <i class="itk-flecha-abajo-filtros"></i></a>
+                                                <a id="seeLessFilters" href="#">See less filters <i class="itk-flecha-arriba-filtros"></i></a>
+                                                                                    </div>
+                                    </div>
+                                    <div id="profucts-filters-inline" style="display: none;"><a href="" id="reset-filter">Reset filters</a></div>
+                                </div>
+                                <!-- .et_pb_column -->
+                                <div id="products-container-right" class="product_grid">
+
+                                    <div id="number-products"><span></span> מאמרים</div>
+                                    <!-- .et_pb_text -->
+                                    <div class="et_pb_module et_pb_products_0 et_pb_bg_layout_light et_pb_portfolio_grid clearfix">
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_module_inner">
+					<div class="et_pb_module et_pb_products_0 et_pb_bg_layout_light et_pb_portfolio_grid clearfix">
+				<div class="et_pb_ajax_pagination_container">
+					
+					
+					<div class="et_pb_portfolio_grid_items product-list">
+						<div id="post-76110" class="post-76110 product type-product status-publish hentry product_cat-fridge-freezers color-black product_installation-free-standing product_lifestyle-k-series-8 product_energy_efficiency-d-ue-icon-new et_pb_portfolio_item et_pb_grid_item">
+    
+    
+            <span class="label-new-b">New</span>
+
+
+
+        <div class="product-cat-img-container">
+        <span class="label-fix">New</span>
+        <a onmouseover="jQuery('#post-img-76110').hide();jQuery('#post-img-alt-76110').show();" onmouseleave="jQuery('#post-img-alt-76110').hide();jQuery('#post-img-76110').show();"  href="/product/fkg6875-1s_123400005/" title="FKG6875.1S">
+                            <img id="post-img-76110" class="product-cat-img lozad" src="/wp-content/themes/kueppersbusch/img/px.png" data-src="https://teka.b-cdn.net/CMP1219/5/PR422814BI37110_123400005_FKG6875_1S_SZ2.png">
+                                        <img style="display: none" id="post-img-alt-76110" class="product-cat-img" src="https://teka.b-cdn.net/CMP1219/6/PR422814BI37111_123400005_FKG6875_1S_SZ2.png">
+            
+            
+        </a>
+    </div>
+
+
+    <div class="product-cat-info">
+
+                <div class="productCat">
+            <a>FKG6875.1S</a>
+        </div>
+        <a href="/product/fkg6875-1s_123400005/" title="FKG6875.1S"><strong class="productCatLargeName">60 cm freestanding fridge-freezer in retro design with NoFrost</strong></a>
+
+
+
+
+
+        <div class="product-list-footer">
+                            <div class="product-list-colors">צבע <img class="tooltip" src="https://teka.b-cdn.net/CMP1219/files/4/Black.svg" alt="Black" title="Black" data-exclude="76110" data-parent_product="">
+                    <div class="other-colors"></div>
+                </div>
+            
+
+        </div>
+
+        <div class="product-list-description">
+                        <a class="teka-button" href="/product/fkg6875-1s_123400005/">+ פרטים</a>
+                    </div>
+    </div>
+
+</div><div id="post-76226" class="post-76226 product type-product status-publish hentry product_cat-fridge-freezers color-black product_installation-free-standing product_lifestyle-k-series-8 et_pb_portfolio_item et_pb_grid_item">
+    
+    
+            <span class="label-new-b">New</span>
+
+
+
+        <div class="product-cat-img-container">
+        <span class="label-fix">New</span>
+        <a onmouseover="jQuery('#post-img-76226').hide();jQuery('#post-img-alt-76226').show();" onmouseleave="jQuery('#post-img-alt-76226').hide();jQuery('#post-img-76226').show();"  href="/product/fkg9860-1s_123430015/" title="FKG9860.1S">
+                            <img id="post-img-76226" class="product-cat-img lozad" src="/wp-content/themes/kueppersbusch/img/px.png" data-src="https://teka.b-cdn.net/CMP1219/5/PR422469BI37108_123430015_FKG9860_1S_SZ2.png">
+                                        <img style="display: none" id="post-img-alt-76226" class="product-cat-img" src="https://teka.b-cdn.net/CMP1219/5/PR422469BI37109_123430015_FKG9860_1S_SZ2.png">
+            
+            
+        </a>
+    </div>
+
+
+    <div class="product-cat-info">
+
+                <div class="productCat">
+            <a>FKG9860.1S</a>
+        </div>
+        <a href="/product/fkg9860-1s_123430015/" title="FKG9860.1S"><strong class="productCatLargeName">French door fridge-freezer with touch control sensor</strong></a>
+
+
+
+
+
+        <div class="product-list-footer">
+                            <div class="product-list-colors">צבע <img class="tooltip" src="https://teka.b-cdn.net/CMP1219/files/4/Black.svg" alt="Black" title="Black" data-exclude="76226" data-parent_product="">
+                    <div class="other-colors"></div>
+                </div>
+            
+
+        </div>
+
+        <div class="product-list-description">
+                        <a class="teka-button" href="/product/fkg9860-1s_123430015/">+ פרטים</a>
+                    </div>
+    </div>
+
+</div><div id="post-76230" class="post-76230 product type-product status-publish hentry product_cat-fridge-freezers color-stainless-steel product_installation-free-standing product_energy_efficiency-e-ue-icon-new et_pb_portfolio_item et_pb_grid_item">
+    
+    
+            <span class="label-new-b">New</span>
+
+
+
+        <div class="product-cat-img-container">
+        <span class="label-fix">New</span>
+        <a onmouseover="jQuery('#post-img-76230').hide();jQuery('#post-img-alt-76230').show();" onmouseleave="jQuery('#post-img-alt-76230').hide();jQuery('#post-img-76230').show();"  href="/product/fkg9850-0e_123430016/" title="FKG9850.0E">
+                            <img id="post-img-76230" class="product-cat-img lozad" src="/wp-content/themes/kueppersbusch/img/px.png" data-src="https://teka.b-cdn.net/CMP1219/2/PR422906BI38461_123430016_FKG9850_0E_SZ2.png">
+                                        <img style="display: none" id="post-img-alt-76230" class="product-cat-img" src="https://teka.b-cdn.net/CMP1219/2/PR422906BI38462_123430016_FKG9850_0E_SZ2.png">
+            
+            
+        </a>
+    </div>
+
+
+    <div class="product-cat-info">
+
+                <div class="productCat">
+            <a>FKG9850.0E</a>
+        </div>
+        <a href="/product/fkg9850-0e_123430016/" title="FKG9850.0E"><strong class="productCatLargeName">Side by Side fridge-freezer with with touch control sensors</strong></a>
+
+
+
+
+
+        <div class="product-list-footer">
+                            <div class="product-list-colors">צבע <img class="tooltip" src="https://teka.b-cdn.net/CMP1219/files/1/Stainless-Steel.svg" alt="Stainless steel" title="Stainless steel" data-exclude="76230" data-parent_product="">
+                    <div class="other-colors"></div>
+                </div>
+            
+
+        </div>
+
+        <div class="product-list-description">
+                        <a class="teka-button" href="/product/fkg9850-0e_123430016/">+ פרטים</a>
+                    </div>
+    </div>
+
+</div><div id="post-76221" class="post-76221 product type-product status-publish hentry product_cat-fridge-freezers color-stainless-steel product_installation-free-standing product_lifestyle-k-series-8 usp-kph-coldline-02 usp-kph-coldline-06 usp-kph-coldline-05 usp-kph-coldline-04 product_energy_efficiency-g-ue-icon-new et_pb_portfolio_item et_pb_grid_item">
+    
+    
+        <div class="product-cat-img-container">
+        <span class="label-fix">New</span>
+        <a  href="/product/fkg9803-0e_123430013/" title="FKG9803.0E">
+                            <img id="post-img-76221" class="product-cat-img lozad" src="/wp-content/themes/kueppersbusch/img/px.png" data-src="https://teka.b-cdn.net/CMP1219/4/PR100781BI29746_123430013_FKG9803_0E_SZ2.png">
+                        
+            
+        </a>
+    </div>
+
+
+    <div class="product-cat-info">
+
+                <div class="productCat">
+            <a>FKG9803.0E</a>
+        </div>
+        <a href="/product/fkg9803-0e_123430013/" title="FKG9803.0E"><strong class="productCatLargeName">Side by Side fridge-freezer with ice dispensor and bar compartment</strong></a>
+
+
+
+
+
+        <div class="product-list-footer">
+                            <div class="product-list-colors">צבע <img class="tooltip" src="https://teka.b-cdn.net/CMP1219/files/1/Stainless-Steel.svg" alt="Stainless steel" title="Stainless steel" data-exclude="76221" data-parent_product="">
+                    <div class="other-colors"></div>
+                </div>
+            
+
+        </div>
+
+        <div class="product-list-description">
+                        <a class="teka-button" href="/product/fkg9803-0e_123430013/">+ פרטים</a>
+                    </div>
+    </div>
+
+</div><div id="post-76112" class="post-76112 product type-product status-publish hentry product_cat-fridge-freezers color-stainless-steel product_installation-free-standing product_energy_efficiency-e-ue-icon-new et_pb_portfolio_item et_pb_grid_item">
+    
+    
+            <span class="label-new-b">New</span>
+
+
+
+        <div class="product-cat-img-container">
+        <span class="label-fix">New</span>
+        <a onmouseover="jQuery('#post-img-76112').hide();jQuery('#post-img-alt-76112').show();" onmouseleave="jQuery('#post-img-alt-76112').hide();jQuery('#post-img-76112').show();"  href="/product/fkg9801-0e_123430017/" title="FKG9801.0E">
+                            <img id="post-img-76112" class="product-cat-img lozad" src="/wp-content/themes/kueppersbusch/img/px.png" data-src="https://teka.b-cdn.net/CMP1219/2/PR422910BI37848_123430017_FKG9801_0E_SZ2.png">
+                                        <img style="display: none" id="post-img-alt-76112" class="product-cat-img" src="https://teka.b-cdn.net/CMP1219/2/PR422910BI37849_123430017_FKG9801_0E_SZ2.png">
+            
+            
+        </a>
+    </div>
+
+
+    <div class="product-cat-info">
+
+                <div class="productCat">
+            <a>FKG9801.0E</a>
+        </div>
+        <a href="/product/fkg9801-0e_123430017/" title="FKG9801.0E"><strong class="productCatLargeName">90 cm side-by-side fridge-freezer with NoFrost</strong></a>
+
+
+
+
+
+        <div class="product-list-footer">
+                            <div class="product-list-colors">צבע <img class="tooltip" src="https://teka.b-cdn.net/CMP1219/files/1/Stainless-Steel.svg" alt="Stainless steel" title="Stainless steel" data-exclude="76112" data-parent_product="">
+                    <div class="other-colors"></div>
+                </div>
+            
+
+        </div>
+
+        <div class="product-list-description">
+                        <a class="teka-button" href="/product/fkg9801-0e_123430017/">+ פרטים</a>
+                    </div>
+    </div>
+
+</div><div id="post-76229" class="post-76229 product type-product status-publish hentry product_cat-fridge-freezers color-stainless-steel product_installation-free-standing product_energy_efficiency-f-ue-icon-new et_pb_portfolio_item et_pb_grid_item">
+    
+    
+            <span class="label-new-b">New</span>
+
+
+
+        <div class="product-cat-img-container">
+        <span class="label-fix">New</span>
+        <a  href="/product/fkg7500-1e_123400004/" title="FKG7500.1E">
+                            <img id="post-img-76229" class="product-cat-img lozad" src="/wp-content/themes/kueppersbusch/img/px.png" data-src="https://teka.b-cdn.net/CMP1219/2/PR422818BI38458_123400004_FKG7500_1E_SZ2.png">
+                        
+            
+        </a>
+    </div>
+
+
+    <div class="product-cat-info">
+
+                <div class="productCat">
+            <a>FKG7500.1E</a>
+        </div>
+        <a href="/product/fkg7500-1e_123400004/" title="FKG7500.1E"><strong class="productCatLargeName">No frost fridge-freezer with youch control sensors and holiday function</strong></a>
+
+
+
+
+
+        <div class="product-list-footer">
+                            <div class="product-list-colors">צבע <img class="tooltip" src="https://teka.b-cdn.net/CMP1219/files/1/Stainless-Steel.svg" alt="Stainless steel" title="Stainless steel" data-exclude="76229" data-parent_product="">
+                    <div class="other-colors"></div>
+                </div>
+            
+
+        </div>
+
+        <div class="product-list-description">
+                        <a class="teka-button" href="/product/fkg7500-1e_123400004/">+ פרטים</a>
+                    </div>
+    </div>
+
+</div><div id="post-76222" class="post-76222 product type-product status-publish hentry product_cat-fridge-freezers color-stainless-steel product_installation-free-standing product_lifestyle-k-series-8 usp-kph-coldline-02 usp-kph-coldline-06 usp-kph-coldline-05 usp-kph-coldline-04 usp-kph-coldline-03 product_energy_efficiency-c-ue-icon-new et_pb_portfolio_item et_pb_grid_item">
+    
+    
+            <span class="label-new-b">New</span>
+
+
+
+        <div class="product-cat-img-container">
+        <span class="label-fix">New</span>
+        <a  href="/product/fkg6800-0e_123410001/" title="FKG6800.0E">
+                            <img id="post-img-76222" class="product-cat-img lozad" src="/wp-content/themes/kueppersbusch/img/px.png" data-src="https://teka.b-cdn.net/CMP1219/3/PR414734BI33386_123410001_FKG6800_0E_SZ2.png">
+                        
+            
+        </a>
+    </div>
+
+
+    <div class="product-cat-info">
+
+                <div class="productCat">
+            <a>FKG6800.0E</a>
+        </div>
+        <a href="/product/fkg6800-0e_123410001/" title="FKG6800.0E"><strong class="productCatLargeName">Freestanding no frost fridge-freezer with touch control sensors</strong></a>
+
+
+
+
+
+        <div class="product-list-footer">
+                            <div class="product-list-colors">צבע <img class="tooltip" src="https://teka.b-cdn.net/CMP1219/files/1/Stainless-Steel.svg" alt="Stainless steel" title="Stainless steel" data-exclude="76222" data-parent_product="">
+                    <div class="other-colors"></div>
+                </div>
+            
+
+        </div>
+
+        <div class="product-list-description">
+                        <a class="teka-button" href="/product/fkg6800-0e_123410001/">+ פרטים</a>
+                    </div>
+    </div>
+
+</div><div id="post-76227" class="post-76227 product type-product status-publish hentry product_cat-fridge-freezers color-stainless-steel product_icons-22l product_icons-eco-function product_icons-ionclean-technology product_icons-led product_icons-longlife-no-frost product_icons-motor-inverter product_icons-on-holidays-function product_icons-vitacare-box product_icons-zero-box product_installation-free-standing product_lifestyle-k-series-5 product_energy_efficiency-f-ue-icon-new et_pb_portfolio_item et_pb_grid_item">
+    
+    
+            <span class="label-new-b">New</span>
+
+
+
+        <div class="product-cat-img-container">
+        <span class="label-fix">New</span>
+        <a onmouseover="jQuery('#post-img-76227').hide();jQuery('#post-img-alt-76227').show();" onmouseleave="jQuery('#post-img-alt-76227').hide();jQuery('#post-img-76227').show();"  href="/product/fkg6580-0e_123400003/" title="FKG6580.0E">
+                            <img id="post-img-76227" class="product-cat-img lozad" src="/wp-content/themes/kueppersbusch/img/px.png" data-src="https://teka.b-cdn.net/CMP1219/2/PR422601BI37106_123400003_FKG6580_0E_SZ2.png">
+                                        <img style="display: none" id="post-img-alt-76227" class="product-cat-img" src="https://teka.b-cdn.net/CMP1219/2/PR422601BI37107_123400003_FKG6580_0E_SZ2.png">
+            
+            
+        </a>
+    </div>
+
+
+    <div class="product-cat-info">
+
+                <div class="productCat">
+            <a>FKG6580.0E</a>
+        </div>
+        <a href="/product/fkg6580-0e_123400003/" title="FKG6580.0E"><strong class="productCatLargeName">No frost fridge-freezer with electronic temperature control with touch control sensors</strong></a>
+
+
+
+
+
+        <div class="product-list-footer">
+                            <div class="product-list-colors">צבע <img class="tooltip" src="https://teka.b-cdn.net/CMP1219/files/1/Stainless-Steel.svg" alt="Stainless steel" title="Stainless steel" data-exclude="76227" data-parent_product="">
+                    <div class="other-colors"></div>
+                </div>
+            
+
+        </div>
+
+        <div class="product-list-description">
+                        <a class="teka-button" href="/product/fkg6580-0e_123400003/">+ פרטים</a>
+                    </div>
+    </div>
+
+</div><div id="post-76069" class="post-76069 product type-product status-publish hentry product_cat-fridge-freezers color-stainless-steel product_installation-free-standing product_lifestyle-k-series-5 usp-kph-coldline-02 usp-kph-coldline-06 usp-kph-coldline-04 product_energy_efficiency-e-ue-icon-new et_pb_portfolio_item et_pb_grid_item">
+    
+    
+        <div class="product-cat-img-container">
+        <span class="label-fix">New</span>
+        <a  href="/product/fkg6500-0e_123410000/" title="FKG6500.0E">
+                            <img id="post-img-76069" class="product-cat-img lozad" src="/wp-content/themes/kueppersbusch/img/px.png" data-src="https://teka.b-cdn.net/CMP1219/2/PR100783BI40395_123410000_FKG6500_0E_SZ2.png">
+                        
+            
+        </a>
+    </div>
+
+
+    <div class="product-cat-info">
+
+                <div class="productCat">
+            <a>FKG6500.0E</a>
+        </div>
+        <a href="/product/fkg6500-0e_123410000/" title="FKG6500.0E"><strong class="productCatLargeName">60 cm free-standing fridge-freezer with NoFrost</strong></a>
+
+
+
+
+
+        <div class="product-list-footer">
+                            <div class="product-list-colors">צבע <img class="tooltip" src="https://teka.b-cdn.net/CMP1219/files/1/Stainless-Steel.svg" alt="Stainless steel" title="Stainless steel" data-exclude="76069" data-parent_product="">
+                    <div class="other-colors"></div>
+                </div>
+            
+
+        </div>
+
+        <div class="product-list-description">
+                        <a class="teka-button" href="/product/fkg6500-0e_123410000/">+ פרטים</a>
+                    </div>
+    </div>
+
+</div><div id="post-76011" class="post-76011 product type-product status-publish hentry finishes-8912 finishes-8913 finishes-8914 finishes-8915 finishes-8916 finishes-8917 finishes-8918 product_cat-wine-coolers color-black product_installation-built-in product_lifestyle-k-series-8 usp-kph-coldline-02 usp-kph-individual-01 product_energy_efficiency-g-ue-icon-new et_pb_portfolio_item et_pb_grid_item">
+    
+    
+        <div class="product-cat-img-container">
+        <span class="label-fix">New</span>
+        <a  href="/product/fwk4800-0s_123600004/" title="FWK4800.0S">
+                            <img id="post-img-76011" class="product-cat-img lozad" src="/wp-content/themes/kueppersbusch/img/px.png" data-src="https://teka.b-cdn.net/CMP1219/4/PR61383BI29633_123600004_FWK4800_0S_SZ2.png">
+                        
+            
+        </a>
+    </div>
+
+
+    <div class="product-cat-info">
+
+                <div class="productCat">
+            <a>FWK4800.0S</a>
+        </div>
+        <a href="/product/fwk4800-0s_123600004/" title="FWK4800.0S"><strong class="productCatLargeName">122cm built-in Wine cooler with 2 temperature zones for 79 bottles</strong></a>
+
+
+
+
+
+        <div class="product-list-footer">
+                            <div class="product-list-colors">צבע <img class="tooltip" src="https://teka.b-cdn.net/CMP1219/files/4/Black.svg" alt="Black" title="Black" data-exclude="76011" data-parent_product="">
+                    <div class="other-colors"></div>
+                </div>
+            
+
+        </div>
+
+        <div class="product-list-description">
+                        <a class="teka-button" href="/product/fwk4800-0s_123600004/">+ פרטים</a>
+                    </div>
+    </div>
+
+</div><div id="post-76012" class="post-76012 product type-product status-publish hentry finishes-8912 finishes-8913 finishes-8914 finishes-8915 finishes-8916 finishes-8917 finishes-8918 product_cat-wine-coolers color-black product_installation-built-in product_lifestyle-k-series-8 usp-kph-coldline-02 usp-kph-individual-01 product_energy_efficiency-g-ue-icon-new et_pb_portfolio_item et_pb_grid_item">
+    
+    
+        <div class="product-cat-img-container">
+        <span class="label-fix">New</span>
+        <a  href="/product/fwk2800-0s_123600003/" title="FWK2800.0S">
+                            <img id="post-img-76012" class="product-cat-img lozad" src="/wp-content/themes/kueppersbusch/img/px.png" data-src="https://teka.b-cdn.net/CMP1219/4/PR61385BI29632_123600003_FWK2800_0S_SZ2.png">
+                        
+            
+        </a>
+    </div>
+
+
+    <div class="product-cat-info">
+
+                <div class="productCat">
+            <a>FWK2800.0S</a>
+        </div>
+        <a href="/product/fwk2800-0s_123600003/" title="FWK2800.0S"><strong class="productCatLargeName">88cm built-in Wine cooler with 2 temperature zones for 52 bottles</strong></a>
+
+
+
+
+
+        <div class="product-list-footer">
+                            <div class="product-list-colors">צבע <img class="tooltip" src="https://teka.b-cdn.net/CMP1219/files/4/Black.svg" alt="Black" title="Black" data-exclude="76012" data-parent_product="">
+                    <div class="other-colors"></div>
+                </div>
+            
+
+        </div>
+
+        <div class="product-list-description">
+                        <a class="teka-button" href="/product/fwk2800-0s_123600003/">+ פרטים</a>
+                    </div>
+    </div>
+
+</div><div id="post-76146" class="post-76146 product type-product status-publish hentry product_ambient-kitchen-mattblack-02 product_cat-wine-coolers color-black product_installation-built-in product_lifestyle-k-series-8 product_energy_efficiency-g-ue-icon-new et_pb_portfolio_item et_pb_grid_item">
+    
+    
+        <div class="product-cat-img-container">
+        <span class="label-fix">New</span>
+        <a  href="/product/fwk2852-0s_123600010/" title="FWK2852.0S">
+                            <img id="post-img-76146" class="product-cat-img lozad" src="/wp-content/themes/kueppersbusch/img/px.png" data-src="https://teka.b-cdn.net/CMP1219/5/PR425368BI40463_123600010_FWK2852_0S_SZ2.png">
+                        
+            
+        </a>
+    </div>
+
+
+    <div class="product-cat-info">
+
+                <div class="productCat">
+            <a>FWK2852.0S</a>
+        </div>
+        <a href="/product/fwk2852-0s_123600010/" title="FWK2852.0S"><strong class="productCatLargeName">Built-in wine cellar with 2 temperature zones for up to 38 bottles and touch-to-open door opening</strong></a>
+
+
+
+
+
+        <div class="product-list-footer">
+                            <div class="product-list-colors">צבע <img class="tooltip" src="https://teka.b-cdn.net/CMP1219/files/4/Black.svg" alt="Black" title="Black" data-exclude="76146" data-parent_product="">
+                    <div class="other-colors"></div>
+                </div>
+            
+
+        </div>
+
+        <div class="product-list-description">
+                        <a class="teka-button" href="/product/fwk2852-0s_123600010/">+ פרטים</a>
+                    </div>
+    </div>
+
+</div><div id="post-76147" class="post-76147 product type-product status-publish hentry product_ambient-kitchen-g-02 product_ambient-kitchen-ss-02 product_cat-wine-coolers color-black product_installation-built-in product_lifestyle-k-series-8 product_energy_efficiency-f-ue-icon-new et_pb_portfolio_item et_pb_grid_item">
+    
+    
+        <div class="product-cat-img-container">
+        <span class="label-fix">New</span>
+        <a  href="/product/fwk6862-0s_123600012/" title="FWK6862.0S">
+                            <img id="post-img-76147" class="product-cat-img lozad" src="/wp-content/themes/kueppersbusch/img/px.png" data-src="https://teka.b-cdn.net/CMP1219/5/PR425369BI40469_123600012_FWK6862_0S_SZ2.png">
+                        
+            
+        </a>
+    </div>
+
+
+    <div class="product-cat-info">
+
+                <div class="productCat">
+            <a>FWK6862.0S</a>
+        </div>
+        <a href="/product/fwk6862-0s_123600012/" title="FWK6862.0S"><strong class="productCatLargeName">Built-in wine climate cabinet with 2 temperature zones for up to 30 bottles and touch-to-open door opening</strong></a>
+
+
+
+
+
+        <div class="product-list-footer">
+                            <div class="product-list-colors">צבע <img class="tooltip" src="https://teka.b-cdn.net/CMP1219/files/4/Black.svg" alt="Black" title="Black" data-exclude="76147" data-parent_product="">
+                    <div class="other-colors"></div>
+                </div>
+            
+
+        </div>
+
+        <div class="product-list-description">
+                        <a class="teka-button" href="/product/fwk6862-0s_123600012/">+ פרטים</a>
+                    </div>
+    </div>
+
+</div><div id="post-76149" class="post-76149 product type-product status-publish hentry product_ambient-kitchen-bv-03 product_ambient-kitchen-cop-02 product_cat-wine-coolers color-black product_installation-built-in product_lifestyle-k-series-5 product_energy_efficiency-f-ue-icon-new et_pb_portfolio_item et_pb_grid_item">
+    
+    
+        <div class="product-cat-img-container">
+        <span class="label-fix">New</span>
+        <a  href="/product/fkwu1531-0s_123610001/" title="FKWU1531.0S">
+                            <img id="post-img-76149" class="product-cat-img lozad" src="/wp-content/themes/kueppersbusch/img/px.png" data-src="https://teka.b-cdn.net/CMP1219/5/PR425371BI40451_123610001_FWKU1531_0S_SZ2.png">
+                        
+            
+        </a>
+    </div>
+
+
+    <div class="product-cat-info">
+
+                <div class="productCat">
+            <a>FKWU1531.0S</a>
+        </div>
+        <a href="/product/fkwu1531-0s_123610001/" title="FKWU1531.0S"><strong class="productCatLargeName">Under-counter wine cooler with 2 temperature zones for up to 17 bottles</strong></a>
+
+
+
+
+
+        <div class="product-list-footer">
+                            <div class="product-list-colors">צבע <img class="tooltip" src="https://teka.b-cdn.net/CMP1219/files/4/Black.svg" alt="Black" title="Black" data-exclude="76149" data-parent_product="">
+                    <div class="other-colors"></div>
+                </div>
+            
+
+        </div>
+
+        <div class="product-list-description">
+                        <a class="teka-button" href="/product/fkwu1531-0s_123610001/">+ פרטים</a>
+                    </div>
+    </div>
+
+</div><div id="post-76148" class="post-76148 product type-product status-publish hentry product_cat-wine-coolers color-black product_installation-built-in product_lifestyle-k-series-8 product_energy_efficiency-f-ue-icon-new et_pb_portfolio_item et_pb_grid_item">
+    
+    
+        <div class="product-cat-img-container">
+        <span class="label-fix">New</span>
+        <a  href="/product/fkwu1851-0s_123600007/" title="FKWU1851.0S">
+                            <img id="post-img-76148" class="product-cat-img lozad" src="/wp-content/themes/kueppersbusch/img/px.png" data-src="https://teka.b-cdn.net/CMP1219/6/PR425370BI40457_123600007_FWKU1851_0S_SZ2.png">
+                        
+            
+        </a>
+    </div>
+
+
+    <div class="product-cat-info">
+
+                <div class="productCat">
+            <a>FKWU1851.0S</a>
+        </div>
+        <a href="/product/fkwu1851-0s_123600007/" title="FKWU1851.0S"><strong class="productCatLargeName">Under-counter wine cooler with 2 temperature zones for up to 46 bottles</strong></a>
+
+
+
+
+
+        <div class="product-list-footer">
+                            <div class="product-list-colors">צבע <img class="tooltip" src="https://teka.b-cdn.net/CMP1219/files/4/Black.svg" alt="Black" title="Black" data-exclude="76148" data-parent_product="">
+                    <div class="other-colors"></div>
+                </div>
+            
+
+        </div>
+
+        <div class="product-list-description">
+                        <a class="teka-button" href="/product/fkwu1851-0s_123600007/">+ פרטים</a>
+                    </div>
+    </div>
+
+</div><div id="post-76138" class="post-76138 product type-product status-publish hentry product_ambient-kitchen-ss-02 product_cat-fridge-freezers product_installation-built-in product_lifestyle-k-series-8 product_energy_efficiency-e-ue-icon-new et_pb_portfolio_item et_pb_grid_item">
+    
+    
+            <span class="label-new-b">New</span>
+
+
+
+        <div class="product-cat-img-container">
+        <span class="label-fix">New</span>
+        <a  href="/product/fkgf9855-0i_123560012/" title="FKGF9855.0i">
+                            <img id="post-img-76138" class="product-cat-img lozad" src="/wp-content/themes/kueppersbusch/img/px.png" data-src="https://teka.b-cdn.net/CMP1219/5/PR425278BI38380_123560012_FKGF9855_0i_SZ2.png">
+                        
+            
+        </a>
+    </div>
+
+
+    <div class="product-cat-info">
+
+                <div class="productCat">
+            <a>FKGF9855.0i</a>
+        </div>
+        <a href="/product/fkgf9855-0i_123560012/" title="FKGF9855.0i"><strong class="productCatLargeName">Built-in fridge-freezer with LED rear panel, NoFrost and ChillerZone</strong></a>
+
+
+
+
+
+        <div class="product-list-footer">
+            
+
+        </div>
+
+        <div class="product-list-description">
+                        <a class="teka-button" href="/product/fkgf9855-0i_123560012/">+ פרטים</a>
+                    </div>
+    </div>
+
+</div><div id="post-76137" class="post-76137 product type-product status-publish hentry product_cat-fridge-freezers product_installation-built-in product_lifestyle-k-series-8 product_energy_efficiency-e-ue-icon-new et_pb_portfolio_item et_pb_grid_item">
+    
+    
+            <span class="label-new-b">New</span>
+
+
+
+        <div class="product-cat-img-container">
+        <span class="label-fix">New</span>
+        <a  href="/product/fkg9850-0e_123560011/" title="FKGF9850.0i">
+                            <img id="post-img-76137" class="product-cat-img lozad" src="/wp-content/themes/kueppersbusch/img/px.png" data-src="https://teka.b-cdn.net/CMP1219/6/PR425277BI38379_123560011_FKGF9850_0i_SZ2.png">
+                        
+            
+        </a>
+    </div>
+
+
+    <div class="product-cat-info">
+
+                <div class="productCat">
+            <a>FKGF9850.0i</a>
+        </div>
+        <a href="/product/fkg9850-0e_123560011/" title="FKGF9850.0i"><strong class="productCatLargeName">Built-in fridge-freezer with LED rear panel, NoFrost and ChillerZone</strong></a>
+
+
+
+
+
+        <div class="product-list-footer">
+            
+
+        </div>
+
+        <div class="product-list-description">
+                        <a class="teka-button" href="/product/fkg9850-0e_123560011/">+ פרטים</a>
+                    </div>
+    </div>
+
+</div><div id="post-76139" class="post-76139 product type-product status-publish hentry product_cat-fridge-freezers product_installation-built-in product_lifestyle-k-series-8 product_energy_efficiency-e-ue-icon-new et_pb_portfolio_item et_pb_grid_item">
+    
+    
+            <span class="label-new-b">New</span>
+
+
+
+        <div class="product-cat-img-container">
+        <span class="label-fix">New</span>
+        <a  href="/product/fkgf9835-0i_123560013/" title="FKGF9835.0i">
+                            <img id="post-img-76139" class="product-cat-img lozad" src="/wp-content/themes/kueppersbusch/img/px.png" data-src="https://teka.b-cdn.net/CMP1219/1/PR425279BI38379_123560013_FKGF9835_0i_SZ2.png">
+                        
+            
+        </a>
+    </div>
+
+
+    <div class="product-cat-info">
+
+                <div class="productCat">
+            <a>FKGF9835.0i</a>
+        </div>
+        <a href="/product/fkgf9835-0i_123560013/" title="FKGF9835.0i"><strong class="productCatLargeName">Built-in fridge-freezer with LED rear panel, NoFrost and ChillerZone</strong></a>
+
+
+
+
+
+        <div class="product-list-footer">
+            
+
+        </div>
+
+        <div class="product-list-description">
+                        <a class="teka-button" href="/product/fkgf9835-0i_123560013/">+ פרטים</a>
+                    </div>
+    </div>
+
+</div><div id="post-76140" class="post-76140 product type-product status-publish hentry product_cat-fridge-freezers product_installation-built-in product_lifestyle-k-series-8 product_energy_efficiency-e-ue-icon-new et_pb_portfolio_item et_pb_grid_item">
+    
+    
+            <span class="label-new-b">New</span>
+
+
+
+        <div class="product-cat-img-container">
+        <span class="label-fix">New</span>
+        <a  href="/product/fkgf8851-0i_123560014/" title="FKGF8851.0i">
+                            <img id="post-img-76140" class="product-cat-img lozad" src="/wp-content/themes/kueppersbusch/img/px.png" data-src="https://teka.b-cdn.net/CMP1219/4/PR425280BI38378_123560014_FKGF8851_0i_SZ2.png">
+                        
+            
+        </a>
+    </div>
+
+
+    <div class="product-cat-info">
+
+                <div class="productCat">
+            <a>FKGF8851.0i</a>
+        </div>
+        <a href="/product/fkgf8851-0i_123560014/" title="FKGF8851.0i"><strong class="productCatLargeName">Built-in fridge-freezer with NoFrost and ChillerZone</strong></a>
+
+
+
+
+
+        <div class="product-list-footer">
+            
+
+        </div>
+
+        <div class="product-list-description">
+                        <a class="teka-button" href="/product/fkgf8851-0i_123560014/">+ פרטים</a>
+                    </div>
+    </div>
+
+</div><div id="post-76078" class="post-76078 product type-product status-publish hentry product_cat-fridge-freezers product_installation-built-in product_lifestyle-k-series-8 usp-kph-coldline-02 usp-kph-coldline-06 usp-kph-coldline-04 usp-kph-coldline-03 usp-kph-coldline-01 product_energy_efficiency-e-ue-icon-new et_pb_portfolio_item et_pb_grid_item">
+    
+    
+        <div class="product-cat-img-container">
+        <span class="label-fix">New</span>
+        <a  href="/product/fkgf8860-0i_123560009/" title="FKGF8860.0i">
+                            <img id="post-img-76078" class="product-cat-img lozad" src="/wp-content/themes/kueppersbusch/img/px.png" data-src="https://teka.b-cdn.net/CMP1219/3/PR420004BI33238_123560009_FKGF8860_0i_SZ2.png">
+                        
+            
+        </a>
+    </div>
+
+
+    <div class="product-cat-info">
+
+                <div class="productCat">
+            <a>FKGF8860.0i</a>
+        </div>
+        <a href="/product/fkgf8860-0i_123560009/" title="FKGF8860.0i"><strong class="productCatLargeName">Built-in fridge-freezer with ökoFresh zone</strong></a>
+
+
+
+
+
+        <div class="product-list-footer">
+            
+
+        </div>
+
+        <div class="product-list-description">
+                        <a class="teka-button" href="/product/fkgf8860-0i_123560009/">+ פרטים</a>
+                    </div>
+    </div>
+
+</div><div id="post-76079" class="post-76079 product type-product status-publish hentry product_cat-fridge-freezers product_installation-built-in product_lifestyle-k-series-5 usp-kph-coldline-02 usp-kph-coldline-06 usp-kph-coldline-04 usp-kph-coldline-01 product_energy_efficiency-e-ue-icon-new et_pb_portfolio_item et_pb_grid_item">
+    
+    
+        <div class="product-cat-img-container">
+        <span class="label-fix">New</span>
+        <a  href="/product/fkg8540-0i_123560006/" title="FKG8540.0i">
+                            <img id="post-img-76079" class="product-cat-img lozad" src="/wp-content/themes/kueppersbusch/img/px.png" data-src="https://teka.b-cdn.net/CMP1219/3/PR420005BI33237_123560006_FKG8540_0i_SZ2.png">
+                        
+            
+        </a>
+    </div>
+
+
+    <div class="product-cat-info">
+
+                <div class="productCat">
+            <a>FKG8540.0i</a>
+        </div>
+        <a href="/product/fkg8540-0i_123560006/" title="FKG8540.0i"><strong class="productCatLargeName">Built-in fridge-freezer with NoFrost and BlueLight</strong></a>
+
+
+
+
+
+        <div class="product-list-footer">
+            
+
+        </div>
+
+        <div class="product-list-description">
+                        <a class="teka-button" href="/product/fkg8540-0i_123560006/">+ פרטים</a>
+                    </div>
+    </div>
+
+</div><div id="post-76080" class="post-76080 product type-product status-publish hentry product_cat-fridge-freezers product_installation-built-in product_lifestyle-k-series-3 usp-kph-coldline-02 usp-kph-coldline-06 usp-kph-coldline-01 product_energy_efficiency-e-ue-icon-new et_pb_portfolio_item et_pb_grid_item">
+    
+    
+        <div class="product-cat-img-container">
+        <span class="label-fix">New</span>
+        <a  href="/product/fkg8340-0i_123560008/" title="FKG8340.0i">
+                            <img id="post-img-76080" class="product-cat-img lozad" src="/wp-content/themes/kueppersbusch/img/px.png" data-src="https://teka.b-cdn.net/CMP1219/3/PR420007BI33236_123560008_FKG8340_0i_SZ2.png">
+                        
+            
+        </a>
+    </div>
+
+
+    <div class="product-cat-info">
+
+                <div class="productCat">
+            <a>FKG8340.0i</a>
+        </div>
+        <a href="/product/fkg8340-0i_123560008/" title="FKG8340.0i"><strong class="productCatLargeName">Built-in fridge-freezer combination</strong></a>
+
+
+
+
+
+        <div class="product-list-footer">
+            
+
+        </div>
+
+        <div class="product-list-description">
+                        <a class="teka-button" href="/product/fkg8340-0i_123560008/">+ פרטים</a>
+                    </div>
+    </div>
+
+</div><div id="post-76223" class="post-76223 product type-product status-publish hentry product_cat-refrigerators product_installation-built-in product_lifestyle-k-series-5 usp-kph-coldline-02 usp-kph-coldline-01 product_energy_efficiency-e-ue-icon-new et_pb_portfolio_item et_pb_grid_item">
+    
+    
+        <div class="product-cat-img-container">
+        <span class="label-fix">New</span>
+        <a  href="/product/fk2540-0i_123480003/" title="FK2540.0i">
+                            <img id="post-img-76223" class="product-cat-img lozad" src="/wp-content/themes/kueppersbusch/img/px.png" data-src="https://teka.b-cdn.net/CMP1219/3/PR420016BI33231_123480003_FK2540_0i_SZ2.png">
+                        
+            
+        </a>
+    </div>
+
+
+    <div class="product-cat-info">
+
+                <div class="productCat">
+            <a>FK2540.0i</a>
+        </div>
+        <a href="/product/fk2540-0i_123480003/" title="FK2540.0i"><strong class="productCatLargeName">Built-in refrigerator with sliding door system and 126L of capacity</strong></a>
+
+
+
+
+
+        <div class="product-list-footer">
+            
+
+        </div>
+
+        <div class="product-list-description">
+                        <a class="teka-button" href="/product/fk2540-0i_123480003/">+ פרטים</a>
+                    </div>
+    </div>
+
+</div><div id="post-76081" class="post-76081 product type-product status-publish hentry product_cat-refrigerators product_installation-built-in product_lifestyle-k-series-5 usp-kph-coldline-02 usp-kph-coldline-01 product_energy_efficiency-e-ue-icon-new et_pb_portfolio_item et_pb_grid_item">
+    
+    
+        <div class="product-cat-img-container">
+        <span class="label-fix">New</span>
+        <a  href="/product/fk2545-0i_123480004/" title="FK2545.0i">
+                            <img id="post-img-76081" class="product-cat-img lozad" src="/wp-content/themes/kueppersbusch/img/px.png" data-src="https://teka.b-cdn.net/CMP1219/3/PR420018BI33232_123480004_FK2545_0i_SZ2.png">
+                        
+            
+        </a>
+    </div>
+
+
+    <div class="product-cat-info">
+
+                <div class="productCat">
+            <a>FK2545.0i</a>
+        </div>
+        <a href="/product/fk2545-0i_123480004/" title="FK2545.0i"><strong class="productCatLargeName">Built-in refrigerator with freezer compartment</strong></a>
+
+
+
+
+
+        <div class="product-list-footer">
+            
+
+        </div>
+
+        <div class="product-list-description">
+                        <a class="teka-button" href="/product/fk2545-0i_123480004/">+ פרטים</a>
+                    </div>
+    </div>
+
+</div><div id="post-76082" class="post-76082 product type-product status-publish hentry product_cat-refrigerators product_installation-built-under product_lifestyle-k-series-5 usp-kph-coldline-02 usp-kph-coldline-01 product_energy_efficiency-e-ue-icon-new et_pb_portfolio_item et_pb_grid_item">
+    
+    
+        <div class="product-cat-img-container">
+        <span class="label-fix">New</span>
+        <a  href="/product/fku1540-0i_123480005/" title="FKU1540.0i">
+                            <img id="post-img-76082" class="product-cat-img lozad" src="/wp-content/themes/kueppersbusch/img/px.png" data-src="https://teka.b-cdn.net/CMP1219/3/PR420020BI33239_123480005_FKU1540_0i_SZ2.png">
+                        
+            
+        </a>
+    </div>
+
+
+    <div class="product-cat-info">
+
+                <div class="productCat">
+            <a>FKU1540.0i</a>
+        </div>
+        <a href="/product/fku1540-0i_123480005/" title="FKU1540.0i"><strong class="productCatLargeName">Under-counter refrigerator</strong></a>
+
+
+
+
+
+        <div class="product-list-footer">
+            
+
+        </div>
+
+        <div class="product-list-description">
+                        <a class="teka-button" href="/product/fku1540-0i_123480005/">+ פרטים</a>
+                    </div>
+    </div>
+
+</div><div id="post-76160" class="post-76160 product type-product status-publish hentry product_cat-fridge-freezers color-white product_installation-built-in product_lifestyle-k-series-8 product_energy_efficiency-e-ue-icon-new et_pb_portfolio_item et_pb_grid_item">
+    
+    
+            <span class="label-new-b">New</span>
+
+
+
+        <div class="product-cat-img-container">
+        <span class="label-fix">New</span>
+        <a  href="/product/fkgfx9800-0i_123560015/" title="FKGFX9800.0i">
+                            <img id="post-img-76160" class="product-cat-img lozad" src="/wp-content/themes/kueppersbusch/img/px.png" data-src="https://teka.b-cdn.net/CMP1219/1/PR425720BI41029_123560015_FKGFX9800_0i_SZ2.png">
+                        
+            
+        </a>
+    </div>
+
+
+    <div class="product-cat-info">
+
+                <div class="productCat">
+            <a>FKGFX9800.0i</a>
+        </div>
+        <a href="/product/fkgfx9800-0i_123560015/" title="FKGFX9800.0i"><strong class="productCatLargeName">Built-in fridge-freezer in Professional American Design with NoFrost and ChillerZone</strong></a>
+
+
+
+
+
+        <div class="product-list-footer">
+                            <div class="product-list-colors">צבע <img class="tooltip" src="https://teka.b-cdn.net/CMP1219/files/5/White.svg" alt="White" title="White" data-exclude="76160" data-parent_product="">
+                    <div class="other-colors"></div>
+                </div>
+            
+
+        </div>
+
+        <div class="product-list-description">
+                        <a class="teka-button" href="/product/fkgfx9800-0i_123560015/">+ פרטים</a>
+                    </div>
+    </div>
+
+</div><div id="post-76154" class="post-76154 product type-product status-publish hentry product_ambient-kitchen-sc-03 product_cat-fridge-freezers color-white product_installation-built-in product_lifestyle-k-series-8 product_energy_efficiency-e-ue-icon-new et_pb_portfolio_item et_pb_grid_item">
+    
+    
+            <span class="label-new-b">New</span>
+
+
+
+        <div class="product-cat-img-container">
+        <span class="label-fix">New</span>
+        <a  href="/product/fkfx9800-0i_123460017/" title="FKFX9800.0i">
+                            <img id="post-img-76154" class="product-cat-img lozad" src="/wp-content/themes/kueppersbusch/img/px.png" data-src="https://teka.b-cdn.net/CMP1219/1/PR425714BI40993_123460017_FKFX9800_0i_SZ2.png">
+                        
+            
+        </a>
+    </div>
+
+
+    <div class="product-cat-info">
+
+                <div class="productCat">
+            <a>FKFX9800.0i</a>
+        </div>
+        <a href="/product/fkfx9800-0i_123460017/" title="FKFX9800.0i"><strong class="productCatLargeName">Built-in refrigerator in Professional American Design and ChillerZone</strong></a>
+
+
+
+
+
+        <div class="product-list-footer">
+                            <div class="product-list-colors">צבע <img class="tooltip" src="https://teka.b-cdn.net/CMP1219/files/5/White.svg" alt="White" title="White" data-exclude="76154" data-parent_product="">
+                    <div class="other-colors"></div>
+                </div>
+            
+
+        </div>
+
+        <div class="product-list-description">
+                        <a class="teka-button" href="/product/fkfx9800-0i_123460017/">+ פרטים</a>
+                    </div>
+    </div>
+
+</div><div id="post-76155" class="post-76155 product type-product status-publish hentry product_ambient-kitchen-sc-03 product_cat-fridge-freezers color-white product_installation-built-in product_lifestyle-k-series-8 product_energy_efficiency-e-ue-icon-new et_pb_portfolio_item et_pb_grid_item">
+    
+    
+            <span class="label-new-b">New</span>
+
+
+
+        <div class="product-cat-img-container">
+        <span class="label-fix">New</span>
+        <a  href="/product/fkfx9800-0i-e_123460018/" title="FKFX9800.0i-E">
+                            <img id="post-img-76155" class="product-cat-img lozad" src="/wp-content/themes/kueppersbusch/img/px.png" data-src="https://teka.b-cdn.net/CMP1219/PR425715BI43219_123460018_FKFX9800_0i_E_SZ2.png">
+                        
+            
+        </a>
+    </div>
+
+
+    <div class="product-cat-info">
+
+                <div class="productCat">
+            <a>FKFX9800.0i-E</a>
+        </div>
+        <a href="/product/fkfx9800-0i-e_123460018/" title="FKFX9800.0i-E"><strong class="productCatLargeName">Built-in refrigerator with stainless steel door in Professional American Design and ChillerZone</strong></a>
+
+
+
+
+
+        <div class="product-list-footer">
+                            <div class="product-list-colors">צבע <img class="tooltip" src="https://teka.b-cdn.net/CMP1219/files/5/White.svg" alt="White" title="White" data-exclude="76155" data-parent_product="">
+                    <div class="other-colors"></div>
+                </div>
+            
+
+        </div>
+
+        <div class="product-list-description">
+                        <a class="teka-button" href="/product/fkfx9800-0i-e_123460018/">+ פרטים</a>
+                    </div>
+    </div>
+
+</div><div id="post-76157" class="post-76157 product type-product status-publish hentry product_ambient-kitchen-sc-03 product_cat-refrigerators color-white product_installation-built-in product_lifestyle-k-series-8 product_energy_efficiency-e-ue-icon-new et_pb_portfolio_item et_pb_grid_item">
+    
+    
+            <span class="label-new-b">New</span>
+
+
+
+        <div class="product-cat-img-container">
+        <span class="label-fix">New</span>
+        <a  href="/product/fgx9800-0i_123500006/" title="FGX9800.0i">
+                            <img id="post-img-76157" class="product-cat-img lozad" src="/wp-content/themes/kueppersbusch/img/px.png" data-src="https://teka.b-cdn.net/CMP1219/1/PR425717BI40989_123500006_FGX9800_0i_SZ2.png">
+                        
+            
+        </a>
+    </div>
+
+
+    <div class="product-cat-info">
+
+                <div class="productCat">
+            <a>FGX9800.0i</a>
+        </div>
+        <a href="/product/fgx9800-0i_123500006/" title="FGX9800.0i"><strong class="productCatLargeName">Built-in freezer in Professional American Design with NoFrost</strong></a>
+
+
+
+
+
+        <div class="product-list-footer">
+                            <div class="product-list-colors">צבע <img class="tooltip" src="https://teka.b-cdn.net/CMP1219/files/5/White.svg" alt="White" title="White" data-exclude="76157" data-parent_product="">
+                    <div class="other-colors"></div>
+                </div>
+            
+
+        </div>
+
+        <div class="product-list-description">
+                        <a class="teka-button" href="/product/fgx9800-0i_123500006/">+ פרטים</a>
+                    </div>
+    </div>
+
+</div><div id="post-76158" class="post-76158 product type-product status-publish hentry product_ambient-kitchen-sc-03 product_cat-freezers color-white product_installation-built-in product_lifestyle-k-series-8 product_energy_efficiency-e-ue-icon-new et_pb_portfolio_item et_pb_grid_item">
+    
+    
+            <span class="label-new-b">New</span>
+
+
+
+        <div class="product-cat-img-container">
+        <span class="label-fix">New</span>
+        <a  href="/product/fgx9800-0i-e_123500007/" title="FGX9800.0i-E">
+                            <img id="post-img-76158" class="product-cat-img lozad" src="/wp-content/themes/kueppersbusch/img/px.png" data-src="https://teka.b-cdn.net/CMP1219/PR425718BI43218_123500007_FGX9800_0i_E_SZ2.png">
+                        
+            
+        </a>
+    </div>
+
+
+    <div class="product-cat-info">
+
+                <div class="productCat">
+            <a>FGX9800.0i-E</a>
+        </div>
+        <a href="/product/fgx9800-0i-e_123500007/" title="FGX9800.0i-E"><strong class="productCatLargeName">Built-in freezer with stainless steel door in Professional American Design with NoFrost</strong></a>
+
+
+
+
+
+        <div class="product-list-footer">
+                            <div class="product-list-colors">צבע <img class="tooltip" src="https://teka.b-cdn.net/CMP1219/files/5/White.svg" alt="White" title="White" data-exclude="76158" data-parent_product="">
+                    <div class="other-colors"></div>
+                </div>
+            
+
+        </div>
+
+        <div class="product-list-description">
+                        <a class="teka-button" href="/product/fgx9800-0i-e_123500007/">+ פרטים</a>
+                    </div>
+    </div>
+
+</div><div id="post-76150" class="post-76150 product type-product status-publish hentry product_cat-refrigerators color-white product_installation-built-in product_lifestyle-k-series-8 product_energy_efficiency-e-ue-icon-new et_pb_portfolio_item et_pb_grid_item">
+    
+    
+        <div class="product-cat-img-container">
+        <span class="label-fix">New</span>
+        <a  href="/product/fk8840-1i_123460014/" title="FK8840.1i">
+                            <img id="post-img-76150" class="product-cat-img lozad" src="/wp-content/themes/kueppersbusch/img/px.png" data-src="https://teka.b-cdn.net/CMP1219/2/PR425682BI40403_123460014_FK8840_1i_SZ2.png">
+                        
+            
+        </a>
+    </div>
+
+
+    <div class="product-cat-info">
+
+                <div class="productCat">
+            <a>FK8840.1i</a>
+        </div>
+        <a href="/product/fk8840-1i_123460014/" title="FK8840.1i"><strong class="productCatLargeName">Built-in refrigerator with BlueLight</strong></a>
+
+
+
+
+
+        <div class="product-list-footer">
+                            <div class="product-list-colors">צבע <img class="tooltip" src="https://teka.b-cdn.net/CMP1219/files/5/White.svg" alt="White" title="White" data-exclude="76150" data-parent_product="">
+                    <div class="other-colors"></div>
+                </div>
+            
+
+        </div>
+
+        <div class="product-list-description">
+                        <a class="teka-button" href="/product/fk8840-1i_123460014/">+ פרטים</a>
+                    </div>
+    </div>
+
+</div><div id="post-76151" class="post-76151 product type-product status-publish hentry product_cat-freezers color-white product_installation-built-in product_lifestyle-k-series-8 product_energy_efficiency-e-ue-icon-new et_pb_portfolio_item et_pb_grid_item">
+    
+    
+        <div class="product-cat-img-container">
+        <span class="label-fix">New</span>
+        <a  href="/product/fg8840-1i_123500005/" title="FG8840.1i">
+                            <img id="post-img-76151" class="product-cat-img lozad" src="/wp-content/themes/kueppersbusch/img/px.png" data-src="https://teka.b-cdn.net/CMP1219/2/PR425683BI40400_123500005_FG8840_1i_SZ2.png">
+                        
+            
+        </a>
+    </div>
+
+
+    <div class="product-cat-info">
+
+                <div class="productCat">
+            <a>FG8840.1i</a>
+        </div>
+        <a href="/product/fg8840-1i_123500005/" title="FG8840.1i"><strong class="productCatLargeName">Built-in freezer with NoFrost</strong></a>
+
+
+
+
+
+        <div class="product-list-footer">
+                            <div class="product-list-colors">צבע <img class="tooltip" src="https://teka.b-cdn.net/CMP1219/files/5/White.svg" alt="White" title="White" data-exclude="76151" data-parent_product="">
+                    <div class="other-colors"></div>
+                </div>
+            
+
+        </div>
+
+        <div class="product-list-description">
+                        <a class="teka-button" href="/product/fg8840-1i_123500005/">+ פרטים</a>
+                    </div>
+    </div>
+
+</div><div id="post-76156" class="post-76156 product type-product status-publish hentry product_cat-refrigerators color-white product_installation-built-in product_lifestyle-k-series-5 product_energy_efficiency-e-ue-icon-new et_pb_portfolio_item et_pb_grid_item">
+    
+    
+            <span class="label-new-b">New</span>
+
+
+
+        <div class="product-cat-img-container">
+        <span class="label-fix">New</span>
+        <a  href="/product/fk8550-0i_123470010/" title="FK8550.0i">
+                            <img id="post-img-76156" class="product-cat-img lozad" src="/wp-content/themes/kueppersbusch/img/px.png" data-src="https://teka.b-cdn.net/CMP1219/1/PR425716BI41827_123470010_FK8550_0i_SZ2.png">
+                        
+            
+        </a>
+    </div>
+
+
+    <div class="product-cat-info">
+
+                <div class="productCat">
+            <a>FK8550.0i</a>
+        </div>
+        <a href="/product/fk8550-0i_123470010/" title="FK8550.0i"><strong class="productCatLargeName">Built-in refrigerator with LED rear panel</strong></a>
+
+
+
+
+
+        <div class="product-list-footer">
+                            <div class="product-list-colors">צבע <img class="tooltip" src="https://teka.b-cdn.net/CMP1219/files/5/White.svg" alt="White" title="White" data-exclude="76156" data-parent_product="">
+                    <div class="other-colors"></div>
+                </div>
+            
+
+        </div>
+
+        <div class="product-list-description">
+                        <a class="teka-button" href="/product/fk8550-0i_123470010/">+ פרטים</a>
+                    </div>
+    </div>
+
+</div><div id="post-76159" class="post-76159 product type-product status-publish hentry product_cat-freezers color-white product_installation-built-in product_lifestyle-k-series-5 product_energy_efficiency-e-ue-icon-new et_pb_portfolio_item et_pb_grid_item">
+    
+    
+            <span class="label-new-b">New</span>
+
+
+
+        <div class="product-cat-img-container">
+        <span class="label-fix">New</span>
+        <a  href="/product/fg8550-0i_123510002/" title="FG8550.0i">
+                            <img id="post-img-76159" class="product-cat-img lozad" src="/wp-content/themes/kueppersbusch/img/px.png" data-src="https://teka.b-cdn.net/CMP1219/1/PR425719BI40988_123510002_FG8550_0i_SZ2.png">
+                        
+            
+        </a>
+    </div>
+
+
+    <div class="product-cat-info">
+
+                <div class="productCat">
+            <a>FG8550.0i</a>
+        </div>
+        <a href="/product/fg8550-0i_123510002/" title="FG8550.0i"><strong class="productCatLargeName">Built-in refrigerator with NoFrost</strong></a>
+
+
+
+
+
+        <div class="product-list-footer">
+                            <div class="product-list-colors">צבע <img class="tooltip" src="https://teka.b-cdn.net/CMP1219/files/5/White.svg" alt="White" title="White" data-exclude="76159" data-parent_product="">
+                    <div class="other-colors"></div>
+                </div>
+            
+
+        </div>
+
+        <div class="product-list-description">
+                        <a class="teka-button" href="/product/fg8550-0i_123510002/">+ פרטים</a>
+                    </div>
+    </div>
+
+</div><div id="post-76153" class="post-76153 product type-product status-publish hentry product_cat-refrigerators color-white product_installation-built-in product_lifestyle-k-series-5 product_energy_efficiency-e-ue-icon-new et_pb_portfolio_item et_pb_grid_item">
+    
+    
+        <div class="product-cat-img-container">
+        <span class="label-fix">New</span>
+        <a  href="/product/fk4545-1i_123460016/" title="FK4545.1i">
+                            <img id="post-img-76153" class="product-cat-img lozad" src="/wp-content/themes/kueppersbusch/img/px.png" data-src="https://teka.b-cdn.net/CMP1219/1/PR425709BI40987_123460016_FK4545_1i_SZ2.png">
+                        
+            
+        </a>
+    </div>
+
+
+    <div class="product-cat-info">
+
+                <div class="productCat">
+            <a>FK4545.1i</a>
+        </div>
+        <a href="/product/fk4545-1i_123460016/" title="FK4545.1i"><strong class="productCatLargeName">Built-in refrigerator with freezer compartment</strong></a>
+
+
+
+
+
+        <div class="product-list-footer">
+                            <div class="product-list-colors">צבע <img class="tooltip" src="https://teka.b-cdn.net/CMP1219/files/5/White.svg" alt="White" title="White" data-exclude="76153" data-parent_product="">
+                    <div class="other-colors"></div>
+                </div>
+            
+
+        </div>
+
+        <div class="product-list-description">
+                        <a class="teka-button" href="/product/fk4545-1i_123460016/">+ פרטים</a>
+                    </div>
+    </div>
+
+</div><div id="post-76152" class="post-76152 product type-product status-publish hentry product_cat-refrigerators color-white product_icons-led product_icons-motor-inverter product_installation-built-in product_lifestyle-k-series-5 product_energy_efficiency-e-ue-icon-new et_pb_portfolio_item et_pb_grid_item">
+    
+    
+        <div class="product-cat-img-container">
+        <span class="label-fix">New</span>
+        <a  href="/product/fk4540-1i_123460015/" title="FK4540.1i">
+                            <img id="post-img-76152" class="product-cat-img lozad" src="/wp-content/themes/kueppersbusch/img/px.png" data-src="https://teka.b-cdn.net/CMP1219/2/PR425708BI40414_123460015_FK4540_1i_SZ2.png">
+                        
+            
+        </a>
+    </div>
+
+
+    <div class="product-cat-info">
+
+                <div class="productCat">
+            <a>FK4540.1i</a>
+        </div>
+        <a href="/product/fk4540-1i_123460015/" title="FK4540.1i"><strong class="productCatLargeName">Built-in refrigerator</strong></a>
+
+
+
+
+
+        <div class="product-list-footer">
+                            <div class="product-list-colors">צבע <img class="tooltip" src="https://teka.b-cdn.net/CMP1219/files/5/White.svg" alt="White" title="White" data-exclude="76152" data-parent_product="">
+                    <div class="other-colors"></div>
+                </div>
+            
+
+        </div>
+
+        <div class="product-list-description">
+                        <a class="teka-button" href="/product/fk4540-1i_123460015/">+ פרטים</a>
+                    </div>
+    </div>
+
+</div><div id="post-76161" class="post-76161 product type-product status-publish hentry product_cat-refrigerators color-white product_installation-built-in product_lifestyle-k-series-5 product_energy_efficiency-d-ue-icon-new et_pb_portfolio_item et_pb_grid_item">
+    
+    
+            <span class="label-new-b">New</span>
+
+
+
+        <div class="product-cat-img-container">
+        <span class="label-fix">New</span>
+        <a  href="/product/fk4550-0i_123470011/" title="FK4550.0i">
+                            <img id="post-img-76161" class="product-cat-img lozad" src="/wp-content/themes/kueppersbusch/img/px.png" data-src="https://teka.b-cdn.net/CMP1219/1/PR425725BI40991_123470011_FK4550_0i_SZ2.png">
+                        
+            
+        </a>
+    </div>
+
+
+    <div class="product-cat-info">
+
+                <div class="productCat">
+            <a>FK4550.0i</a>
+        </div>
+        <a href="/product/fk4550-0i_123470011/" title="FK4550.0i"><strong class="productCatLargeName">Built-in refrigerator with LED rear panel</strong></a>
+
+
+
+
+
+        <div class="product-list-footer">
+                            <div class="product-list-colors">צבע <img class="tooltip" src="https://teka.b-cdn.net/CMP1219/files/5/White.svg" alt="White" title="White" data-exclude="76161" data-parent_product="">
+                    <div class="other-colors"></div>
+                </div>
+            
+
+        </div>
+
+        <div class="product-list-description">
+                        <a class="teka-button" href="/product/fk4550-0i_123470011/">+ פרטים</a>
+                    </div>
+    </div>
+
+</div><div id="post-76162" class="post-76162 product type-product status-publish hentry product_cat-refrigerators color-white product_installation-built-in product_lifestyle-k-series-3 product_energy_efficiency-e-ue-icon-new et_pb_portfolio_item et_pb_grid_item">
+    
+    
+            <span class="label-new-b">New</span>
+
+
+
+        <div class="product-cat-img-container">
+        <span class="label-fix">New</span>
+        <a  href="/product/fk3305-0i_123460019/" title="FK3305.0i">
+                            <img id="post-img-76162" class="product-cat-img lozad" src="/wp-content/themes/kueppersbusch/img/px.png" data-src="https://teka.b-cdn.net/CMP1219/1/PR425726BI40990_123460019_FK3305_0i_SZ2.png">
+                        
+            
+        </a>
+    </div>
+
+
+    <div class="product-cat-info">
+
+                <div class="productCat">
+            <a>FK3305.0i</a>
+        </div>
+        <a href="/product/fk3305-0i_123460019/" title="FK3305.0i"><strong class="productCatLargeName">Built-in refrigerator with freezer compartment</strong></a>
+
+
+
+
+
+        <div class="product-list-footer">
+                            <div class="product-list-colors">צבע <img class="tooltip" src="https://teka.b-cdn.net/CMP1219/files/5/White.svg" alt="White" title="White" data-exclude="76162" data-parent_product="">
+                    <div class="other-colors"></div>
+                </div>
+            
+
+        </div>
+
+        <div class="product-list-description">
+                        <a class="teka-button" href="/product/fk3305-0i_123460019/">+ פרטים</a>
+                    </div>
+    </div>
+
+</div><div id="post-76163" class="post-76163 product type-product status-publish hentry product_cat-wine-coolers color-white product_installation-built-under product_lifestyle-k-series-5 product_energy_efficiency-e-ue-icon-new et_pb_portfolio_item et_pb_grid_item">
+    
+    
+            <span class="label-new-b">New</span>
+
+
+
+        <div class="product-cat-img-container">
+        <span class="label-fix">New</span>
+        <a  href="/product/fku1545-0i_123470009/" title="FKU1545.0i">
+                            <img id="post-img-76163" class="product-cat-img lozad" src="/wp-content/themes/kueppersbusch/img/px.png" data-src="https://teka.b-cdn.net/CMP1219/2/PR425751BI40656_123470009_FKU1545_0I_SZ2.png">
+                        
+            
+        </a>
+    </div>
+
+
+    <div class="product-cat-info">
+
+                <div class="productCat">
+            <a>FKU1545.0i</a>
+        </div>
+        <a href="/product/fku1545-0i_123470009/" title="FKU1545.0i"><strong class="productCatLargeName">Undercounter refrigerator with freezer compartment</strong></a>
+
+
+
+
+
+        <div class="product-list-footer">
+                            <div class="product-list-colors">צבע <img class="tooltip" src="https://teka.b-cdn.net/CMP1219/files/5/White.svg" alt="White" title="White" data-exclude="76163" data-parent_product="">
+                    <div class="other-colors"></div>
+                </div>
+            
+
+        </div>
+
+        <div class="product-list-description">
+                        <a class="teka-button" href="/product/fku1545-0i_123470009/">+ פרטים</a>
+                    </div>
+    </div>
+
+</div><div id="post-76723" class="post-76723 product type-product status-publish hentry product_ambient-kitchen-g-01 product_cat-accessories-for-cooling color-brass product_lifestyle-accessories usp-kph-kits et_pb_portfolio_item et_pb_grid_item">
+    
+    
+        <div class="product-cat-img-container">
+        <span class="label-fix">New</span>
+        <a  href="/product/dk8804_123890003/" title="DK8804">
+                            <img id="post-img-76723" class="product-cat-img lozad" src="/wp-content/themes/kueppersbusch/img/px.png" data-src="https://teka.b-cdn.net/CMP1219/PR81603BI44558_123890003_DK8804_SZ2.png">
+                        
+            
+        </a>
+    </div>
+
+
+    <div class="product-cat-info">
+
+                <div class="productCat">
+            <a>DK8804</a>
+        </div>
+        <a href="/product/dk8804_123890003/" title="DK8804"><strong class="productCatLargeName">Handle - Gold | for wine cooler  FKW4800 - FWK2800</strong></a>
+
+
+
+
+
+        <div class="product-list-footer">
+                            <div class="product-list-colors">צבע <img class="tooltip" src="https://teka.b-cdn.net/CMP1219/files/1/brass.svg" alt="Brass" title="Brass" data-exclude="76723" data-parent_product="">
+                    <div class="other-colors"></div>
+                </div>
+            
+
+        </div>
+
+        <div class="product-list-description">
+                        <a class="teka-button" href="/product/dk8804_123890003/">+ פרטים</a>
+                    </div>
+    </div>
+
+</div><div id="post-76708" class="post-76708 product type-product status-publish hentry product_ambient-kitchen-bc-01 product_cat-accessories-for-cooling color-chrome-black product_lifestyle-accessories usp-kph-kits et_pb_portfolio_item et_pb_grid_item">
+    
+    
+        <div class="product-cat-img-container">
+        <span class="label-fix">New</span>
+        <a  href="/product/dk8802_123890001/" title="DK8802">
+                            <img id="post-img-76708" class="product-cat-img lozad" src="/wp-content/themes/kueppersbusch/img/px.png" data-src="https://teka.b-cdn.net/CMP1219/PR77367BI44556_123890001_DK8802_SZ2.png">
+                        
+            
+        </a>
+    </div>
+
+
+    <div class="product-cat-info">
+
+                <div class="productCat">
+            <a>DK8802</a>
+        </div>
+        <a href="/product/dk8802_123890001/" title="DK8802"><strong class="productCatLargeName">Handle - Black Chrome | for wine cooler FKW4800 - FWK2800</strong></a>
+
+
+
+
+
+        <div class="product-list-footer">
+                            <div class="product-list-colors">צבע <img class="tooltip" src="https://teka.b-cdn.net/CMP1219/files/2/Chromed-Black.svg" alt="Chrome Black" title="Chrome Black" data-exclude="76708" data-parent_product="">
+                    <div class="other-colors"></div>
+                </div>
+            
+
+        </div>
+
+        <div class="product-list-description">
+                        <a class="teka-button" href="/product/dk8802_123890001/">+ פרטים</a>
+                    </div>
+    </div>
+
+</div><div id="post-76724" class="post-76724 product type-product status-publish hentry product_ambient-kitchen-cop-01 product_cat-accessories-for-cooling color-copper product_lifestyle-accessories usp-kph-kits et_pb_portfolio_item et_pb_grid_item">
+    
+    
+        <div class="product-cat-img-container">
+        <span class="label-fix">New</span>
+        <a  href="/product/dk8807_123890005/" title="DK8807">
+                            <img id="post-img-76724" class="product-cat-img lozad" src="/wp-content/themes/kueppersbusch/img/px.png" data-src="https://teka.b-cdn.net/CMP1219/PR81607BI44560_123890005_DK8807_SZ2.png">
+                        
+            
+        </a>
+    </div>
+
+
+    <div class="product-cat-info">
+
+                <div class="productCat">
+            <a>DK8807</a>
+        </div>
+        <a href="/product/dk8807_123890005/" title="DK8807"><strong class="productCatLargeName">Handle - Copper | for wine cooler FKW4800 - FWK2800</strong></a>
+
+
+
+
+
+        <div class="product-list-footer">
+                            <div class="product-list-colors">צבע <img class="tooltip" src="https://teka.b-cdn.net/CMP1219/files/Copper.svg" alt="Copper" title="Copper" data-exclude="76724" data-parent_product="">
+                    <div class="other-colors"></div>
+                </div>
+            
+
+        </div>
+
+        <div class="product-list-description">
+                        <a class="teka-button" href="/product/dk8807_123890005/">+ פרטים</a>
+                    </div>
+    </div>
+
+</div><div id="post-76706" class="post-76706 product type-product status-publish hentry product_ambient-kitchen-ss-01 product_cat-accessories-for-cooling color-stainless-steel product_lifestyle-accessories usp-kph-kits et_pb_portfolio_item et_pb_grid_item">
+    
+    
+        <div class="product-cat-img-container">
+        <span class="label-fix">New</span>
+        <a  href="/product/dk8801_123890000/" title="DK8801">
+                            <img id="post-img-76706" class="product-cat-img lozad" src="/wp-content/themes/kueppersbusch/img/px.png" data-src="https://teka.b-cdn.net/CMP1219/PR77361BI44555_123890000_DK8801_SZ2.png">
+                        
+            
+        </a>
+    </div>
+
+
+    <div class="product-cat-info">
+
+                <div class="productCat">
+            <a>DK8801</a>
+        </div>
+        <a href="/product/dk8801_123890000/" title="DK8801"><strong class="productCatLargeName">Handle - Stainless steel | for wine cooler FKW4800 - FWK2800</strong></a>
+
+
+
+
+
+        <div class="product-list-footer">
+                            <div class="product-list-colors">צבע <img class="tooltip" src="https://teka.b-cdn.net/CMP1219/files/1/Stainless-Steel.svg" alt="Stainless steel" title="Stainless steel" data-exclude="76706" data-parent_product="">
+                    <div class="other-colors"></div>
+                </div>
+            
+
+        </div>
+
+        <div class="product-list-description">
+                        <a class="teka-button" href="/product/dk8801_123890000/">+ פרטים</a>
+                    </div>
+    </div>
+
+</div><div id="post-76705" class="post-76705 product type-product status-publish hentry product_ambient-kitchen-sc-01 product_cat-accessories-for-cooling color-silver product_lifestyle-accessories usp-kph-kits et_pb_portfolio_item et_pb_grid_item">
+    
+    
+        <div class="product-cat-img-container">
+        <span class="label-fix">New</span>
+        <a  href="/product/dk8803_123890002/" title="DK8803">
+                            <img id="post-img-76705" class="product-cat-img lozad" src="/wp-content/themes/kueppersbusch/img/px.png" data-src="https://teka.b-cdn.net/CMP1219/PR77359BI44557_123890002_DK8803_SZ2.png">
+                        
+            
+        </a>
+    </div>
+
+
+    <div class="product-cat-info">
+
+                <div class="productCat">
+            <a>DK8803</a>
+        </div>
+        <a href="/product/dk8803_123890002/" title="DK8803"><strong class="productCatLargeName">Handle - Silver Chrome | for wine cooler  FKW4800 - FWK2800</strong></a>
+
+
+
+
+
+        <div class="product-list-footer">
+                            <div class="product-list-colors">צבע <img class="tooltip" src="https://teka.b-cdn.net/CMP1219/files/Silver.svg" alt="Silver" title="Silver" data-exclude="76705" data-parent_product="">
+                    <div class="other-colors"></div>
+                </div>
+            
+
+        </div>
+
+        <div class="product-list-description">
+                        <a class="teka-button" href="/product/dk8803_123890002/">+ פרטים</a>
+                    </div>
+    </div>
+
+</div><div id="post-76657" class="post-76657 product type-product status-publish hentry product_ambient-kitchen-bv-01 product_cat-accessories-for-cooling color-black product_lifestyle-accessories usp-kph-kits et_pb_portfolio_item et_pb_grid_item">
+    
+    
+        <div class="product-cat-img-container">
+        <span class="label-fix">New</span>
+        <a  href="/product/dk8805_123890004/" title="DK8805">
+                            <img id="post-img-76657" class="product-cat-img lozad" src="/wp-content/themes/kueppersbusch/img/px.png" data-src="https://teka.b-cdn.net/CMP1219/PR77365BI44559_123890004_DK8805_SZ2.png">
+                        
+            
+        </a>
+    </div>
+
+
+    <div class="product-cat-info">
+
+                <div class="productCat">
+            <a>DK8805</a>
+        </div>
+        <a href="/product/dk8805_123890004/" title="DK8805"><strong class="productCatLargeName">Handle - Black Velvet | for wine cooler FKW4800 - FWK2800</strong></a>
+
+
+
+
+
+        <div class="product-list-footer">
+                            <div class="product-list-colors">צבע <img class="tooltip" src="https://teka.b-cdn.net/CMP1219/files/4/Black.svg" alt="Black" title="Black" data-exclude="76657" data-parent_product="">
+                    <div class="other-colors"></div>
+                </div>
+            
+
+        </div>
+
+        <div class="product-list-description">
+                        <a class="teka-button" href="/product/dk8805_123890004/">+ פרטים</a>
+                    </div>
+    </div>
+
+</div>			<script type="text/javascript">
+				jQuery("#number-products > span").html("45");
+			</script>
+			
+					</div>
+					
+				</div>
+			</div> <!-- .et_pb_portfolio -->
+				</div>
+			</div>                                </div>
+                                <!-- .et_pb_column -->
+                            </div>
+                            <!-- .et_pb_row -->
+
+
+
+
+                                                                                        <div id="product-benefits" class="tab-content et_pb_section et_pb_section_2 et_section_regular et_pb_section_first" >
+                                    <div class="cabecera"> <h2>קירור</h2></div>
+                                                                            
+                                            <div class="et_pb_row et_pb_row_3  benefits-type- benefits-image-alignment- benefits-text-colour- benefits-background-colour- " style="background-color: ; ">
+                                                
+                                                    <div class="product-benefits-image et_pb_column  et_pb_column_5    et_pb_css_mix_blend_mode_passthrough">
+                                                        <div class="et_pb_module et_pb_image et_pb_image_2 et_always_center_on_mobile">
+                                                            <span class="et_pb_image_wrap"><img class="lozad" src="/wp-content/themes/kueppersbusch/img/px.png" data-src="https://teka.b-cdn.net/CMP1219/2/cooler_img1.jpg" alt="" /></span>
+                                                        </div>
+                                                    </div>
+                                                                                                <div class="product-benefits-text et_pb_column  et_pb_column_6    et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                                    <div class="et_pb_module et_pb_text et_pb_text_4 et_pb_bg_layout_light  et_pb_text_align_lef" style="color: ;">
+                                                        <div class="et_pb_text_inner">
+                                                            <h3></h3>
+
+
+                                                                                                                        <span><h3>Top interior design</h3>
+The interior design of Küppersbusch cooling appliances appears at its best: the door compartments are made of high-grade plastic with chrome railings, combined with chrome trims.</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                                                                                                    
+                                            <div class="et_pb_row et_pb_row_3  benefits-type- benefits-image-alignment- benefits-text-colour- benefits-background-colour- " style="background-color: ; ">
+                                                
+                                                    <div class="product-benefits-image et_pb_column  et_pb_column_5    et_pb_css_mix_blend_mode_passthrough">
+                                                        <div class="et_pb_module et_pb_image et_pb_image_2 et_always_center_on_mobile">
+                                                            <span class="et_pb_image_wrap"><img class="lozad" src="/wp-content/themes/kueppersbusch/img/px.png" data-src="https://teka.b-cdn.net/CMP1219/2/cooler_img2.jpg" alt="" /></span>
+                                                        </div>
+                                                    </div>
+                                                                                                <div class="product-benefits-text et_pb_column  et_pb_column_6    et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                                    <div class="et_pb_module et_pb_text et_pb_text_4 et_pb_bg_layout_light  et_pb_text_align_lef" style="color: ;">
+                                                        <div class="et_pb_text_inner">
+                                                            <h3></h3>
+
+
+                                                                                                                        <span><h3>LED lighting</h3>
+The LED lighting inside the Küppersbusch refrigerators improves the interior lighting and guarantees brightness over the entire surface. In addition, it is the latest generation LED technology, developed to increase the energy saving of your appliance.</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                                                                                                    
+                                            <div class="et_pb_row et_pb_row_3  benefits-type- benefits-image-alignment- benefits-text-colour- benefits-background-colour- " style="background-color: ; ">
+                                                
+                                                    <div class="product-benefits-image et_pb_column  et_pb_column_5    et_pb_css_mix_blend_mode_passthrough">
+                                                        <div class="et_pb_module et_pb_image et_pb_image_2 et_always_center_on_mobile">
+                                                            <span class="et_pb_image_wrap"><img class="lozad" src="/wp-content/themes/kueppersbusch/img/px.png" data-src="https://teka.b-cdn.net/CMP1219/2/cooler_img4.jpg" alt="" /></span>
+                                                        </div>
+                                                    </div>
+                                                                                                <div class="product-benefits-text et_pb_column  et_pb_column_6    et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                                    <div class="et_pb_module et_pb_text et_pb_text_4 et_pb_bg_layout_light  et_pb_text_align_lef" style="color: ;">
+                                                        <div class="et_pb_text_inner">
+                                                            <h3></h3>
+
+
+                                                                                                                        <span><h3>NoFrost Technology</h3>
+All Küppersbusch refrigerators feature the most advanced NoFrost technology. This technology ensures that the inside of the freezer always remains free of ice build-up.</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                                                                                                    
+                                            <div class="et_pb_row et_pb_row_3  benefits-type- benefits-image-alignment- benefits-text-colour- benefits-background-colour- " style="background-color: ; ">
+                                                
+                                                    <div class="product-benefits-image et_pb_column  et_pb_column_5    et_pb_css_mix_blend_mode_passthrough">
+                                                        <div class="et_pb_module et_pb_image et_pb_image_2 et_always_center_on_mobile">
+                                                            <span class="et_pb_image_wrap"><img class="lozad" src="/wp-content/themes/kueppersbusch/img/px.png" data-src="https://teka.b-cdn.net/CMP1219/3/oven_img7.png" alt="" /></span>
+                                                        </div>
+                                                    </div>
+                                                                                                <div class="product-benefits-text et_pb_column  et_pb_column_6    et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                                    <div class="et_pb_module et_pb_text et_pb_text_4 et_pb_bg_layout_light  et_pb_text_align_lef" style="color: ;">
+                                                        <div class="et_pb_text_inner">
+                                                            <h3></h3>
+
+
+                                                                                                                        <span><h3>אישי</h3>
+<br />Küppersbusch is the first brand to offer customizable appliances that adapt to your personal taste and style. All this without giving up the latest technology for your kitchen. You can choose the range you prefer, and then select the customization color options for your device.</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                                                                                            </div>
+                            
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- .et_pb_section -->
+            </div>
+        </div>
+</div>
+
+</div>
+<!-- .entry-content -->
+</article>
+</div> <!-- #main-content -->
+<div id="compare-side-bar">
+    <div class="compare-content">
+        <div class="compare-list">
+
+        </div>
+        <div class="compare-button">
+            <a class="compare-button" href="#">COMPARE</a>
+        </div>
+    </div>
+    <div class="compare-label">
+        <span>COMPARE</span>
+    </div>
+</div>
+<div id="compare-max-reached">You have reached the limit of products to be compared.</div>
+
+			<footer id="main-footer">
+				
+<div class="container">
+	<div id="footer-widgets" class="clearfix">
+	<div class="footer-widget"><div id="nav_menu-4" class="fwidget et_pb_widget widget_nav_menu"><h4 class="title">מוצרים</h4><div class="menu-products-footer-container"><ul id="menu-products-footer" class="menu"><li id="menu-item-69933" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-69933"><a href="../ovens-and-compacts/index.html">Ovens</a></li>
+<li id="menu-item-69934" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-69934"><a href="../hobs/index.html">כיריים</a></li>
+<li id="menu-item-69935" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-69935"><a href="../hoods/index.html">סינונים</a></li>
+<li id="menu-item-69936" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-69936"><a href="index.html">קו קר</a></li>
+<li id="menu-item-69937" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-69937"><a href="../dishwashers/index.html">מדיחי כלים</a></li>
+<li id="menu-item-69938" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-69938"><a href="../laundry/index.html">כביסה</a></li>
+<li id="menu-item-76241" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-76241"><a href="../sinks-and-taps/index.html">כיורים וברזים</a></li>
+<li id="menu-item-76577" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-76577"><a href="../service/manuals/index.html">מדריכים</a></li>
+</ul></div></div></div> <!-- end .footer-widget --><div class="footer-widget"><div id="nav_menu-12" class="fwidget et_pb_widget widget_nav_menu"><h4 class="title">אודות קופרבוש</h4><div class="menu-about-kuppersbusch-footer-container"><ul id="menu-about-kuppersbusch-footer" class="menu"><li id="menu-item-69944" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-69944"><a href="../brand/index.html">ערכי מותג</a></li>
+<li id="menu-item-69942" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-69942"><a href="../history/index.html">History</a></li>
+<li id="menu-item-69940" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-69940"><a href="../design/index.html">Design</a></li>
+<li id="menu-item-69941" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-69941"><a href="../downloads/index.html">Downloads</a></li>
+<li id="menu-item-72896" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-72896"><a href="../new-energy-label/index.html">תווית אנרגיה חדשה</a></li>
+<li id="menu-item-69939" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-69939"><a href="../service/index.html">Service</a></li>
+<li id="menu-item-74079" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-74079"><a href="../individual/index.html">אישי</a></li>
+<li id="menu-item-74080" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-74080"><a href="../k-series/index.html">סדרת K</a></li>
+</ul></div></div></div> <!-- end .footer-widget --><div class="footer-widget"><div id="media_image-2" class="fwidget et_pb_widget widget_media_image"><img class="image " src="../../wp-content/themes/kueppersbusch/img/kuppersbusch-white.svg" alt="" width="300" height="37" decoding="async" loading="lazy" /></div><div id="custom_html-3" class="widget_text fwidget et_pb_widget widget_custom_html"><div class="textwidget custom-html-widget"><a href="https://www.youtube.com/channel/UCaRoMAFkv5XWgWDPwObus4g" target="_blank" align="right"><img src="../../es-es/wp-content/uploads/sites/2/2022/07/KPH-youtube-.png"></a><a href="https://www.linkedin.com/company/k%C3%BCppersbusch-hausger%C3%A4te-gmbh/" target="_blank" align="right"><img src="../../es-es/wp-content/uploads/sites/2/2022/07/KPH-linkedin-.png"></a><a href="https://www.instagram.com/kueppersbusch.international/" target="_blank" align="right"><img src="../../es-es/wp-content/uploads/sites/2/2022/07/KPH-IG-.png"></a></div></div></div> <!-- end .footer-widget -->	</div> <!-- #footer-widgets -->
+</div>	<!-- .container -->
+
+				<div id="footer-bottom">
+					<div class="container clearfix">
+						<div id="footer-idioma-old">
+							<a href="#lighboxCountries" class="currentCountry" data-featherlight-variant="lighboxCountries"><img style="width: 23px;" src="../img/paises/global-bn.svg" /><strong>Global</strong></a>
+						</div>
+						
+								<div id="footer-legal">
+										<ul id="menu-legal" class="bottom-nav"><li id="menu-item-22135" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22135"><a href="../legal-notice/index.html">ייעוץ משפטי</a></li>
+<li id="menu-item-22140" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22140"><a href="../privacy-policy/index.html">מדיניות פרטיות</a></li>
+<li id="menu-item-22141" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22141"><a href="../cookies-policy/index.html">מדיניות עוגיות</a></li>
+</ul>								</div> <!-- #et-footer-nav -->
+
+							
+						<div id="footer-copyright">&copy; Copyright 2025. Küppersbusch</div>
+
+					</div>	<!-- .container -->
+				</div>
+			</footer> <!-- #main-footer -->
+		</div> <!-- #et-main-area -->
+
+
+	</div> <!-- #page-container -->
+
+<div style=" display: none;">
+	
+
+		<script type="text/javascript">
+		jQuery(document).ready(function() {
+			jQuery("#top-menu .sub-menu-2").each(function( index ) {
+   		jQuery( this ).css("height", jQuery(this).parent().find(".sub-menu").outerHeight());
+});
+
+			});
+	</script>
+
+
+
+	<ul class="sub-menu-2 sub-menu-support">
+		<div>
+			<span class="menu-support-atencion"><strong>Customer</strong> service</span>
+			<span class="menu-support-telefono">902 111 211</span>
+			<span class="menu-support-horario">Available from Monday to Friday, <br>8 to 20h</span>
+		</div>
+	</ul>
+</div>
+	
+    <div id="player-container" style="display:none">
+        <iframe id="player" src="about:blank" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen">
+        </iframe>
+        <span class="close"><i class='itk-cross'></i><span>
+    </div>
+	<script type='text/javascript'>
+            var tekaCurrencySymbol = '$';
+            var tekaCurrencySymbolPosition = 'before';
+            var tekaPriceDecimals = 0;
+          </script>		<div class='asp_hidden_data' id="asp_hidden_data" style="display: none !important;">
+			<svg style="position:absolute" height="0" width="0">
+				<filter id="aspblur">
+					<feGaussianBlur in="SourceGraphic" stdDeviation="4"/>
+				</filter>
+			</svg>
+			<svg style="position:absolute" height="0" width="0">
+				<filter id="no_aspblur"></filter>
+			</svg>
+		</div>
+<script type="text/javascript" src="../plugins/js/dist/hooks.min.js" id="wp-hooks-js"></script>
+<script type="text/javascript" src="../plugins/js/dist/i18n.min.js" id="wp-i18n-js"></script>
+
+
+<script type="text/javascript" src="../js/tl_custom.js" id="tl_custom-js"></script>
+<script type="text/javascript" src="../js/select2/js/select2.min.js" id="select2-js"></script>
+<script type="text/javascript" src="../js/menuslider.js" id="menuslider-js"></script>
+<script type="text/javascript" src="../js/tooltipster/js/tooltipster.bundle.min.js" id="tooltipster-js"></script>
+<script type="text/javascript" src="../js/js.cookie.js" id="s.cookie-js"></script>
+<script type="text/javascript" src="../js/compare.js" id="compare-js"></script>
+<script type="text/javascript" src="../js/comparator.js" id="comparator-js"></script>
+<script type="text/javascript" src="../js/slick/slick.min.js" id="slick-js"></script>
+<script type="text/javascript" src="../js/featherlight/featherlight.min.js" id="featherlight-js"></script>
+<script type="text/javascript" src="../js/featherlight/featherlight.gallery.min.js" id="featherlight-gallery-js"></script>
+<script type="text/javascript" src="../js/markerclusterer.js" id="markerclusterer-js"></script>
+<script type="text/javascript" src="../js/product-list.js" id="product-list-js"></script>
+<script type="text/javascript" src="../js/lozad.min.js" id="lozad-js"></script>
+<script type="text/javascript" src="../js/scripts.js" id="scripts-js"></script>
+<script type="text/javascript" src="../js/jssocials/jssocials.min.js" id="jssocials-js-js"></script>
+<script type="text/javascript" src="../js/jquery.fullscreen-0.4.1.min.js" id="fullscreen-js"></script>
+<script type="text/javascript" id="divi-custom-script-js-extra">
+/* <![CDATA[ */
+var DIVI = {"item_count":"%d Item","items_count":"%d Items"};
+var et_builder_utils_params = {"condition":{"diviTheme":true,"extraTheme":false},"scrollLocations":["app","top"],"builderScrollLocations":{"desktop":"app","tablet":"app","phone":"app"},"onloadScrollLocation":"app","builderType":"fe"};
+var et_frontend_scripts = {"builderCssContainerPrefix":"#et-boc","builderCssLayoutPrefix":"#et-boc .et-l"};
+var et_pb_custom = {"ajaxurl":"https:\/\/www.home-kueppersbusch.com\/global\/wp-admin\/admin-ajax.php","images_uri":"https:\/\/www.home-kueppersbusch.com\/global\/wp-content\/themes\/Divi\/images","builder_images_uri":"https:\/\/www.home-kueppersbusch.com\/global\/wp-content\/themes\/Divi\/includes\/builder\/images","et_frontend_nonce":"75f352ffc8","subscription_failed":"Please, check the fields below to make sure you entered the correct information.","et_ab_log_nonce":"af428d75b0","fill_message":"Please, fill in the following fields:","contact_error_message":"Please, fix the following errors:","invalid":"Invalid email","captcha":"Captcha","prev":"Prev","previous":"Previous","next":"Next","wrong_captcha":"You entered the wrong number in captcha.","wrong_checkbox":"Checkbox","ignore_waypoints":"no","is_divi_theme_used":"1","widget_search_selector":".widget_search","ab_tests":[],"is_ab_testing_active":"","page_id":"76163","unique_test_id":"","ab_bounce_rate":"5","is_cache_plugin_active":"no","is_shortcode_tracking":"","tinymce_uri":"https:\/\/www.home-kueppersbusch.com\/global\/wp-content\/themes\/Divi\/includes\/builder\/frontend-builder\/assets\/vendors","accent_color":"#c8102e","waypoints_options":[]};
+var et_pb_box_shadow_elements = [];
+/* ]]> */
+</script>
+<script type="text/javascript" src="../css/Divi/js/scripts.min.js" id="divi-custom-script-js"></script>
+<script type="text/javascript" src="../wp-content/themes/Divi/includes/builder/feature/dynamic-assets/assets/js/jquery.fitvids%EF%B9%96ver=4.27.4.js" id="fitvids-js"></script>
+<script type="text/javascript" id="et-builder-cpt-modules-wrapper-js-extra">
+/* <![CDATA[ */
+var et_modules_wrapper = {"builderCssContainerPrefix":"#et-boc","builderCssLayoutPrefix":"#et-boc .et-l"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wp-content/themes/Divi/includes/builder/scripts/cpt-modules-wrapper.js?ver=4.27.4" id="et-builder-cpt-modules-wrapper-js"></script>
+<script type="text/javascript" src="../css/Divi/core/admin/js/common.js" id="et-core-common-js"></script>
+
+	<script type="text/javascript">
+			</script>
+</body>
+</html>

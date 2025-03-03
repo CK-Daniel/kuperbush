@@ -263,6 +263,114 @@ input:checked + .kuperbush-toggle-slider:before {
     transform: translateX(18px);
 }
 
+/* Disabled fields */
+.kuperbush-field-disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.kuperbush-field-disabled .kuperbush-toggle-slider {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.kuperbush-field-disabled input:checked + .kuperbush-toggle-slider {
+    background-color: #7e9fb9;
+}
+
+.kuperbush-field-disabled .kuperbush-field-description {
+    font-style: italic;
+}
+
+/* Bulk Actions */
+.kuperbush-bulk-actions {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f0f0f1;
+    display: flex;
+    gap: 10px;
+}
+
+/* Field Groups */
+.kuperbush-field-group {
+    margin-bottom: 25px;
+    padding: 15px;
+    border: 1px solid #e2e4e7;
+    border-radius: 5px;
+}
+
+.kuperbush-field-group legend {
+    padding: 0 10px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+/* Tables */
+.kuperbush-table-container {
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+.kuperbush-admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    border: 1px solid #e2e4e7;
+}
+
+.kuperbush-admin-table th {
+    background: #f6f7f7;
+    padding: 10px 15px;
+    text-align: left;
+    font-weight: 500;
+    border-bottom: 1px solid #e2e4e7;
+}
+
+.kuperbush-admin-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #f0f0f1;
+    vertical-align: middle;
+}
+
+.kuperbush-admin-table tr:last-child td {
+    border-bottom: none;
+}
+
+.kuperbush-admin-table tr:hover td {
+    background: #f9f9f9;
+}
+
+/* Status Badges */
+.kuperbush-status-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.kuperbush-status-success {
+    background: #edf7ed;
+    color: #1e7d1e;
+}
+
+.kuperbush-status-warning {
+    background: #fff9e6;
+    color: #986801;
+}
+
+.kuperbush-status-error {
+    background: #fcf0f0;
+    color: #c32525;
+}
+
+/* Form Elements */
+.kuperbush-form-container {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f0f0f1;
+}
+
 /* Submit Button */
 .kuperbush-admin-submit-button {
     margin-top: 20px !important;

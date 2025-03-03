@@ -86,76 +86,71 @@ if (!function_exists('kuperbush_theme_activation')) {
 add_action('after_switch_theme', 'kuperbush_theme_activation');
 
 /**
- * Add a button to the admin tools page to manually create pages
+ * Process template page form action
  */
-if (!function_exists('kuperbush_add_admin_page')) {
-    function kuperbush_add_admin_page() {
-        add_management_page(
-            'Kuperbush Tools',
-            'Kuperbush Tools',
-            'manage_options',
-            'kuperbush-tools',
-            'kuperbush_admin_tools_page'
-        );
+if (!function_exists('kuperbush_process_template_page_actions')) {
+    function kuperbush_process_template_page_actions() {
+        // Check if the form was submitted
+        if (isset($_POST['kuperbush_create_pages']) && check_admin_referer('kuperbush_create_pages_nonce')) {
+            // Run page creation
+            kuperbush_create_template_pages();
+            
+            // Add admin notice
+            add_settings_error(
+                'kuperbush_template_pages',
+                'kuperbush_pages_created',
+                __('Template pages have been created or updated!', 'kuperbush'),
+                'success'
+            );
+            
+            // Redirect to prevent form resubmission
+            wp_redirect(add_query_arg(array(
+                'page' => 'kuperbush-options',
+                'tab' => 'tools',
+                'settings-updated' => 'true'
+            ), admin_url('themes.php')));
+            exit;
+        }
     }
 }
-add_action('admin_menu', 'kuperbush_add_admin_page');
+add_action('admin_init', 'kuperbush_process_template_page_actions');
 
 /**
- * Admin tools page callback
+ * Get template pages table HTML
  */
-if (!function_exists('kuperbush_admin_tools_page')) {
-    function kuperbush_admin_tools_page() {
+if (!function_exists('kuperbush_get_template_pages_table')) {
+    function kuperbush_get_template_pages_table() {
+        ob_start();
         ?>
-        <div class="wrap">
-            <h1>Kuperbush Theme Tools</h1>
-            
-            <?php
-            // Check if the form was submitted
-            if (isset($_POST['kuperbush_create_pages']) && check_admin_referer('kuperbush_create_pages_nonce')) {
-                // Run page creation
-                kuperbush_create_template_pages();
-                echo '<div class="notice notice-success"><p>Template pages have been created or updated!</p></div>';
-            }
-            ?>
-            
-            <div class="card">
-                <h2>Template Pages</h2>
-                <p>This tool will create pages for your template files if they don't exist.</p>
-                
-                <form method="post" action="">
-                    <?php wp_nonce_field('kuperbush_create_pages_nonce'); ?>
-                    <input type="hidden" name="kuperbush_create_pages" value="1">
-                    <p><input type="submit" class="button button-primary" value="Create Template Pages"></p>
-                </form>
-            </div>
-            
-            <div class="card">
-                <h2>Current Template Pages</h2>
-                <table class="widefat">
-                    <thead>
-                        <tr>
-                            <th>Template</th>
-                            <th>Page Title</th>
-                            <th>Slug</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php
-                        $template_pages = kuperbush_get_template_pages_config();
-                        
+        <div class="kuperbush-table-container">
+            <table class="kuperbush-admin-table">
+                <thead>
+                    <tr>
+                        <th><?php _e('Template', 'kuperbush'); ?></th>
+                        <th><?php _e('Page Title', 'kuperbush'); ?></th>
+                        <th><?php _e('Slug', 'kuperbush'); ?></th>
+                        <th><?php _e('Status', 'kuperbush'); ?></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    $template_pages = kuperbush_get_template_pages_config();
+                    
+                    if (empty($template_pages)) {
+                        echo '<tr><td colspan="4">' . __('No template pages configured.', 'kuperbush') . '</td></tr>';
+                    } else {
                         foreach ($template_pages as $template => $page_data) {
                             $existing_page = get_page_by_path($page_data['slug']);
-                            $status = $existing_page ? 'Exists' : 'Not Created';
-                            $template_match = false;
+                            $status = $existing_page ? __('Exists', 'kuperbush') : __('Not Created', 'kuperbush');
+                            $status_class = $existing_page ? 'kuperbush-status-success' : 'kuperbush-status-warning';
                             
                             if ($existing_page) {
                                 $current_template = get_post_meta($existing_page->ID, '_wp_page_template', true);
                                 $template_match = ($current_template === $template);
                                 
                                 if (!$template_match) {
-                                    $status .= ' (Template mismatch)';
+                                    $status .= ' (' . __('Template mismatch', 'kuperbush') . ')';
+                                    $status_class = 'kuperbush-status-error';
                                 }
                             }
                             
@@ -163,17 +158,16 @@ if (!function_exists('kuperbush_admin_tools_page')) {
                             echo '<td>' . esc_html($template) . '</td>';
                             echo '<td>' . esc_html($page_data['title']) . '</td>';
                             echo '<td>' . esc_html($page_data['slug']) . '</td>';
-                            echo '<td>' . esc_html($status) . '</td>';
+                            echo '<td><span class="kuperbush-status-badge ' . esc_attr($status_class) . '">' . esc_html($status) . '</span></td>';
                             echo '</tr>';
                         }
-                        ?>
-                    </tbody>
-                </table>
-            </div>
-            
-            <?php do_action('kuperbush_admin_tools_sections'); ?>
+                    }
+                    ?>
+                </tbody>
+            </table>
         </div>
         <?php
+        return ob_get_clean();
     }
 }
 

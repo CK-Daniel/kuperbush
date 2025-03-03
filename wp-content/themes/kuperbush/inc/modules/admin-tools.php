@@ -10,19 +10,41 @@ if (!defined('ABSPATH')) {
 }
 
 /**
- * Disable Gutenberg editor if option is set
+ * Disable Gutenberg editor based on settings
+ * 
+ * Allows for global or post-type specific disabling of the Gutenberg editor
  */
 function kuperbush_disable_gutenberg() {
-    // Check if the feature is enabled
+    // Global setting - disable Gutenberg for all post types
     if (get_option('kuperbush_disable_gutenberg', false)) {
-        // Disable Gutenberg editor
+        // Disable Gutenberg editor completely
         add_filter('use_block_editor_for_post', '__return_false', 10);
         add_filter('use_block_editor_for_post_type', '__return_false', 10);
         
-        // Optional: Disable Gutenberg widgets screen
+        // Disable Gutenberg widgets screen
         add_filter('gutenberg_use_widgets_block_editor', '__return_false');
         add_filter('use_widgets_block_editor', '__return_false');
+        
+        return; // No need to check individual post types if global setting is on
     }
+    
+    // Post type specific settings
+    add_filter('use_block_editor_for_post_type', function($use_block_editor, $post_type) {
+        // Check if this specific post type has Gutenberg disabled
+        if (get_option('kuperbush_disable_gutenberg_' . $post_type, false)) {
+            return false;
+        }
+        return $use_block_editor;
+    }, 10, 2);
+    
+    add_filter('use_block_editor_for_post', function($use_block_editor, $post) {
+        $post_type = get_post_type($post);
+        // Check if this specific post type has Gutenberg disabled
+        if (get_option('kuperbush_disable_gutenberg_' . $post_type, false)) {
+            return false;
+        }
+        return $use_block_editor;
+    }, 10, 2);
 }
 add_action('init', 'kuperbush_disable_gutenberg');
 
@@ -73,6 +95,23 @@ function kuperbush_register_settings() {
         'default' => false,
         'sanitize_callback' => 'rest_sanitize_boolean',
     ));
+    
+    // Register custom login page setting
+    register_setting('kuperbush_options', 'kuperbush_enable_custom_login', array(
+        'type' => 'boolean',
+        'default' => false,
+        'sanitize_callback' => 'rest_sanitize_boolean',
+    ));
+    
+    // Register post type specific Gutenberg settings
+    $post_types = get_post_types(array('public' => true), 'objects');
+    foreach ($post_types as $post_type) {
+        register_setting('kuperbush_options', 'kuperbush_disable_gutenberg_' . $post_type->name, array(
+            'type' => 'boolean',
+            'default' => false,
+            'sanitize_callback' => 'rest_sanitize_boolean',
+        ));
+    }
 }
 add_action('admin_init', 'kuperbush_register_settings');
 
@@ -105,6 +144,49 @@ function kuperbush_add_options_page() {
 add_action('admin_menu', 'kuperbush_add_options_page');
 
 /**
+ * Get available post types for editor settings
+ *
+ * @return array Associative array of post type objects
+ */
+function kuperbush_get_editor_post_types() {
+    // Get all public post types
+    $post_types = get_post_types(array('public' => true), 'objects');
+    
+    // Filter out some post types we don't want to include
+    $excluded_types = array('attachment');
+    foreach ($excluded_types as $excluded) {
+        if (isset($post_types[$excluded])) {
+            unset($post_types[$excluded]);
+        }
+    }
+    
+    return $post_types;
+}
+
+/**
+ * Get template pages management form HTML
+ */
+function kuperbush_get_template_pages_form() {
+    ob_start();
+    ?>
+    <div class="kuperbush-form-container">
+        <form method="post" action="" class="kuperbush-template-pages-form">
+            <?php wp_nonce_field('kuperbush_create_pages_nonce'); ?>
+            <input type="hidden" name="kuperbush_create_pages" value="1">
+            <p><?php _e('This tool will create pages for your template files if they don\'t exist.', 'kuperbush'); ?></p>
+            <button type="submit" class="button button-primary"><?php _e('Create Template Pages', 'kuperbush'); ?></button>
+        </form>
+    </div>
+    <?php
+    // Get template pages table
+    if (function_exists('kuperbush_get_template_pages_table')) {
+        echo kuperbush_get_template_pages_table();
+    }
+    
+    return ob_get_clean();
+}
+
+/**
  * Define the structure of admin modules
  * 
  * This function returns a structured array of modules, sections, and settings
@@ -122,12 +204,61 @@ function kuperbush_get_admin_modules() {
                     'description' => __('Configure how the WordPress editor behaves.', 'kuperbush'),
                     'fields' => array(
                         'kuperbush_disable_gutenberg' => array(
-                            'label' => __('Disable Gutenberg Editor', 'kuperbush'),
-                            'description' => __('Use the classic editor instead of Gutenberg. Changes take effect on page reload.', 'kuperbush'),
+                            'label' => __('Disable Gutenberg Editor Globally', 'kuperbush'),
+                            'description' => __('Use the classic editor instead of Gutenberg for all post types. Changes take effect on page reload.', 'kuperbush'),
                             'type' => 'checkbox',
                             'default' => false,
                         ),
                     )
+                ),
+                'post_type_editor' => array(
+                    'title' => __('Post Type Editor Settings', 'kuperbush'),
+                    'description' => __('Configure editor settings for specific post types.', 'kuperbush'),
+                    'before_fields' => '<div class="kuperbush-bulk-actions">
+                        <button type="button" class="button kuperbush-select-all-post-types">' . __('Select All Post Types', 'kuperbush') . '</button>
+                        <button type="button" class="button kuperbush-deselect-all-post-types">' . __('Deselect All', 'kuperbush') . '</button>
+                    </div>',
+                    'fields' => function() {
+                        $fields = array();
+                        $post_types = kuperbush_get_editor_post_types();
+                        
+                        // Create a field for each post type
+                        foreach ($post_types as $post_type) {
+                            $fields['kuperbush_disable_gutenberg_' . $post_type->name] = array(
+                                'label' => sprintf(__('Disable Gutenberg for %s', 'kuperbush'), $post_type->labels->name),
+                                'description' => sprintf(__('Use the classic editor for %s. This setting is ignored if Gutenberg is disabled globally.', 'kuperbush'), $post_type->labels->name),
+                                'type' => 'checkbox',
+                                'default' => false,
+                                'post_type' => $post_type->name,
+                            );
+                        }
+                        
+                        return $fields;
+                    },
+                ),
+                'login_page' => array(
+                    'title' => __('Login Page', 'kuperbush'),
+                    'description' => __('Customize the WordPress login page.', 'kuperbush'),
+                    'fields' => array(
+                        'kuperbush_enable_custom_login' => array(
+                            'label' => __('Enable Custom Login Page', 'kuperbush'),
+                            'description' => __('Use the theme\'s custom styling for the WordPress login page.', 'kuperbush'),
+                            'type' => 'checkbox',
+                            'default' => false,
+                        ),
+                    )
+                ),
+            )
+        ),
+        'tools' => array(
+            'title' => __('Tools', 'kuperbush'),
+            'icon' => 'dashicons-admin-tools',
+            'description' => __('Theme tools and utilities.', 'kuperbush'),
+            'sections' => array(
+                'template_pages' => array(
+                    'title' => __('Template Pages', 'kuperbush'),
+                    'description' => __('Manage pages automatically created from template files.', 'kuperbush'),
+                    'custom_content' => 'kuperbush_get_template_pages_form',
                 ),
             )
         ),
@@ -185,10 +316,12 @@ function kuperbush_render_field($field_id, $field) {
     
     switch ($field['type']) {
         case 'checkbox':
+            $disabled = !empty($field['disabled']) ? 'disabled="disabled"' : '';
+            $field_class = !empty($field['disabled']) ? 'kuperbush-field-disabled' : '';
             ?>
-            <div class="kuperbush-field kuperbush-field-checkbox">
+            <div class="kuperbush-field kuperbush-field-checkbox <?php echo esc_attr($field_class); ?>">
                 <label class="kuperbush-toggle">
-                    <input type="checkbox" name="<?php echo esc_attr($field_id); ?>" id="<?php echo esc_attr($field_id); ?>" value="1" <?php checked($value); ?>>
+                    <input type="checkbox" name="<?php echo esc_attr($field_id); ?>" id="<?php echo esc_attr($field_id); ?>" value="1" <?php checked($value); ?> <?php echo $disabled; ?>>
                     <span class="kuperbush-toggle-slider"></span>
                 </label>
                 <label for="<?php echo esc_attr($field_id); ?>" class="kuperbush-field-label"><?php echo esc_html($field['label']); ?></label>
@@ -290,9 +423,69 @@ function kuperbush_options_page_callback() {
                                 </div>
                                 
                                 <div class="kuperbush-admin-section-content">
-                                    <?php foreach ($section['fields'] as $field_id => $field): ?>
-                                        <?php kuperbush_render_field($field_id, $field); ?>
-                                    <?php endforeach; ?>
+                                    <?php 
+                                    // Display any content that should appear before fields
+                                    if (!empty($section['before_fields'])) {
+                                        echo wp_kses_post($section['before_fields']);
+                                    }
+                                    
+                                    // Check if this section has custom content
+                                    if (!empty($section['custom_content'])) {
+                                        if (is_callable($section['custom_content'])) {
+                                            // Call the function to get the content
+                                            echo call_user_func($section['custom_content']);
+                                        } else {
+                                            // Direct HTML content
+                                            echo wp_kses_post($section['custom_content']);
+                                        }
+                                    } 
+                                    // Regular fields section
+                                    elseif (!empty($section['fields'])) {
+                                        // Handle both direct fields array and callable that returns fields
+                                        $fields = is_callable($section['fields']) ? call_user_func($section['fields']) : $section['fields'];
+                                        
+                                        // Group fields by group if specified
+                                        $has_groups = false;
+                                        $grouped_fields = array();
+                                        
+                                        foreach ($fields as $field_id => $field) {
+                                            // Check if the field has a group
+                                            if (!empty($field['group'])) {
+                                                $has_groups = true;
+                                                $grouped_fields[$field['group']][$field_id] = $field;
+                                            } else {
+                                                $grouped_fields['default'][$field_id] = $field;
+                                            }
+                                        }
+                                        
+                                        // If we have groups, render them in fieldsets
+                                        if ($has_groups) {
+                                            foreach ($grouped_fields as $group_name => $group_fields) {
+                                                if ($group_name !== 'default') {
+                                                    echo '<fieldset class="kuperbush-field-group"><legend>' . esc_html($group_name) . '</legend>';
+                                                }
+                                                
+                                                foreach ($group_fields as $field_id => $field) {
+                                                    kuperbush_render_field($field_id, $field);
+                                                }
+                                                
+                                                if ($group_name !== 'default') {
+                                                    echo '</fieldset>';
+                                                }
+                                            }
+                                        } else {
+                                            // No groups, just render fields normally
+                                            foreach ($fields as $field_id => $field) {
+                                                kuperbush_render_field($field_id, $field);
+                                            }
+                                        }
+                                    }
+                                    
+                                    // Display any content that should appear after fields
+                                    if (!empty($section['after_fields'])) {
+                                        echo wp_kses_post($section['after_fields']);
+                                    }
+                                    ?>
                                 </div>
                             </div>
                         <?php endforeach; ?>

@@ -14,6 +14,7 @@
             this.setupTabNavigation();
             this.setupFormSubmission();
             this.setupToggleFields();
+            this.setupBulkActions();
         },
 
         /**
@@ -76,6 +77,25 @@
             
             // Trigger change event on page load to set initial states
             $('.kuperbush-field-checkbox input[type="checkbox"]').trigger('change');
+        },
+        
+        /**
+         * Setup bulk action buttons
+         */
+        setupBulkActions: function() {
+            // Select all post types
+            $('.kuperbush-select-all-post-types').on('click', function(e) {
+                e.preventDefault();
+                const section = $(this).closest('.kuperbush-admin-section');
+                section.find('input[type="checkbox"]').prop('checked', true).trigger('change');
+            });
+            
+            // Deselect all post types
+            $('.kuperbush-deselect-all-post-types').on('click', function(e) {
+                e.preventDefault();
+                const section = $(this).closest('.kuperbush-admin-section');
+                section.find('input[type="checkbox"]').prop('checked', false).trigger('change');
+            });
         }
     };
 

@@ -6,6 +6,9 @@
 /**
  * Load modular theme files
  */
+// Form fix for theme admin settings - load FIRST to ensure it's available early
+require_once get_template_directory() . '/inc/after-form-fix.php';
+
 // Core theme functionality
 require_once get_template_directory() . '/inc/modules/setup.php';
 require_once get_template_directory() . '/inc/modules/scripts.php';

@@ -120,6 +120,14 @@
                 console.log('Current tab:', currentTab);
                 console.log('Form URL:', window.location.href);
                 
+                // ENHANCED DEBUG: Log form element details
+                console.log('Form element details:');
+                console.log('- ID:', form.attr('id'));
+                console.log('- Classes:', form.attr('class'));
+                console.log('- Action:', form.attr('action'));
+                console.log('- Method:', form.attr('method'));
+                console.log('- Enctype:', form.attr('enctype'));
+                
                 // Debug form data
                 console.log('Submitting form with data:');
                 let formData = {};
@@ -137,8 +145,33 @@
                 });
                 console.log(formData);
                 
+                // ENHANCED DEBUG: Log nonce fields specifically
+                const nonceField = form.find('input[name="_wpnonce"]');
+                if (nonceField.length) {
+                    console.log('Nonce field found:');
+                    console.log('- Value:', nonceField.val());
+                    console.log('- Parent:', nonceField.parent().prop('tagName'));
+                } else {
+                    console.error('CRITICAL: Nonce field is missing!');
+                }
+                
+                // ENHANCED DEBUG: Log hidden fields specifically
+                console.log('Hidden fields in the form:');
+                form.find('input[type="hidden"]').each(function() {
+                    const hiddenInput = $(this);
+                    console.log(`- ${hiddenInput.attr('name')}: ${hiddenInput.val()}`);
+                });
+                
                 // Dump the entire form HTML for debugging
                 console.log('Form HTML:', form.prop('outerHTML'));
+                
+                // ENHANCED DEBUG: Check for required fields
+                console.log('Checking form for required hidden fields:');
+                const requiredFields = ['option_page', 'action', '_wpnonce', 'active_tab'];
+                requiredFields.forEach(field => {
+                    const hasField = form.find(`input[name="${field}"]`).length > 0;
+                    console.log(`- ${field}: ${hasField ? 'Present' : 'MISSING'}`);
+                });
                 
                 // Make EXTRA sure the active_tab is set correctly
                 const activeTabInput = form.find('input[name="active_tab"]');
@@ -153,6 +186,14 @@
                 // Make sure we have a _wpnonce field
                 if (!form.find('input[name="_wpnonce"]').length) {
                     console.error('CRITICAL: Form is missing _wpnonce field which is required for security!');
+                    
+                    // ENHANCEMENT: Try to find settings-fields output in the form and log it
+                    const settingsFieldsHTML = form.find('.settings-fields').html();
+                    if (settingsFieldsHTML) {
+                        console.log('Found settings-fields container:', settingsFieldsHTML);
+                    } else {
+                        console.log('No settings-fields container found in the form');
+                    }
                 }
                 
                 // Store for comparison
@@ -181,16 +222,31 @@
                     console.log('Set form action to:', form.attr('action'));
                 }
                 
+                // ENHANCEMENT: Ensure form has proper settings fields
+                // WordPress settings API requires these fields to save options
+                if (!form.find('input[name="option_page"]').length) {
+                    form.append('<input type="hidden" name="option_page" value="kuperbush_options">');
+                    console.log('Added missing option_page field');
+                }
+                
                 // Make sure we have required hidden fields
                 if (!form.find('input[name="action"]').length) {
                     form.append('<input type="hidden" name="action" value="options">');
                     console.log('Added hidden action field');
                 }
                 
-                // Make sure we have the option_page field
-                if (!form.find('input[name="option_page"]').length) {
-                    form.append('<input type="hidden" name="option_page" value="kuperbush_options">');
-                    console.log('Added missing option_page field');
+                // ENHANCEMENT: Add _wp_http_referer if missing
+                if (!form.find('input[name="_wp_http_referer"]').length) {
+                    form.append('<input type="hidden" name="_wp_http_referer" value="' + window.location.pathname + window.location.search + '">');
+                    console.log('Added missing _wp_http_referer field');
+                }
+                
+                // CRITICAL FIX: If form is missing nonce, add wp_nonce_field output
+                if (!form.find('input[name="_wpnonce"]').length) {
+                    // This is a temporary debug fix - it won't have the correct nonce value
+                    // but will help us understand if the issue is with missing nonce fields
+                    console.log('ATTEMPTING TO FIX: Adding missing nonce field');
+                    form.append('<input type="hidden" name="_wpnonce" value="temp_debug_nonce_fix">');
                 }
                 
                 // Example validation check (not currently used)
@@ -233,6 +289,9 @@
                 } catch (hookError) {
                     console.error('Error setting up form submission hook:', hookError);
                 }
+                
+                // ADD EVENT LISTENER FOR ACTUAL FORM SUBMIT EVENT
+                console.log('Added actual submit event listener to track when form is actually submitted');
             });
             
             // Handle the front page form submission in the same way

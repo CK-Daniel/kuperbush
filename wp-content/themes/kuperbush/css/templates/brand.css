@@ -1,0 +1,164 @@
+/**
+ * Brand Page Template Styles
+ */
+
+/* General Brand Page Styles */
+.brand {
+    color: #000000;
+}
+
+/* Brand Main Sections */
+.marca-bloque {
+    position: relative;
+    overflow: hidden;
+    padding: 60px 0;
+}
+
+.marca-bloque h1 {
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.marca-bloque h3 {
+    font-size: 28px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.marca-bloque p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Header Section */
+#marca-1 {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 180px;
+    padding-bottom: 180px;
+    position: relative;
+}
+
+#marca-1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.7;
+    z-index: -1;
+}
+
+/* Brand Values Section */
+#marca-2 {
+    background-color: #f9f9f9;
+    position: relative;
+}
+
+#marca-2 .et_pb_column {
+    position: relative;
+    z-index: 1;
+}
+
+/* Full Width Values Section */
+#marca-3 {
+    background-color: #ffffff;
+}
+
+/* Design & History Sections */
+#marca-6, #marca-7 {
+    background-color: #f5f5f5;
+}
+
+/* Button Styles */
+.container_button {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.KPH_button_lato {
+    margin-bottom: 15px;
+}
+
+.KPH_button_lato a {
+    display: inline-block;
+    background-color: #c8102e;
+    color: #ffffff !important;
+    text-decoration: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.KPH_button_lato a:hover {
+    background-color: #a00d24;
+}
+
+/* Animation Classes */
+.et_animated {
+    opacity: 1;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+.fade {
+    animation-name: fadeIn;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 980px) {
+    .marca-bloque h1 {
+        font-size: 40px;
+    }
+    
+    .marca-bloque h3 {
+        font-size: 24px;
+    }
+    
+    #marca-1 {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+    
+    .container_button {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .marca-bloque h1 {
+        font-size: 32px;
+    }
+    
+    .marca-bloque h3 {
+        font-size: 20px;
+    }
+    
+    .marca-bloque {
+        padding: 40px 0;
+    }
+    
+    #marca-1 {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+}

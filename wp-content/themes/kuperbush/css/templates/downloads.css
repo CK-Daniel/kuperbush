@@ -1,0 +1,154 @@
+/* Downloads template specific styles */
+
+#descargas-header {
+    margin-top: -80px;
+    padding-bottom: 0px;
+    background-color: #000000 !important;
+}
+
+#descargas-header::before {
+    background-image: url(https://www.home-kueppersbusch.com/global/wp-content/uploads/sites/3/2022/07/KUPPER-Cabecera-2.jpg) !important;
+}
+
+.et_pb_text_0 {
+    letter-spacing: 5px;
+    padding-top: 180px !important;
+    padding-bottom: 200px !important;
+}
+
+.et_pb_text_0 h1 {
+    color: #ffffff !important;
+    letter-spacing: 4px;
+}
+
+.descarga-bloque {
+    padding-bottom: 0px;
+    margin-bottom: 80px;
+    background-color: #000000 !important;
+}
+
+.et_pb_text_1, .et_pb_text_2, .et_pb_text_3 {
+    font-weight: 300;
+    background-color: #000000;
+    color: #FFFFFF !important;
+}
+
+.et_pb_text_1 h3, .et_pb_text_2 h3, .et_pb_text_3 h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 32px;
+}
+
+.et_pb_text_2 {
+    padding-bottom: 140px !important;
+    margin-top: 0px !important;
+}
+
+.et_pb_image_0 {
+    margin-top: -30px !important;
+    margin-left: 100px !important;
+    text-align: left;
+    margin-left: 0;
+}
+
+.et_pb_image_1 {
+    padding-left: 0px;
+    margin-top: -30px !important;
+    margin-left: 100px !important;
+    transform: scaleX(1.5) scaleY(1.5);
+    text-align: left;
+    margin-left: 0;
+}
+
+.et_pb_section_2, .et_pb_section_3 {
+    padding-bottom: 0px;
+    margin-bottom: 120px;
+    background-color: #000000 !important;
+}
+
+.KPH_button-2 {
+    background-color: #c8102e;
+    color: #ffffff;
+    padding: 10px 20px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.KPH_button-2:hover {
+    background-color: #a50d25;
+}
+
+.KPH_button_lato {
+    background-color: #c8102e;
+    color: #ffffff;
+    padding: 10px 20px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.KPH_button_lato:hover {
+    background-color: #a50d25;
+}
+
+.container_button {
+    margin-top: 20px;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 980px) {
+    .et_pb_image_0 {
+        margin-left: 0px !important;
+    }
+    
+    .et_pb_image_0 .et_pb_image_wrap img, 
+    .et_pb_image_1 .et_pb_image_wrap img {
+        width: auto;
+    }
+    
+    .et_pb_section_2::before {
+        background-image: initial !important;
+    }
+    
+    .et_pb_section_2 {
+        background-color: #000000 !important;
+    }
+    
+    .et_pb_image_1 {
+        margin-top: 0px !important;
+        margin-left: 0px !important;
+        transform: scaleX(1.1) scaleY(1.1);
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .et_pb_image_0 {
+        margin-left: 0px !important;
+    }
+    
+    .et_pb_image_0 .et_pb_image_wrap img, 
+    .et_pb_image_1 .et_pb_image_wrap img {
+        width: auto;
+    }
+    
+    .et_pb_section_2::before {
+        background-image: initial !important;
+    }
+    
+    .et_pb_section_2 {
+        background-color: #000000 !important;
+    }
+    
+    .et_pb_image_1 {
+        margin-top: -140px !important;
+        transform: scaleX(1.1) scaleY(1.1);
+    }
+}

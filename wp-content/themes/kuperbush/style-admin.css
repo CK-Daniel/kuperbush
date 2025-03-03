@@ -1,0 +1,51 @@
+#wp-admin-bar-my-sites-list {
+    width: 800px;
+    display: -ms-flexbox !important;
+    display: -webkit-flex !important;
+    display: flex !important;
+    -webkit-flex-direction: row !important;
+    -ms-flex-direction: row !important;
+    flex-direction: row !important;
+    -webkit-flex-wrap: wrap !important;
+    -ms-flex-wrap: wrap !important;
+    flex-wrap: wrap !important;
+    -webkit-justify-content: flex-start !important;
+    -ms-flex-pack: start !important;
+    justify-content: flex-start !important;
+    -webkit-align-content: stretch !important;
+    -ms-flex-line-pack: stretch !important;
+    align-content: stretch !important;
+    -webkit-align-items: flex-start !important;
+    -ms-flex-align: start !important;
+    align-items: flex-start !important;
+}
+
+#wp-admin-bar-my-sites-list>li {
+    width: 200px;
+    float: left !important;
+    display: inline-block;
+}
+
+#wp-admin-bar-my-sites-list>li:hover {
+    z-index: 100000;
+}
+
+.status-draft {
+    background: #FCE3F2 !important;
+}
+
+.status-pending {
+    background: #87C5D6 !important;
+}
+
+.status-publish {
+    /* por defecto */
+}
+
+.status-future {
+    background: #C6EBF5 !important;
+}
+
+.status-private {
+    background: #F2D46F;
+}

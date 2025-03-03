@@ -202,7 +202,7 @@ class Kuperbush_Admin_Settings {
      * Custom settings saving handler that preserves all tab settings
      */
     public function process_options() {
-        // Force debug mode and enhanced logging
+        // Debug logging
         if ( $this->debug ) {
             $log_file = WP_CONTENT_DIR . '/kuperbush-debug.log';
             file_put_contents( $log_file, "Processing options - POST data: " . print_r( $_POST, true ) . "\n", FILE_APPEND );

@@ -114,6 +114,11 @@
             $('.kuperbush-admin-form').on('submit', function(e) {
                 // For future form validation if needed
                 const form = $(this);
+                const currentTab = new URLSearchParams(window.location.search).get('tab') || 'general';
+                
+                console.log('========= FORM SUBMISSION DEBUG =========');
+                console.log('Current tab:', currentTab);
+                console.log('Form URL:', window.location.href);
                 
                 // Debug form data
                 console.log('Submitting form with data:');
@@ -131,6 +136,24 @@
                     }
                 });
                 console.log(formData);
+                
+                // Dump the entire form HTML for debugging
+                console.log('Form HTML:', form.prop('outerHTML'));
+                
+                // Make EXTRA sure the active_tab is set correctly
+                const activeTabInput = form.find('input[name="active_tab"]');
+                if (activeTabInput.length) {
+                    activeTabInput.val(currentTab);
+                    console.log('Set active_tab to:', currentTab);
+                } else {
+                    form.append('<input type="hidden" name="active_tab" value="' + currentTab + '">');
+                    console.log('Added missing active_tab field with value:', currentTab);
+                }
+                
+                // Make sure we have a _wpnonce field
+                if (!form.find('input[name="_wpnonce"]').length) {
+                    console.error('CRITICAL: Form is missing _wpnonce field which is required for security!');
+                }
                 
                 // Store for comparison
                 if (window.kuperbushAdminSavedValues === undefined) {
@@ -164,6 +187,12 @@
                     console.log('Added hidden action field');
                 }
                 
+                // Make sure we have the option_page field
+                if (!form.find('input[name="option_page"]').length) {
+                    form.append('<input type="hidden" name="option_page" value="kuperbush_options">');
+                    console.log('Added missing option_page field');
+                }
+                
                 // Example validation check (not currently used)
                 const isValid = true;
                 
@@ -187,12 +216,35 @@
                 // Debug submission
                 console.log('Form submitted to:', form.attr('action'));
                 console.log('With method:', form.attr('method'));
+                console.log('=======================================');
+                
+                // Add a debug handler for form submission
+                try {
+                    // Create a fake response handler to log any potential errors
+                    const originalSubmit = form[0].submit;
+                    form[0].submit = function() {
+                        console.log('Form.submit() called');
+                        try {
+                            originalSubmit.apply(this, arguments);
+                        } catch (submitError) {
+                            console.error('Error during form submission:', submitError);
+                        }
+                    };
+                } catch (hookError) {
+                    console.error('Error setting up form submission hook:', hookError);
+                }
             });
             
             // Handle the front page form submission in the same way
             $('.kuperbush-front-page-form, .kuperbush-template-pages-form').on('submit', function(e) {
                 const form = $(this);
                 const submitButton = form.find('input[type="submit"], button[type="submit"]');
+                const currentTab = new URLSearchParams(window.location.search).get('tab') || 'general';
+                
+                console.log('========= CUSTOM FORM SUBMISSION DEBUG =========');
+                console.log('Current tab:', currentTab);
+                console.log('Form URL:', window.location.href);
+                console.log('Form type:', form.hasClass('kuperbush-front-page-form') ? 'Front Page Form' : 'Template Pages Form');
                 
                 // Debug form data
                 console.log('Submitting custom form with data:');
@@ -211,6 +263,27 @@
                 });
                 console.log(formData);
                 
+                // Dump the entire form HTML for debugging
+                console.log('Form HTML:', form.prop('outerHTML'));
+                
+                // Make EXTRA sure the active_tab is set correctly
+                const activeTabInput = form.find('input[name="active_tab"]');
+                if (activeTabInput.length) {
+                    activeTabInput.val(currentTab);
+                    console.log('Set active_tab to:', currentTab);
+                } else {
+                    form.append('<input type="hidden" name="active_tab" value="' + currentTab + '">');
+                    console.log('Added missing active_tab field with value:', currentTab);
+                }
+                
+                // Make sure we have a nonce field
+                const nonceField = form.find('input[name="_wpnonce"]');
+                if (!nonceField.length) {
+                    console.error('CRITICAL: Custom form is missing nonce field which is required for security!');
+                } else {
+                    console.log('Nonce value:', nonceField.val());
+                }
+                
                 // Make sure the form action is correct
                 const formAction = form.attr('action');
                 if (!formAction || formAction === '') {
@@ -222,6 +295,12 @@
                 if (!form.find('input[name="option_page"]').length) {
                     form.append('<input type="hidden" name="option_page" value="kuperbush_options">');
                     console.log('Added hidden option_page field');
+                }
+                
+                // Make sure we have required hidden fields
+                if (!form.find('input[name="action"]').length) {
+                    form.append('<input type="hidden" name="action" value="options">');
+                    console.log('Added hidden action field');
                 }
                 
                 submitButton.prop('disabled', true)
@@ -237,6 +316,23 @@
                 // Debug submission
                 console.log('Custom form submitted to:', form.attr('action'));
                 console.log('With method:', form.attr('method'));
+                console.log('=======================================');
+                
+                // Add a debug handler for form submission
+                try {
+                    // Create a fake response handler to log any potential errors
+                    const originalSubmit = form[0].submit;
+                    form[0].submit = function() {
+                        console.log('Custom Form.submit() called');
+                        try {
+                            originalSubmit.apply(this, arguments);
+                        } catch (submitError) {
+                            console.error('Error during custom form submission:', submitError);
+                        }
+                    };
+                } catch (hookError) {
+                    console.error('Error setting up custom form submission hook:', hookError);
+                }
             });
         },
         

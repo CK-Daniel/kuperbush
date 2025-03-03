@@ -286,11 +286,8 @@ class Kuperbush_Admin_Settings {
                 continue;
             }
             
-            // Special handling for some tabs
-            $special_handling = in_array( $active_tab, array( 'general', 'tools' ), true );
-            
-            // Only update fields in the current tab or with special handling
-            if ( isset( $current_tab_fields[$option_name] ) || $special_handling ) {
+            // Only process fields in the current tab
+            if ( isset( $current_tab_fields[$option_name] ) ) {
                 // For checkboxes, set value to false if not in $_POST
                 if ( isset( $option_data['type'] ) && $option_data['type'] === 'boolean' ) {
                     if ( ! isset( $_POST[$option_name] ) ) {
@@ -308,11 +305,8 @@ class Kuperbush_Admin_Settings {
                 continue;
             }
             
-            // Special handling for some tabs
-            $special_handling = in_array( $active_tab, array( 'general', 'tools' ), true );
-            
-            // Only update fields in the current tab or with special handling
-            if ( isset( $current_tab_fields[$option_name] ) || $special_handling ) {
+            // Only process fields in the current tab
+            if ( isset( $current_tab_fields[$option_name] ) ) {
                 if ( isset( $_POST[$option_name] ) ) {
                     $value = $_POST[$option_name];
                     

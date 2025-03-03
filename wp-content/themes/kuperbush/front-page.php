@@ -25,7 +25,7 @@ get_header();
                                     </div>
                                 </div>
                                 <span class="et_pb_section_video_bg et_pb_section_video_bg_desktop_tablet">
-                                    <video loop="loop" autoplay playsinline muted>
+                                    <video loop autoplay="autoplay" playsinline muted="muted" preload="auto">
                                         <source type="video/mp4" src="<?php echo get_template_directory_uri(); ?>/video/KPH_WebVideo_PlacasCampanaIntegrada.mp4" />
                                     </video>
                                 </span>
@@ -43,7 +43,7 @@ get_header();
                                     </div>
                                 </div>
                                 <span class="et_pb_section_video_bg et_pb_section_video_bg_desktop_tablet">
-                                    <video loop="loop" autoplay playsinline muted>
+                                    <video loop autoplay="autoplay" playsinline muted="muted" preload="auto">
                                         <source type="video/mp4" src="<?php echo get_template_directory_uri(); ?>/video/KPH_WebVideo_GraphiteDesignLine_Kitchen.mp4" />
                                     </video>
                                 </span>
@@ -60,7 +60,7 @@ get_header();
                                     </div>
                                 </div>
                                 <span class="et_pb_section_video_bg et_pb_section_video_bg_desktop_tablet">
-                                    <video loop="loop" autoplay playsinline muted>
+                                    <video loop autoplay="autoplay" playsinline muted="muted" preload="auto">
                                         <source type="video/mp4" src="<?php echo get_template_directory_uri(); ?>/video/KPH_WebVideo_MattBlackDesignLine_Kitchen.mp4" />
                                     </video>
                                 </span>

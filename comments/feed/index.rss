@@ -8,10 +8,10 @@
 <channel>
 	<title>
 	Comments for Küppersbusch Global	</title>
-	<atom:link href="/comments/feed/" rel="self" type="application/rss+xml" />
-	<link>/</link>
+	<atom:link href="https://www.home-kueppersbusch.com/global/comments/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.home-kueppersbusch.com/global/</link>
 	<description></description>
-	<lastBuildDate>Tue, 25 Feb 2025 14:43:21 +0000</lastBuildDate>
+	<lastBuildDate>Fri, 28 Feb 2025 16:18:44 +0000</lastBuildDate>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>

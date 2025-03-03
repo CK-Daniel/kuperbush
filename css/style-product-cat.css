@@ -400,6 +400,7 @@ body:not(.et-tb-has-header) #main-content .container {
     list-style-type: disc;
     padding: 0 0 23px 1em;
     line-height: 26px;
+    direction: rtl;
 }
 #left-area ol,
 .entry-content ol,
@@ -5084,8 +5085,7 @@ div.et_pb_section.et_pb_section_0::before {
     padding-top: 180px !important;
     padding-bottom: 200px !important;
 }
-div.et_pb_section.et_pb_section_1 {
-}
+
 
 div.et_pb_section.et_pb_section_1::before {
   content: "";
@@ -5094,7 +5094,7 @@ div.et_pb_section.et_pb_section_1::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url(../wp-content/uploads/sites/3/2022/07/KUPPER-valores-marca-2.jpg);
+  background-image: url(../img/uploads/KUPPER-valores-marca-2.jpg);
   background-repeat: no-repeat;
   z-index: 0;
   width: 50%;
@@ -5150,14 +5150,10 @@ div.et_pb_section.et_pb_section_1::before {
     }
 }
 @media only screen and (min-width: 768px) and (max-width: 980px) {
-    .et_pb_section_1 {
-        display: none !important;
-    }
+   
 }
 @media only screen and (max-width: 767px) {
-    .et_pb_section_1 {
-        display: none !important;
-    }
+   
     .et_pb_image_0 .et_pb_image_wrap img,
     .et_pb_image_1 .et_pb_image_wrap img,
     .et_pb_image_2 .et_pb_image_wrap img {
@@ -5365,3 +5361,24 @@ div.et_pb_section.et_pb_section_1::before {
         padding: 0 !important;
     }
 }
+
+.product-filter > h4:after {
+    font-family: 'Etmodules';
+    content: '\4c';
+    float: left;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.product-filter.open > h4:after {
+    font-family: 'Etmodules';
+    content: '\4b';
+    float: left;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+

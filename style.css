@@ -10,11 +10,11 @@ Version:  1.0
 ------------------------------------------------------- */
 @font-face {
     font-family: 'ElegantIcons';
-    src: url('/wp-content/themes/kueppersbusch/fonts/ElegantIcons.eot');
-    src: url('/wp-content/themes/kueppersbusch/fonts/ElegantIcons.eot?#iefix') format('embedded-opentype'),
-        url('/wp-content/themes/kueppersbusch/fonts/ElegantIcons.woff') format('woff'),
-        url('/wp-content/themes/kueppersbusch/fonts/ElegantIcons.ttf') format('truetype'),
-        url('/wp-content/themes/kueppersbusch/fonts/ElegantIcons.svg#ElegantIcons') format('svg');
+    src: url('fonts/ElegantIcons.eot');
+    src: url('fonts/ElegantIcons.eot?#iefix') format('embedded-opentype'),
+        url('fonts/ElegantIcons.woff') format('woff'),
+        url('fonts/ElegantIcons.ttf') format('truetype'),
+        url('fonts/ElegantIcons.svg#ElegantIcons') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -322,7 +322,7 @@ strong {
 .teka-button {
     font-weight: 300;
     font-size: 11px;
-    float: left;
+    float: right;
     color: #000 !important;
     text-align: center;
     border: 1px solid !important;
@@ -865,7 +865,7 @@ input[type="submit"]:hover {
     margin-top: -5px;
     position: absolute;
     right: 0 !important;
-    top: 0px;
+    top: 39%;
     display: flex;
     gap: 7px;
 }
@@ -1050,7 +1050,6 @@ input[type="submit"]:hover {
 
 #top-menu > li > a:first-child {
     padding: 0 15px 20px;
-    padding-bottom: 0px !important;!I;!;
 }
 
 #top-menu li ul.sub-menu {
@@ -1077,10 +1076,9 @@ input[type="submit"]:hover {
 #top-menu li:hover ul.sub-menu {
     pointer-events: auto;
     margin-left: -13px;
-    right: 16px !important;!i;!;
-    left: auto;
     width: fit-content;
-    min-width: 250px;
+    min-width: 300px;
+    right: 0px;
 }
 
 #top-menu li.menu-bath ul.sub-menu,
@@ -1196,7 +1194,7 @@ ul.sub-menu:after {
 
 #top-menu li li,
 #top-menu li li a {
-    padding-right: 0;
+    padding-left: 0;
     width: 100%;
 }
 
@@ -1321,6 +1319,7 @@ span.menu-support-telefono:before {
 #kph-home-slider .et_pb_slide {
     min-height: 100vh;
     max-height: 100vh !important;
+    direction: ltr;
 }
 
 #kph-home-slider .container_button {
@@ -1348,6 +1347,7 @@ span.menu-support-telefono:before {
     width: 100%;
     text-align: center;
     z-index: 10;
+    direction: ltr;
 }
 
 #home-slider {
@@ -2121,11 +2121,6 @@ span.menu-support-telefono:before {
 #main-footer .footer-widget,
 #main-footer .footer-widget > div {
     margin-bottom: 10px;
-    right: 0px;
-    position: relative;
-    left: auto;
-    display: flex;
-    flex-direction: column;
 }
 
 #footer-widgets .footer-widget li {
@@ -2542,20 +2537,15 @@ span.label-new-b {
     padding: 0 10px;
     font-size: 13px;
 }
-.productCat {
-    width: 100%;
-    text-align: right;
-}
+
 .product-list .productCatLargeName {
     color: #787879;
     font-weight: 300;
     font-size: 14px;
     width: 220px;
-    float: right;
+    float: left;
     display: block;
     line-height: 1.25em;
-    text-align: right;
-    direction: rtl;
 }
 
 @media (max-width: 1500px) {
@@ -2591,7 +2581,6 @@ span.label-new-b {
     color: #000 !important;
     font-weight: 300;
     font-size: 18px;
-    text-align: right;
 }
 
 @media (max-width: 480px) {
@@ -2649,7 +2638,7 @@ span.label-new-b {
 .product-filter > h4:after {
     font-family: 'Etmodules';
     content: '\4c';
-    float: left;
+    float: right;
     font-size: 20px;
     text-align: center;
     cursor: pointer;
@@ -2960,7 +2949,7 @@ span#product-menu-main-cat-mobile {
 #product-menu-left ul li {
     margin-top: 10px;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-content: stretch;
@@ -2978,7 +2967,6 @@ span#product-menu-main-cat-mobile {
     font-size: 15px;
     padding-top: 3px;
     font-weight: 300;
-    text-align: right;
 }
 
 #product-menu-left li a:hover {
@@ -3367,7 +3355,7 @@ span#product-menu-main-cat-mobile {
 }
 
 #years-warranty {
-    background-image: url(/wp-content/themes/kueppersbusch/img/5-years-warranty.svg);
+    background-image: url(img/5-years-warranty.svg);
     width: 100px;
     height: 100px;
     background-repeat: no-repeat;
@@ -3844,7 +3832,11 @@ span#product-menu-main-cat-mobile {
 /*product-features*/
 #product-features-description {
     display: flex;
+    direction: rtl;
+    text-align: right;
 }
+
+div#product-features-description {}
 
 #product-features-description h2 {
     margin-top: 1.2em;
@@ -4058,6 +4050,8 @@ span#product-menu-main-cat-mobile {
     font-size: 18px !important;
     color: #000;
     font-weight: 600;
+    text-align: center;
+    direction: rtl;
 }
 
 #product-benefits img {
@@ -5131,7 +5125,7 @@ downlo .slick-prev:before,
 
 .add-product-compare img:hover {
     background-color: #3C3C3C !important;
-    content: url("https://www.home-kueppersbusch.com/wp-content/themes/kueppersbusch/img/add-product-compare-hover.svg");
+    content: url("/wp-content/themes/kueppersbusch/img/add-product-compare-hover.svg");
 }
 
 .page-template-tp-comparador-productos .link-back {
@@ -6640,7 +6634,7 @@ tr.trGroup td:after {
 }
 
 #worldwide-map {
-    background-image: url(/wp-content/themes/kueppersbusch/img/presencia-internacional-dots.png) !important;
+    background-image: url(img/presencia-internacional-dots.png) !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
     height: 700px;
@@ -6652,7 +6646,7 @@ tr.trGroup td:after {
 
 @media (max-width: 550px) {
     #worldwide-map {
-        background-image: url(/wp-content/themes/kueppersbusch/img/presencia-internacional-dots-responsive.png) !important;
+        background-image: url(img/presencia-internacional-dots-responsive.png) !important;
         width: 100%;
         background-position: bottom center !important;
         height: 500px;
@@ -7306,7 +7300,7 @@ div.asp_r .results .item.asp_r_product_cat.hovered .asp_image {
     display: flex;
     align-items: center;
     justify-content: center;
-    /*background-image: url('/wp-content/uploads/2018/10/iniciar-sesion-1.jpg');*/
+    /*background-image: url('../../uploads/2018/10/iniciar-sesion-1.jpg');*/
     background-size: cover;
     background-position: center;
 }
@@ -7803,7 +7797,7 @@ label.my-30 {
 .video a.play {
     width: 75px;
     height: 75px;
-    background: rgba(255, 255, 255, 0.2) url(/wp-content/themes/kueppersbusch/img/btn_play.png) no-repeat center;
+    background: rgba(255, 255, 255, 0.2) url(img/btn_play.png) no-repeat center;
     display: inline-block;
     text-indent: -9999px;
     border-radius: 50%;
@@ -7818,7 +7812,7 @@ label.my-30 {
 a.close_fullscreen {
     width: 100%;
     height: 50px;
-    background: rgba(255, 255, 255, 0.2) url(/wp-content/themes/kueppersbusch/img/btn_close_black.png) no-repeat right;
+    background: rgba(255, 255, 255, 0.2) url(img/btn_close_black.png) no-repeat right;
     display: none;
     text-indent: -9999px;
     background-size: 25px;
@@ -8179,7 +8173,7 @@ table.table-sub-cookies td {
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
     opacity: 0.5;
-    /*background-image: url(https://www.home-kueppersbusch.com/en-ae/wp-content/themes/kueppersbusch/img/teka-logo.svg);*/
+    /*background-image: url(/en-ae/wp-content/themes/kueppersbusch/img/teka-logo.svg);*/
     background-size: 57px 60px;
     width: 57px;
     height: 65px;
@@ -8764,7 +8758,7 @@ h3 {
 }
 
 #top-menu li ul.sub-menu {
-    /* left: inherit !important; */
+    left: inherit !important;
 }
 
 .et-fixed-header {
@@ -9116,7 +9110,6 @@ div#footer-widgets {
         margin: 0 !important;
         float: right;
         direction: rtl;
-        text-align: right;
     }
 }
 
@@ -9217,7 +9210,7 @@ div#footer-widgets {
 }
 
 #product-icons ._head:after {
-    content: url(https://www.home-kueppersbusch.com/wp-content/uploads/2021/colapsable.svg);
+    content: url(/wp-content/uploads/2021/colapsable.svg);
     right: 0px;
     position: absolute;
     display: block;
@@ -9897,7 +9890,7 @@ div.asp_w.asp_r .results .item .asp_image {
     height: 100%;
     z-index: 4;
     background-color: rgba(255, 255, 255, .3);
-    background-image: url('/wp-content/themes/kueppersbusch/img/document-file-pdf.svg');
+    background-image: url('../kueppersbusch/img/document-file-pdf.svg');
     background-size: 30% auto;
     background-position: center;
     background-repeat: no-repeat;
@@ -10374,6 +10367,8 @@ body #page-container .et_pb_section.slider-inicio .et_pb_button_1 {
 
 #product-related-products-slider .product {
     padding: 25px;
+    width: 33% !important;
+    min-width: 33%;
 }
 
 .reconocimientos .et_pb_image_wrap:hover:before {
@@ -10421,8 +10416,7 @@ body #page-container .et_pb_section.bloque-destacados-inicio .et_pb_button_4 {
 }
 
 #top-menu li li a {
-    padding: 0 !important;
-    TEXT-ALIGN: RIGHT;
+    padding: 0 !important
 }
 
 ul.sub-menu:before,
@@ -10445,8 +10439,7 @@ h5.et_pb_toggle_title {
 }
 
 #top-menu li ul.sub-menu {
-    RIGHT: inherit !important;
-    LEFT: AUTO;
+    left: inherit !important;
 }
 
 #top-menu li ul.sub-menu {
@@ -10459,6 +10452,7 @@ h5.et_pb_toggle_title {
     text-transform: uppercase;
     font-size: 34px;
     padding-bottom: 30px;
+    text-align: right !important;
 }
 
 /*.bloque-texto .et_pb_text_inner p {
@@ -10522,8 +10516,6 @@ a.descargas-enlace img {
 #main-header #et-top-navigation {
     padding-left: 230px !important;
     padding-right: 70px;
-    POSITION: RELATIVE;
-    padding-top: 0px;
 }
 
 @media (max-width:980px) {
@@ -10628,7 +10620,7 @@ span.label-new-b {
 div#footer-widgets {
     display: flex;
     align-items: flex-start;
-    flex-direction: row-reverse;
+    direction: rtl;
 }
 
 #main-footer .footer-widget h4.title {
@@ -11025,6 +11017,8 @@ header.masthead .masthead-content .masthead-subheading {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    direction: rtl;
+    text-align: right;
 }
 
 #texto_producto h1 {
@@ -11032,7 +11026,7 @@ header.masthead .masthead-content .masthead-subheading {
     font-size: 1.25em;
     line-height: 1.3em;
     color: #FFFFFF;
-    text-align: left;
+    text-align: right;
     width: 300px;
 }
 
@@ -11042,13 +11036,13 @@ header.masthead .masthead-content .masthead-subheading {
     line-height: 18px;
     text-transform: uppercase;
     color: #ffffff;
-    text-align: left;
+    text-align: right;
 }
 
 .etiqueta_nuevo {
     padding-bottom: 13px;
     font-weight: 300;
-    text-align: left;
+    text-align: right;
 }
 
 .precio {
@@ -11145,6 +11139,7 @@ ul.menu_sticky {
     font-weight: 300;
     padding: 15px 0;
     line-height: 20px;
+    direction: rtl;
 }
 
 .first_nav {
@@ -11155,10 +11150,10 @@ ul.menu_sticky {
 }
 
 .second_nav {
-    padding-left: 51px;
+    padding-right: 51px;
     font-size: 14px;
-    float: right;
-    min-width: -webkit-max-content;
+    float: left;
+    border-bottom-left-radius: -webkit-max-content;
     min-width: -moz-max-content;
     min-width: max-content;
 }
@@ -11208,6 +11203,7 @@ ul.menu_compra:hover {
     text-transform: none;
     border-bottom: 1px solid #c7c7c7;
     width: 100%;
+    text-align: right;
 }
 
 /* Selectores */
@@ -11218,6 +11214,7 @@ ul.menu_compra:hover {
     gap: 2%;
     z-index: 0;
     padding-bottom: 100px;
+    direction: rtl;
 }
 
 details {
@@ -11293,13 +11290,14 @@ summary::-webkit-details-marker {
 details > summary::after {
     position: absolute;
     content: "+";
-    right: 0px;
+    left: 0px;
 }
 
 details[open] > summary::after {
     position: absolute;
     content: "-";
-    right: 0px;
+    left: 0px;
+    right: auto;
 }
 
 /* Accesorios opcionales */
@@ -11382,7 +11380,6 @@ details[open] > summary::after {
     letter-spacing: 0.8px;
     padding-bottom: 20px;
     text-transform: none;
-    text-align: right;
 }
 
 .texto_cabecera,
@@ -12373,6 +12370,7 @@ a.medium.cli-plugin-button.cli-plugin-main-button.cli_settings_button:hover {
 /*divi contacto españa*/
 #kupper-contact-forms {
     background: #000 !important;
+    display: block !important;
 }
 
 #kupper-contact-forms * {
@@ -13134,6 +13132,44 @@ div#k-series-menu a:hover {
     margin-bottom: 42px;
 }
 
+#ambient-products .et_pb_row {
+    display: flex;
+    flex-direction: column;
+    direction: rtl;
+}
+
+.product-cat-info {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.video a.play {
+    width: 75px;
+    height: 75px;
+    background: rgba(255, 255, 255, 0.2) url(img/btn_play.png) no-repeat center;
+    display: inline-block;
+    text-indent: -9999px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100% !important;
+}
+
 @media (max-width: 481px) {
     #recipe-top {
         display: flex;
@@ -13167,4 +13203,23 @@ div#k-series-menu a:hover {
         color: #FFF;
         text-align: center;
     }
+}
+
+
+
+
+@media (max-width: 975px){
+    .brand .et_pb_row.et_pb_row_2,  .brand .et_pb_row.et_pb_row_3, .brand .et_pb_row.et_pb_row_4{
+    display: flex;
+    flex-direction: column-reverse;
+    }
+
+    #main-header .et_mobile_menu .menu-item-has-children > a:after {
+        font-size: 16px;
+        content: '\4c';
+        top: 13px;
+        left: 10px;
+        right: auto;
+    }
+
 }

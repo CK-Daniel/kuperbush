@@ -34,12 +34,22 @@
          * Preserve active tab when form is submitted
          */
         preserveTabsOnSubmit: function() {
-            // Add hidden input to remember the current tab
+            // Get the current tab from URL
             const currentTab = new URLSearchParams(window.location.search).get('tab') || 'general';
             
+            // Update the active_tab hidden input value
             $('.kuperbush-admin-form').each(function() {
-                if (!$(this).find('input[name="active_tab"]').length) {
-                    $(this).append('<input type="hidden" name="active_tab" value="' + currentTab + '">');
+                const activeTabInput = $(this).find('input[name="active_tab"]');
+                if (activeTabInput.length) {
+                    activeTabInput.val(currentTab);
+                }
+            });
+            
+            // Also make sure the front page form has the correct active tab
+            $('.kuperbush-front-page-form').each(function() {
+                const activeTabInput = $(this).find('input[name="active_tab"]');
+                if (activeTabInput.length) {
+                    activeTabInput.val(currentTab);
                 }
             });
         },

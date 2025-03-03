@@ -119,24 +119,31 @@ add_action('admin_init', 'kuperbush_register_settings');
  * Redirect after settings save to maintain active tab
  */
 function kuperbush_settings_redirect() {
-    // Check if settings were updated and active_tab is set
-    if (isset($_REQUEST['settings-updated']) && isset($_REQUEST['active_tab'])) {
-        // Get the active tab
-        $active_tab = sanitize_key($_REQUEST['active_tab']);
-        
-        // Create the redirect URL with the active tab
-        $redirect_url = add_query_arg(
-            array(
-                'page' => 'kuperbush-options',
-                'tab' => $active_tab,
-                'settings-updated' => 'true'
-            ),
-            admin_url('themes.php')
-        );
-        
-        // Redirect to the active tab
-        wp_redirect($redirect_url);
-        exit;
+    // Check if this is a settings-update request
+    if (isset($_REQUEST['option_page']) && $_REQUEST['option_page'] === 'kuperbush_options') {
+        if (isset($_POST['active_tab'])) {
+            // Get the active tab
+            $active_tab = sanitize_key($_POST['active_tab']);
+            
+            // Create the redirect URL with the active tab
+            $redirect_url = add_query_arg(
+                array(
+                    'page' => 'kuperbush-options',
+                    'tab' => $active_tab,
+                    'settings-updated' => 'true'
+                ),
+                admin_url('themes.php')
+            );
+            
+            // This hook runs before WordPress would normally redirect
+            add_filter('wp_redirect', function($location) use ($redirect_url) {
+                if (strpos($location, 'options-general.php?page=') !== false ||
+                    strpos($location, 'options.php?') !== false) {
+                    return $redirect_url;
+                }
+                return $location;
+            });
+        }
     }
 }
 add_action('admin_init', 'kuperbush_settings_redirect');
@@ -408,23 +415,38 @@ function kuperbush_front_page_options_form() {
     if (isset($_POST['kuperbush_front_page_nonce']) && 
         wp_verify_nonce($_POST['kuperbush_front_page_nonce'], 'kuperbush_front_page_action')) {
         
+        // Get the active tab for redirect
+        $active_tab = isset($_POST['active_tab']) ? sanitize_key($_POST['active_tab']) : 'general';
+        
         if (isset($_POST['kuperbush_apply_front_page'])) {
             // Apply front page settings
             $result = kuperbush_create_front_page(true);
             if ($result) {
-                echo '<div class="notice notice-success"><p>Front page has been created and set as the homepage!</p></div>';
+                add_settings_error('kuperbush_front_page', 'kuperbush_front_page_success', 'Front page has been created and set as the homepage!', 'success');
             } else {
-                echo '<div class="notice notice-error"><p>An error occurred while configuring the front page.</p></div>';
+                add_settings_error('kuperbush_front_page', 'kuperbush_front_page_error', 'An error occurred while configuring the front page.', 'error');
             }
         } else {
             // Just create the pages without applying settings
             $result = kuperbush_create_front_page(false);
             if ($result) {
-                echo '<div class="notice notice-success"><p>Front page has been created but not set as the homepage.</p></div>';
+                add_settings_error('kuperbush_front_page', 'kuperbush_front_page_success', 'Front page has been created but not set as the homepage.', 'success');
             } else {
-                echo '<div class="notice notice-error"><p>An error occurred while creating the front page.</p></div>';
+                add_settings_error('kuperbush_front_page', 'kuperbush_front_page_error', 'An error occurred while creating the front page.', 'error');
             }
         }
+        
+        // Redirect to prevent form resubmission and preserve the tab
+        $redirect_url = add_query_arg(
+            array(
+                'page' => 'kuperbush-options',
+                'tab' => $active_tab,
+                'settings-updated' => 'true'
+            ),
+            admin_url('themes.php')
+        );
+        wp_redirect($redirect_url);
+        exit;
     }
     
     // Get current front page settings
@@ -468,7 +490,7 @@ function kuperbush_front_page_options_form() {
         
         <form method="post" action="" style="margin-top: 1em;" class="kuperbush-front-page-form">
             <?php wp_nonce_field('kuperbush_front_page_action', 'kuperbush_front_page_nonce'); ?>
-            <input type="hidden" name="active_tab" value="general">
+            <input type="hidden" name="active_tab" value="<?php echo isset($_GET['tab']) ? esc_attr(sanitize_key($_GET['tab'])) : 'general'; ?>">
             
             <p>
                 <label>
@@ -488,6 +510,15 @@ function kuperbush_front_page_options_form() {
     <?php
     return ob_get_clean();
 }
+
+/**
+ * Display settings errors for our custom form submissions
+ */
+function kuperbush_admin_notices() {
+    // Show existing WordPress errors
+    settings_errors('kuperbush_front_page');
+}
+add_action('admin_notices', 'kuperbush_admin_notices');
 
 /**
  * Theme Options page content
@@ -535,6 +566,7 @@ function kuperbush_options_page_callback() {
                     
                     <form method="post" action="options.php" class="kuperbush-admin-form">
                         <?php settings_fields('kuperbush_options'); ?>
+                        <input type="hidden" name="active_tab" value="<?php echo esc_attr($active_tab); ?>">
                         
                         <?php foreach ($modules[$active_tab]['sections'] as $section_id => $section): ?>
                             <div class="kuperbush-admin-section">

@@ -112,41 +112,275 @@ function kuperbush_register_settings() {
             'sanitize_callback' => 'rest_sanitize_boolean',
         ));
     }
+    
+    // Make sure all fields defined in kuperbush_get_admin_modules() are properly registered
+    $modules = kuperbush_get_admin_modules();
+    foreach ($modules as $tab_id => $tab_data) {
+        if (isset($tab_data['sections'])) {
+            foreach ($tab_data['sections'] as $section_id => $section) {
+                if (!empty($section['fields'])) {
+                    $fields = is_callable($section['fields']) ? call_user_func($section['fields']) : $section['fields'];
+                    foreach ($fields as $field_id => $field_data) {
+                        // Skip if already registered
+                        if (isset($GLOBALS['wp_registered_settings'][$field_id])) {
+                            continue;
+                        }
+                        
+                        $args = array();
+                        
+                        // Set type based on field type
+                        if (isset($field_data['type'])) {
+                            switch ($field_data['type']) {
+                                case 'checkbox':
+                                    $args['type'] = 'boolean';
+                                    $args['sanitize_callback'] = 'rest_sanitize_boolean';
+                                    break;
+                                case 'text':
+                                    $args['type'] = 'string';
+                                    $args['sanitize_callback'] = 'sanitize_text_field';
+                                    break;
+                                case 'select':
+                                    $args['type'] = 'string';
+                                    break;
+                                default:
+                                    $args['type'] = 'string';
+                                    break;
+                            }
+                        }
+                        
+                        // Set default value if provided
+                        if (isset($field_data['default'])) {
+                            $args['default'] = $field_data['default'];
+                        }
+                        
+                        // Register the setting
+                        register_setting('kuperbush_options', $field_id, $args);
+                    }
+                }
+            }
+        }
+    }
 }
 add_action('admin_init', 'kuperbush_register_settings');
 
 /**
- * Redirect after settings save to maintain active tab
+ * Custom settings saving handler that preserves all tab settings
  */
-function kuperbush_settings_redirect() {
-    // Check if this is a settings-update request
-    if (isset($_REQUEST['option_page']) && $_REQUEST['option_page'] === 'kuperbush_options') {
-        if (isset($_POST['active_tab'])) {
-            // Get the active tab
-            $active_tab = sanitize_key($_POST['active_tab']);
-            
-            // Create the redirect URL with the active tab
-            $redirect_url = add_query_arg(
-                array(
-                    'page' => 'kuperbush-options',
-                    'tab' => $active_tab,
-                    'settings-updated' => 'true'
-                ),
-                admin_url('themes.php')
-            );
-            
-            // This hook runs before WordPress would normally redirect
-            add_filter('wp_redirect', function($location) use ($redirect_url) {
-                if (strpos($location, 'options-general.php?page=') !== false ||
-                    strpos($location, 'options.php?') !== false) {
-                    return $redirect_url;
-                }
-                return $location;
-            });
+function kuperbush_process_options() {
+    // Only run on our settings page submissions
+    if (!isset($_POST['option_page']) || $_POST['option_page'] !== 'kuperbush_options') {
+        return;
+    }
+
+    // Verify nonce
+    check_admin_referer('kuperbush_options-options');
+    
+    // Get active tab
+    $active_tab = isset($_POST['active_tab']) ? sanitize_key($_POST['active_tab']) : 'general';
+    
+    // Process front page form if that was submitted
+    if (isset($_POST['kuperbush_front_page_nonce']) && 
+        wp_verify_nonce($_POST['kuperbush_front_page_nonce'], 'kuperbush_front_page_action')) {
+        
+        if (isset($_POST['kuperbush_apply_front_page'])) {
+            // Apply front page settings
+            $result = kuperbush_create_front_page(true);
+            if ($result) {
+                add_settings_error(
+                    'kuperbush_options',
+                    'kuperbush_front_page_success',
+                    __('Front page has been created and set as the homepage!', 'kuperbush'),
+                    'success'
+                );
+            } else {
+                add_settings_error(
+                    'kuperbush_options',
+                    'kuperbush_front_page_error',
+                    __('An error occurred while configuring the front page.', 'kuperbush'),
+                    'error'
+                );
+            }
+        } else {
+            // Just create the pages without applying settings
+            $result = kuperbush_create_front_page(false);
+            if ($result) {
+                add_settings_error(
+                    'kuperbush_options',
+                    'kuperbush_front_page_success',
+                    __('Front page has been created but not set as the homepage.', 'kuperbush'),
+                    'success'
+                );
+            } else {
+                add_settings_error(
+                    'kuperbush_options',
+                    'kuperbush_front_page_error',
+                    __('An error occurred while creating the front page.', 'kuperbush'),
+                    'error'
+                );
+            }
         }
     }
+    
+    // Get all registered settings
+    global $wp_registered_settings;
+    
+    // Get fields that should be updated in the current tab
+    $current_tab_fields = array();
+    $modules = kuperbush_get_admin_modules();
+    $updated_options = array();
+    
+    // Debug log - only enabled in debug mode
+    $debug = defined('WP_DEBUG') && WP_DEBUG;
+    $log_file = WP_CONTENT_DIR . '/kuperbush-debug.log';
+    
+    if ($debug) {
+        file_put_contents($log_file, "Processing tab: $active_tab\n", FILE_APPEND);
+        file_put_contents($log_file, "POST data: " . print_r($_POST, true) . "\n", FILE_APPEND);
+    }
+    
+    // First, collect all fields from all tabs to ensure we don't miss any
+    foreach ($modules as $tab_id => $tab_data) {
+        if (isset($tab_data['sections'])) {
+            foreach ($tab_data['sections'] as $section_id => $section) {
+                if (!empty($section['fields'])) {
+                    $fields = is_callable($section['fields']) ? call_user_func($section['fields']) : $section['fields'];
+                    foreach ($fields as $field_id => $field_data) {
+                        if ($tab_id === $active_tab) {
+                            // Mark fields in current tab for prioritized handling
+                            $current_tab_fields[$field_id] = true;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    if ($debug && isset($modules[$active_tab]['sections'])) {
+        file_put_contents($log_file, "Found sections for tab $active_tab: " . print_r(array_keys($modules[$active_tab]['sections']), true) . "\n", FILE_APPEND);
+        
+        foreach ($modules[$active_tab]['sections'] as $section_id => $section) {
+            file_put_contents($log_file, "Processing section: $section_id\n", FILE_APPEND);
+            
+            // Check for custom content too
+            if (!empty($section['custom_content'])) {
+                file_put_contents($log_file, "Section has custom_content: " . $section['custom_content'] . "\n", FILE_APPEND);
+            }
+            
+            if (!empty($section['fields'])) {
+                $fields = is_callable($section['fields']) ? call_user_func($section['fields']) : $section['fields'];
+                file_put_contents($log_file, "Section fields: " . print_r(array_keys($fields), true) . "\n", FILE_APPEND);
+            }
+        }
+    }
+    
+    if ($debug) {
+        file_put_contents($log_file, "Current tab fields: " . print_r(array_keys($current_tab_fields), true) . "\n", FILE_APPEND);
+    }
+    
+    // Process checkbox options first (unchecked checkboxes don't appear in $_POST)
+    foreach ($wp_registered_settings as $option_name => $option_data) {
+        // Only process our settings
+        if (strpos($option_name, 'kuperbush_') !== 0) {
+            continue;
+        }
+        
+        // If we're on the general tab with front page custom section, handle all options
+        $special_handling = ($active_tab === 'general' && 
+                             !empty($modules[$active_tab]['sections']['front_page']['custom_content']) &&
+                             $modules[$active_tab]['sections']['front_page']['custom_content'] === 'kuperbush_front_page_options_form');
+        
+        // Only update fields in the current tab or if we're in the special general tab case
+        if (isset($current_tab_fields[$option_name]) || $special_handling) {
+            // For checkboxes, set value to false if not in $_POST
+            if (isset($option_data['type']) && $option_data['type'] === 'boolean') {
+                if (!isset($_POST[$option_name])) {
+                    update_option($option_name, false);
+                    $updated_options[$option_name] = false;
+                    if ($debug) {
+                        file_put_contents($log_file, "Updated checkbox option: $option_name = false\n", FILE_APPEND);
+                    }
+                }
+            }
+        }
+    }
+    
+    // Process all other option fields
+    foreach ($wp_registered_settings as $option_name => $option_data) {
+        // Only process our settings
+        if (strpos($option_name, 'kuperbush_') !== 0) {
+            continue;
+        }
+        
+        // If we're on the general tab with front page custom section, handle all options
+        $special_handling = ($active_tab === 'general' && 
+                             !empty($modules[$active_tab]['sections']['front_page']['custom_content']) &&
+                             $modules[$active_tab]['sections']['front_page']['custom_content'] === 'kuperbush_front_page_options_form');
+        
+        // Only update fields in the current tab or if we're in the special general tab case
+        if (isset($current_tab_fields[$option_name]) || $special_handling) {
+            // Log special case
+            if ($debug && $special_handling) {
+                file_put_contents($log_file, "Special handling for option: $option_name in general tab\n", FILE_APPEND);
+            }
+            
+            if (isset($_POST[$option_name])) {
+                $value = $_POST[$option_name];
+                
+                // Apply sanitization if available
+                if (isset($option_data['sanitize_callback']) && is_callable($option_data['sanitize_callback'])) {
+                    $value = call_user_func($option_data['sanitize_callback'], $value);
+                }
+                
+                update_option($option_name, $value);
+                $updated_options[$option_name] = $value;
+                
+                if ($debug) {
+                    file_put_contents($log_file, "Updated option: $option_name = " . print_r($value, true) . "\n", FILE_APPEND);
+                }
+            } else {
+                // For checkboxes that weren't checked (legacy handling for options without explicit type)
+                if (strpos($option_name, 'kuperbush_disable') === 0 || 
+                    strpos($option_name, 'kuperbush_enable') === 0 ||
+                    strpos($option_name, 'kuperbush_show') === 0) {
+                    
+                    // Only update if we haven't already processed this option
+                    if (!isset($updated_options[$option_name])) {
+                        update_option($option_name, false);
+                        $updated_options[$option_name] = false;
+                        
+                        if ($debug) {
+                            file_put_contents($log_file, "Updated legacy checkbox option: $option_name = false\n", FILE_APPEND);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    // Add success message
+    add_settings_error(
+        'kuperbush_options',
+        'settings_updated',
+        __('Settings saved successfully!', 'kuperbush'),
+        'success'
+    );
+    
+    // Ensure all settings are registered properly and saved into transient
+    set_transient('settings_errors', get_settings_errors(), 30);
+    
+    // Redirect back to the settings page
+    wp_redirect(add_query_arg(
+        array(
+            'page' => 'kuperbush-options',
+            'tab' => $active_tab,
+            'settings-updated' => 'true'
+        ),
+        admin_url('themes.php')
+    ));
+    exit;
 }
-add_action('admin_init', 'kuperbush_settings_redirect');
+add_action('admin_post', 'kuperbush_process_options');
+add_action('admin_post_options', 'kuperbush_process_options');
 
 /**
  * Register admin scripts and styles
@@ -348,9 +582,18 @@ function kuperbush_get_admin_modules() {
 
 /**
  * Render a field based on its type
+ * 
+ * @param string $field_id The option name for this field
+ * @param array $field Field configuration data
  */
 function kuperbush_render_field($field_id, $field) {
-    $value = get_option($field_id, $field['default']);
+    // Get the current value from the database, falling back to default if not set
+    $value = get_option($field_id, isset($field['default']) ? $field['default'] : '');
+    
+    // For debugging
+    if (defined('WP_DEBUG') && WP_DEBUG) {
+        error_log("Rendering field: $field_id with value: " . print_r($value, true));
+    }
     
     switch ($field['type']) {
         case 'checkbox':
@@ -359,7 +602,7 @@ function kuperbush_render_field($field_id, $field) {
             ?>
             <div class="kuperbush-field kuperbush-field-checkbox <?php echo esc_attr($field_class); ?>">
                 <label class="kuperbush-toggle">
-                    <input type="checkbox" name="<?php echo esc_attr($field_id); ?>" id="<?php echo esc_attr($field_id); ?>" value="1" <?php checked($value); ?> <?php echo $disabled; ?>>
+                    <input type="checkbox" name="<?php echo esc_attr($field_id); ?>" id="<?php echo esc_attr($field_id); ?>" value="1" <?php checked($value, true); ?> <?php echo $disabled; ?>>
                     <span class="kuperbush-toggle-slider"></span>
                 </label>
                 <label for="<?php echo esc_attr($field_id); ?>" class="kuperbush-field-label"><?php echo esc_html($field['label']); ?></label>
@@ -411,43 +654,8 @@ function kuperbush_render_field($field_id, $field) {
 function kuperbush_front_page_options_form() {
     ob_start();
     
-    // Check if form was submitted
-    if (isset($_POST['kuperbush_front_page_nonce']) && 
-        wp_verify_nonce($_POST['kuperbush_front_page_nonce'], 'kuperbush_front_page_action')) {
-        
-        // Get the active tab for redirect
-        $active_tab = isset($_POST['active_tab']) ? sanitize_key($_POST['active_tab']) : 'general';
-        
-        if (isset($_POST['kuperbush_apply_front_page'])) {
-            // Apply front page settings
-            $result = kuperbush_create_front_page(true);
-            if ($result) {
-                add_settings_error('kuperbush_front_page', 'kuperbush_front_page_success', 'Front page has been created and set as the homepage!', 'success');
-            } else {
-                add_settings_error('kuperbush_front_page', 'kuperbush_front_page_error', 'An error occurred while configuring the front page.', 'error');
-            }
-        } else {
-            // Just create the pages without applying settings
-            $result = kuperbush_create_front_page(false);
-            if ($result) {
-                add_settings_error('kuperbush_front_page', 'kuperbush_front_page_success', 'Front page has been created but not set as the homepage.', 'success');
-            } else {
-                add_settings_error('kuperbush_front_page', 'kuperbush_front_page_error', 'An error occurred while creating the front page.', 'error');
-            }
-        }
-        
-        // Redirect to prevent form resubmission and preserve the tab
-        $redirect_url = add_query_arg(
-            array(
-                'page' => 'kuperbush-options',
-                'tab' => $active_tab,
-                'settings-updated' => 'true'
-            ),
-            admin_url('themes.php')
-        );
-        wp_redirect($redirect_url);
-        exit;
-    }
+    // Create form markup - don't process submission here
+    // We'll process it in the kuperbush_process_options function
     
     // Get current front page settings
     $show_on_front = get_option('show_on_front');
@@ -488,9 +696,11 @@ function kuperbush_front_page_options_form() {
             </tr>
         </table>
         
-        <form method="post" action="" style="margin-top: 1em;" class="kuperbush-front-page-form">
+        <form method="post" action="<?php echo admin_url('admin-post.php'); ?>" style="margin-top: 1em;" class="kuperbush-front-page-form">
             <?php wp_nonce_field('kuperbush_front_page_action', 'kuperbush_front_page_nonce'); ?>
             <input type="hidden" name="active_tab" value="<?php echo isset($_GET['tab']) ? esc_attr(sanitize_key($_GET['tab'])) : 'general'; ?>">
+            <input type="hidden" name="option_page" value="kuperbush_options">
+            <input type="hidden" name="action" value="options">
             
             <p>
                 <label>
@@ -515,8 +725,24 @@ function kuperbush_front_page_options_form() {
  * Display settings errors for our custom form submissions
  */
 function kuperbush_admin_notices() {
-    // Show existing WordPress errors
-    settings_errors('kuperbush_front_page');
+    // Get current screen
+    $screen = get_current_screen();
+    
+    // Only show notices on our settings page
+    if ($screen && $screen->id === 'appearance_page_kuperbush-options') {
+        // Show settings errors
+        if (isset($_GET['settings-updated']) && $_GET['settings-updated'] === 'true') {
+            add_settings_error(
+                'kuperbush_options',
+                'settings_updated',
+                __('Settings saved successfully.', 'kuperbush'),
+                'success'
+            );
+        }
+        
+        // Display all errors and success messages
+        settings_errors('kuperbush_options');
+    }
 }
 add_action('admin_notices', 'kuperbush_admin_notices');
 
@@ -543,6 +769,11 @@ function kuperbush_options_page_callback() {
             </div>
         </div>
         
+        <?php
+        // Display settings errors/notifications
+        settings_errors('kuperbush_options');
+        ?>
+        
         <div class="kuperbush-admin-content">
             <div class="kuperbush-admin-sidebar">
                 <ul class="kuperbush-admin-tabs">
@@ -564,8 +795,9 @@ function kuperbush_options_page_callback() {
                         <p class="kuperbush-admin-module-description"><?php echo esc_html($modules[$active_tab]['description']); ?></p>
                     </div>
                     
-                    <form method="post" action="options.php" class="kuperbush-admin-form">
+                    <form method="post" action="<?php echo admin_url('admin-post.php'); ?>" class="kuperbush-admin-form">
                         <?php settings_fields('kuperbush_options'); ?>
+                        <input type="hidden" name="action" value="options">
                         <input type="hidden" name="active_tab" value="<?php echo esc_attr($active_tab); ?>">
                         
                         <?php foreach ($modules[$active_tab]['sections'] as $section_id => $section): ?>

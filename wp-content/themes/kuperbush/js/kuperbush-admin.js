@@ -16,6 +16,7 @@
             this.setupToggleFields();
             this.setupBulkActions();
             this.preserveTabsOnSubmit();
+            this.handleSuccessNotifications();
         },
 
         /**
@@ -55,12 +56,71 @@
         },
         
         /**
+         * Handle success notifications and settings-updated parameter
+         */
+        handleSuccessNotifications: function() {
+            // Check if we have a settings-updated parameter
+            const urlParams = new URLSearchParams(window.location.search);
+            const settingsUpdated = urlParams.get('settings-updated');
+            
+            if (settingsUpdated === 'true') {
+                // If there's no success message already displayed (WordPress might have added one)
+                if ($('.notice-success').length === 0) {
+                    // Add a success message
+                    const successMessage = $('<div class="notice notice-success is-dismissible"><p>' + 
+                                           'Settings saved successfully!' + 
+                                           '</p><button type="button" class="notice-dismiss"></button></div>');
+                    
+                    // Add it at the top of the form
+                    $('.kuperbush-admin-module-header').before(successMessage);
+                    
+                    // Make it dismissible
+                    successMessage.find('.notice-dismiss').on('click', function() {
+                        successMessage.fadeOut(300, function() { $(this).remove(); });
+                    });
+                    
+                    // Auto-dismiss after 5 seconds
+                    setTimeout(function() {
+                        successMessage.fadeOut(300, function() { $(this).remove(); });
+                    }, 5000);
+                    
+                    // Remove the settings-updated parameter from URL without refreshing
+                    if (window.history && window.history.replaceState) {
+                        // Remove the parameter but keep the other ones
+                        urlParams.delete('settings-updated');
+                        const newUrl = window.location.pathname + (urlParams.toString() ? '?' + urlParams.toString() : '');
+                        window.history.replaceState({}, document.title, newUrl);
+                    }
+                }
+            }
+        },
+        
+        /**
          * Handle form submission with validation
          */
         setupFormSubmission: function() {
             $('.kuperbush-admin-form').on('submit', function(e) {
                 // For future form validation if needed
                 const form = $(this);
+                
+                // Collect current values for later comparison
+                if (window.kuperbushAdminSavedValues === undefined) {
+                    window.kuperbushAdminSavedValues = {};
+                }
+                
+                // Save the current form values to compare after submit
+                form.find('input, select, textarea').each(function() {
+                    const input = $(this);
+                    const name = input.attr('name');
+                    
+                    if (name) {
+                        if (input.is(':checkbox')) {
+                            window.kuperbushAdminSavedValues[name] = input.is(':checked');
+                        } else {
+                            window.kuperbushAdminSavedValues[name] = input.val();
+                        }
+                    }
+                });
                 
                 // Example validation check (not currently used)
                 const isValid = true;
@@ -72,7 +132,31 @@
                 
                 // Add saving indicator
                 const submitButton = form.find('.kuperbush-admin-submit-button');
-                submitButton.prop('disabled', true).addClass('updating-message');
+                submitButton.prop('disabled', true)
+                            .addClass('updating-message')
+                            .attr('data-original-text', submitButton.val())
+                            .val('Saving...');
+                
+                // Add a loading overlay to the form
+                const loadingOverlay = $('<div class="kuperbush-loading-overlay"><div class="kuperbush-loading-spinner"></div></div>');
+                form.append(loadingOverlay);
+                loadingOverlay.fadeIn(150);
+            });
+            
+            // Handle the front page form submission in the same way
+            $('.kuperbush-front-page-form').on('submit', function(e) {
+                const form = $(this);
+                const submitButton = form.find('input[type="submit"]');
+                
+                submitButton.prop('disabled', true)
+                           .addClass('updating-message')
+                           .attr('data-original-text', submitButton.val())
+                           .val('Processing...');
+                
+                // Add a loading overlay
+                const loadingOverlay = $('<div class="kuperbush-loading-overlay"><div class="kuperbush-loading-spinner"></div></div>');
+                form.append(loadingOverlay);
+                loadingOverlay.fadeIn(150);
             });
         },
         
@@ -85,8 +169,16 @@
                 const fieldId = $(this).attr('id');
                 const isChecked = $(this).is(':checked');
                 
+                // Apply the toggled state visually (improves feedback)
+                const toggleSlider = $(this).next('.kuperbush-toggle-slider');
+                if (isChecked) {
+                    toggleSlider.addClass('kuperbush-toggle-checked');
+                } else {
+                    toggleSlider.removeClass('kuperbush-toggle-checked');
+                }
+                
                 // Example: Show or hide dependent fields based on checkbox state
-                // $('.dependent-on-' + fieldId).toggleClass('hidden', !isChecked);
+                $('.dependent-on-' + fieldId).toggleClass('hidden', !isChecked);
                 
                 // Custom handling for specific fields can be added here
                 switch (fieldId) {

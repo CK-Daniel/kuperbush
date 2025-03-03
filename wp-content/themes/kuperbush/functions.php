@@ -17,6 +17,7 @@ require_once get_template_directory() . '/inc/modules/template-registry.php';
 require_once get_template_directory() . '/inc/modules/auto-pages.php';
 require_once get_template_directory() . '/inc/modules/template-utility.php';
 require_once get_template_directory() . '/inc/modules/front-page.php';
+require_once get_template_directory() . '/inc/modules/admin-tools.php';
 
 // Custom post types
 require_once get_template_directory() . '/inc/cpt-products.php';

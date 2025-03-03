@@ -170,6 +170,8 @@ if (!function_exists('kuperbush_admin_tools_page')) {
                     </tbody>
                 </table>
             </div>
+            
+            <?php do_action('kuperbush_admin_tools_sections'); ?>
         </div>
         <?php
     }

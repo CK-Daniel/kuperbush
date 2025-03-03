@@ -13,6 +13,9 @@ require_once get_template_directory() . '/inc/modules/widgets.php';
 require_once get_template_directory() . '/inc/modules/templates.php';
 require_once get_template_directory() . '/inc/modules/products.php';
 require_once get_template_directory() . '/inc/modules/fallbacks.php';
+require_once get_template_directory() . '/inc/modules/template-registry.php';
+require_once get_template_directory() . '/inc/modules/auto-pages.php';
+require_once get_template_directory() . '/inc/modules/template-utility.php';
 
 // Custom post types
 require_once get_template_directory() . '/inc/cpt-products.php';

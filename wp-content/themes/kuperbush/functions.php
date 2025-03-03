@@ -18,7 +18,8 @@ require_once get_template_directory() . '/inc/modules/auto-pages.php';
 require_once get_template_directory() . '/inc/modules/template-utility.php';
 require_once get_template_directory() . '/inc/modules/front-page.php';
 require_once get_template_directory() . '/inc/modules/front-page-scripts.php';
-require_once get_template_directory() . '/inc/modules/admin-tools.php';
+// New modular admin structure (replacing admin-tools.php)
+require_once get_template_directory() . '/inc/admin/admin.php';
 require_once get_template_directory() . '/inc/modules/extra-login-page.php';
 
 // Custom post types

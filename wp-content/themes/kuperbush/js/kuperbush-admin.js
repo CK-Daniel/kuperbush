@@ -115,7 +115,24 @@
                 // For future form validation if needed
                 const form = $(this);
                 
-                // Collect current values for later comparison
+                // Debug form data
+                console.log('Submitting form with data:');
+                let formData = {};
+                form.find('input, select, textarea').each(function() {
+                    const input = $(this);
+                    const name = input.attr('name');
+                    
+                    if (name) {
+                        if (input.is(':checkbox')) {
+                            formData[name] = input.is(':checked') ? '1' : '0';
+                        } else {
+                            formData[name] = input.val();
+                        }
+                    }
+                });
+                console.log(formData);
+                
+                // Store for comparison
                 if (window.kuperbushAdminSavedValues === undefined) {
                     window.kuperbushAdminSavedValues = {};
                 }
@@ -133,6 +150,19 @@
                         }
                     }
                 });
+                
+                // Make sure the form action is correct
+                const formAction = form.attr('action');
+                if (!formAction || formAction === '') {
+                    form.attr('action', window.ajaxurl || '/wp-admin/admin-post.php');
+                    console.log('Set form action to:', form.attr('action'));
+                }
+                
+                // Make sure we have required hidden fields
+                if (!form.find('input[name="action"]').length) {
+                    form.append('<input type="hidden" name="action" value="options">');
+                    console.log('Added hidden action field');
+                }
                 
                 // Example validation check (not currently used)
                 const isValid = true;
@@ -153,22 +183,60 @@
                 const loadingOverlay = $('<div class="kuperbush-loading-overlay"><div class="kuperbush-loading-spinner"></div></div>');
                 form.append(loadingOverlay);
                 loadingOverlay.fadeIn(150);
+                
+                // Debug submission
+                console.log('Form submitted to:', form.attr('action'));
+                console.log('With method:', form.attr('method'));
             });
             
             // Handle the front page form submission in the same way
-            $('.kuperbush-front-page-form').on('submit', function(e) {
+            $('.kuperbush-front-page-form, .kuperbush-template-pages-form').on('submit', function(e) {
                 const form = $(this);
-                const submitButton = form.find('input[type="submit"]');
+                const submitButton = form.find('input[type="submit"], button[type="submit"]');
+                
+                // Debug form data
+                console.log('Submitting custom form with data:');
+                let formData = {};
+                form.find('input, select, textarea').each(function() {
+                    const input = $(this);
+                    const name = input.attr('name');
+                    
+                    if (name) {
+                        if (input.is(':checkbox')) {
+                            formData[name] = input.is(':checked') ? '1' : '0';
+                        } else {
+                            formData[name] = input.val();
+                        }
+                    }
+                });
+                console.log(formData);
+                
+                // Make sure the form action is correct
+                const formAction = form.attr('action');
+                if (!formAction || formAction === '') {
+                    form.attr('action', window.ajaxurl || '/wp-admin/admin-post.php');
+                    console.log('Set form action to:', form.attr('action'));
+                }
+                
+                // Make sure we have the option_page field
+                if (!form.find('input[name="option_page"]').length) {
+                    form.append('<input type="hidden" name="option_page" value="kuperbush_options">');
+                    console.log('Added hidden option_page field');
+                }
                 
                 submitButton.prop('disabled', true)
                            .addClass('updating-message')
-                           .attr('data-original-text', submitButton.val())
+                           .attr('data-original-text', submitButton.val() || submitButton.text())
                            .val('Processing...');
                 
                 // Add a loading overlay
                 const loadingOverlay = $('<div class="kuperbush-loading-overlay"><div class="kuperbush-loading-spinner"></div></div>');
                 form.append(loadingOverlay);
                 loadingOverlay.fadeIn(150);
+                
+                // Debug submission
+                console.log('Custom form submitted to:', form.attr('action'));
+                console.log('With method:', form.attr('method'));
             });
         },
         

@@ -167,8 +167,19 @@ add_action('admin_init', 'kuperbush_register_settings');
  * Custom settings saving handler that preserves all tab settings
  */
 function kuperbush_process_options() {
+    // Debug log - only enabled in debug mode
+    $debug = defined('WP_DEBUG') && WP_DEBUG;
+    $log_file = WP_CONTENT_DIR . '/kuperbush-debug.log';
+    
+    if ($debug) {
+        file_put_contents($log_file, "Processing options - POST data: " . print_r($_POST, true) . "\n", FILE_APPEND);
+    }
+    
     // Only run on our settings page submissions
     if (!isset($_POST['option_page']) || $_POST['option_page'] !== 'kuperbush_options') {
+        if ($debug) {
+            file_put_contents($log_file, "Not our option_page: " . (isset($_POST['option_page']) ? $_POST['option_page'] : 'not set') . "\n", FILE_APPEND);
+        }
         return;
     }
 
@@ -178,9 +189,17 @@ function kuperbush_process_options() {
     // Get active tab
     $active_tab = isset($_POST['active_tab']) ? sanitize_key($_POST['active_tab']) : 'general';
     
+    if ($debug) {
+        file_put_contents($log_file, "Active tab: $active_tab\n", FILE_APPEND);
+    }
+    
     // Process front page form if that was submitted
     if (isset($_POST['kuperbush_front_page_nonce']) && 
         wp_verify_nonce($_POST['kuperbush_front_page_nonce'], 'kuperbush_front_page_action')) {
+        
+        if ($debug) {
+            file_put_contents($log_file, "Processing front page form\n", FILE_APPEND);
+        }
         
         if (isset($_POST['kuperbush_apply_front_page'])) {
             // Apply front page settings
@@ -218,6 +237,43 @@ function kuperbush_process_options() {
                     'error'
                 );
             }
+        }
+    }
+    
+    // Process template pages form if that was submitted
+    if (isset($_POST['kuperbush_create_pages']) && 
+        isset($_POST['_wpnonce']) && 
+        wp_verify_nonce($_POST['_wpnonce'], 'kuperbush_create_pages_nonce')) {
+        
+        if ($debug) {
+            file_put_contents($log_file, "Processing template pages form\n", FILE_APPEND);
+        }
+        
+        // Call the function to create template pages
+        if (function_exists('kuperbush_create_template_pages')) {
+            $result = kuperbush_create_template_pages();
+            if ($result) {
+                add_settings_error(
+                    'kuperbush_options',
+                    'kuperbush_template_pages_success',
+                    __('Template pages have been created successfully!', 'kuperbush'),
+                    'success'
+                );
+            } else {
+                add_settings_error(
+                    'kuperbush_options',
+                    'kuperbush_template_pages_error',
+                    __('No new template pages were created.', 'kuperbush'),
+                    'info'
+                );
+            }
+        } else {
+            add_settings_error(
+                'kuperbush_options',
+                'kuperbush_template_pages_error',
+                __('Template pages function is not available.', 'kuperbush'),
+                'error'
+            );
         }
     }
     
@@ -308,11 +364,11 @@ function kuperbush_process_options() {
             continue;
         }
         
-        // Special handling for the General tab
+        // Special handling for the General and Tools tabs
         $special_handling = false;
         
-        // Either it's in the current tab fields or it's in the general tab
-        if ($active_tab === 'general') {
+        // Either it's in the current tab fields or it's in the general/tools tab
+        if ($active_tab === 'general' || $active_tab === 'tools') {
             $special_handling = true;
         }
         
@@ -338,15 +394,15 @@ function kuperbush_process_options() {
             continue;
         }
         
-        // Special handling for the General tab
+        // Special handling for the General and Tools tabs
         $special_handling = false;
         
-        // Either it's in the current tab fields or it's in the general tab
-        if ($active_tab === 'general') {
+        // Either it's in the current tab fields or it's in the general/tools tab
+        if ($active_tab === 'general' || $active_tab === 'tools') {
             $special_handling = true;
             
             if ($debug) {
-                file_put_contents($log_file, "General tab handling for option: $option_name\n", FILE_APPEND);
+                file_put_contents($log_file, "Special tab handling for option: $option_name in tab: $active_tab\n", FILE_APPEND);
             }
         }
         
@@ -469,11 +525,15 @@ function kuperbush_get_editor_post_types() {
  */
 function kuperbush_get_template_pages_form() {
     ob_start();
+    $active_tab = isset($_GET['tab']) ? sanitize_key($_GET['tab']) : 'tools';
     ?>
     <div class="kuperbush-form-container">
-        <form method="post" action="" class="kuperbush-template-pages-form">
+        <form method="post" action="<?php echo admin_url('admin-post.php'); ?>" class="kuperbush-template-pages-form">
             <?php wp_nonce_field('kuperbush_create_pages_nonce'); ?>
             <input type="hidden" name="kuperbush_create_pages" value="1">
+            <input type="hidden" name="active_tab" value="<?php echo esc_attr($active_tab); ?>">
+            <input type="hidden" name="option_page" value="kuperbush_options">
+            <input type="hidden" name="action" value="options">
             <p><?php _e('This tool will create pages for your template files if they don\'t exist.', 'kuperbush'); ?></p>
             <button type="submit" class="button button-primary"><?php _e('Create Template Pages', 'kuperbush'); ?></button>
         </form>

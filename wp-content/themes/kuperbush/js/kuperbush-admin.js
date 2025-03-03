@@ -15,6 +15,7 @@
             this.setupFormSubmission();
             this.setupToggleFields();
             this.setupBulkActions();
+            this.preserveTabsOnSubmit();
         },
 
         /**
@@ -29,6 +30,20 @@
             });
         },
 
+        /**
+         * Preserve active tab when form is submitted
+         */
+        preserveTabsOnSubmit: function() {
+            // Add hidden input to remember the current tab
+            const currentTab = new URLSearchParams(window.location.search).get('tab') || 'general';
+            
+            $('.kuperbush-admin-form').each(function() {
+                if (!$(this).find('input[name="active_tab"]').length) {
+                    $(this).append('<input type="hidden" name="active_tab" value="' + currentTab + '">');
+                }
+            });
+        },
+        
         /**
          * Handle form submission with validation
          */

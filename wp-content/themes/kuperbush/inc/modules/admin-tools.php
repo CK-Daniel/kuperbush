@@ -116,6 +116,32 @@ function kuperbush_register_settings() {
 add_action('admin_init', 'kuperbush_register_settings');
 
 /**
+ * Redirect after settings save to maintain active tab
+ */
+function kuperbush_settings_redirect() {
+    // Check if settings were updated and active_tab is set
+    if (isset($_REQUEST['settings-updated']) && isset($_REQUEST['active_tab'])) {
+        // Get the active tab
+        $active_tab = sanitize_key($_REQUEST['active_tab']);
+        
+        // Create the redirect URL with the active tab
+        $redirect_url = add_query_arg(
+            array(
+                'page' => 'kuperbush-options',
+                'tab' => $active_tab,
+                'settings-updated' => 'true'
+            ),
+            admin_url('themes.php')
+        );
+        
+        // Redirect to the active tab
+        wp_redirect($redirect_url);
+        exit;
+    }
+}
+add_action('admin_init', 'kuperbush_settings_redirect');
+
+/**
  * Register admin scripts and styles
  */
 function kuperbush_admin_scripts() {
@@ -199,6 +225,11 @@ function kuperbush_get_admin_modules() {
             'icon' => 'dashicons-admin-generic',
             'description' => __('General theme settings and configuration options.', 'kuperbush'),
             'sections' => array(
+                'front_page' => array(
+                    'title' => __('Front Page Settings', 'kuperbush'),
+                    'description' => __('Configure your site\'s homepage and front page settings.', 'kuperbush'),
+                    'custom_content' => 'kuperbush_front_page_options_form',
+                ),
                 'editor' => array(
                     'title' => __('Editor Settings', 'kuperbush'),
                     'description' => __('Configure how the WordPress editor behaves.', 'kuperbush'),
@@ -364,6 +395,98 @@ function kuperbush_render_field($field_id, $field) {
             do_action('kuperbush_render_field_' . $field['type'], $field_id, $field);
             break;
     }
+}
+
+/**
+ * Get front page options form HTML
+ * This function displays the front page configuration options
+ */
+function kuperbush_front_page_options_form() {
+    ob_start();
+    
+    // Check if form was submitted
+    if (isset($_POST['kuperbush_front_page_nonce']) && 
+        wp_verify_nonce($_POST['kuperbush_front_page_nonce'], 'kuperbush_front_page_action')) {
+        
+        if (isset($_POST['kuperbush_apply_front_page'])) {
+            // Apply front page settings
+            $result = kuperbush_create_front_page(true);
+            if ($result) {
+                echo '<div class="notice notice-success"><p>Front page has been created and set as the homepage!</p></div>';
+            } else {
+                echo '<div class="notice notice-error"><p>An error occurred while configuring the front page.</p></div>';
+            }
+        } else {
+            // Just create the pages without applying settings
+            $result = kuperbush_create_front_page(false);
+            if ($result) {
+                echo '<div class="notice notice-success"><p>Front page has been created but not set as the homepage.</p></div>';
+            } else {
+                echo '<div class="notice notice-error"><p>An error occurred while creating the front page.</p></div>';
+            }
+        }
+    }
+    
+    // Get current front page settings
+    $show_on_front = get_option('show_on_front');
+    $page_on_front = get_option('page_on_front');
+    $page_for_posts = get_option('page_for_posts');
+    
+    $front_page = $page_on_front ? get_post($page_on_front) : null;
+    $posts_page = $page_for_posts ? get_post($page_for_posts) : null;
+    
+    ?>
+    <div class="kuperbush-form-container">
+        <p><?php _e('This tool will create a front page and optionally set it as the homepage in WordPress settings.', 'kuperbush'); ?></p>
+        
+        <table class="widefat" style="margin-bottom: 1em;">
+            <tr>
+                <th><?php _e('Current Homepage Display', 'kuperbush'); ?></th>
+                <td><?php echo $show_on_front === 'page' ? __('Static page', 'kuperbush') : __('Latest posts', 'kuperbush'); ?></td>
+            </tr>
+            <tr>
+                <th><?php _e('Current Front Page', 'kuperbush'); ?></th>
+                <td>
+                    <?php if ($front_page): ?>
+                        <?php echo esc_html($front_page->post_title); ?> (ID: <?php echo esc_html($front_page->ID); ?>)
+                    <?php else: ?>
+                        <?php _e('Not set', 'kuperbush'); ?>
+                    <?php endif; ?>
+                </td>
+            </tr>
+            <tr>
+                <th><?php _e('Current Posts Page', 'kuperbush'); ?></th>
+                <td>
+                    <?php if ($posts_page): ?>
+                        <?php echo esc_html($posts_page->post_title); ?> (ID: <?php echo esc_html($posts_page->ID); ?>)
+                    <?php else: ?>
+                        <?php _e('Not set', 'kuperbush'); ?>
+                    <?php endif; ?>
+                </td>
+            </tr>
+        </table>
+        
+        <form method="post" action="" style="margin-top: 1em;" class="kuperbush-front-page-form">
+            <?php wp_nonce_field('kuperbush_front_page_action', 'kuperbush_front_page_nonce'); ?>
+            <input type="hidden" name="active_tab" value="general">
+            
+            <p>
+                <label>
+                    <input type="checkbox" name="kuperbush_apply_front_page" value="1">
+                    <?php _e('Apply front page settings (change WordPress settings to use this page as front page)', 'kuperbush'); ?>
+                </label>
+            </p>
+            
+            <p><input type="submit" class="button button-primary" value="<?php _e('Setup Front Page', 'kuperbush'); ?>"></p>
+        </form>
+        
+        <p class="description" style="margin-top: 1em;">
+            <strong><?php _e('Note:', 'kuperbush'); ?></strong> 
+            <?php _e('If you don\'t check the "Apply front page settings" box, pages will be created but your current homepage settings will not be changed.', 'kuperbush'); ?>
+        </p>
+    </div>
+    <?php
+    return ob_get_clean();
 }
 
 /**

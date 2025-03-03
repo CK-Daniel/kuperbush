@@ -5,6 +5,8 @@
  * This module handles the creation of the front page and 
  * sets it as the homepage in WordPress settings when explicitly requested.
  * It does NOT modify the front page automatically on theme activation.
+ * 
+ * Note: The admin UI has been moved to admin-tools.php
  */
 
 if (!function_exists('kuperbush_create_front_page')) {
@@ -102,160 +104,27 @@ if (!function_exists('kuperbush_create_blog_page')) {
 }
 
 /**
- * Add functionality to admin tools page
+ * Add a notice to inform users about the new location of front page settings
  */
-if (!function_exists('kuperbush_front_page_admin_tools')) {
-    function kuperbush_front_page_admin_tools() {
-        // Make sure there's a Kuperbush admin tools section
-        if (!function_exists('kuperbush_admin_tools_page')) {
-            return;
-        }
-        
-        // Add the front page section to the admin tools page
-        add_action('admin_init', function() {
-            // Register our section
-            add_settings_section(
-                'kuperbush_front_page_section',
-                'Front Page Setup',
-                'kuperbush_front_page_section_callback',
-                'kuperbush_tools_page'
-            );
-        });
-    }
-}
-add_action('init', 'kuperbush_front_page_admin_tools');
-
-/**
- * Output front page settings section
- */
-if (!function_exists('kuperbush_front_page_section_callback')) {
-    function kuperbush_front_page_section_callback() {
-        // Check if form was submitted
-        if (isset($_POST['kuperbush_front_page_nonce']) && 
-            wp_verify_nonce($_POST['kuperbush_front_page_nonce'], 'kuperbush_front_page_action')) {
-            
-            if (isset($_POST['kuperbush_apply_front_page'])) {
-                // Apply front page settings
-                $result = kuperbush_create_front_page(true);
-                if ($result) {
-                    echo '<div class="notice notice-success"><p>Front page has been created and set as the homepage!</p></div>';
-                } else {
-                    echo '<div class="notice notice-error"><p>An error occurred while configuring the front page.</p></div>';
-                }
-            } else {
-                // Just create the pages without applying settings
-                $result = kuperbush_create_front_page(false);
-                if ($result) {
-                    echo '<div class="notice notice-success"><p>Front page has been created but not set as the homepage.</p></div>';
-                } else {
-                    echo '<div class="notice notice-error"><p>An error occurred while creating the front page.</p></div>';
-                }
-            }
-        }
-        
-        // Get current front page settings
-        $show_on_front = get_option('show_on_front');
-        $page_on_front = get_option('page_on_front');
-        $page_for_posts = get_option('page_for_posts');
-        
-        $front_page = $page_on_front ? get_post($page_on_front) : null;
-        $posts_page = $page_for_posts ? get_post($page_for_posts) : null;
-        
+function kuperbush_front_page_admin_notice() {
+    global $pagenow;
+    
+    // Only show on the kuperbush-front-page admin page if someone tries to access it directly
+    if ($pagenow === 'admin.php' && isset($_GET['page']) && $_GET['page'] === 'kuperbush-front-page') {
         ?>
-        <div class="card">
-            <h2>Front Page Settings</h2>
-            <p>This tool will create a front page and optionally set it as the homepage in WordPress settings.</p>
-            
-            <table class="widefat">
-                <tr>
-                    <th>Current Homepage Display</th>
-                    <td><?php echo $show_on_front === 'page' ? 'Static page' : 'Latest posts'; ?></td>
-                </tr>
-                <tr>
-                    <th>Current Front Page</th>
-                    <td>
-                        <?php if ($front_page): ?>
-                            <?php echo esc_html($front_page->post_title); ?> (ID: <?php echo esc_html($front_page->ID); ?>)
-                        <?php else: ?>
-                            Not set
-                        <?php endif; ?>
-                    </td>
-                </tr>
-                <tr>
-                    <th>Current Posts Page</th>
-                    <td>
-                        <?php if ($posts_page): ?>
-                            <?php echo esc_html($posts_page->post_title); ?> (ID: <?php echo esc_html($posts_page->ID); ?>)
-                        <?php else: ?>
-                            Not set
-                        <?php endif; ?>
-                    </td>
-                </tr>
-            </table>
-            
-            <form method="post" action="" style="margin-top: 1em;">
-                <?php wp_nonce_field('kuperbush_front_page_action', 'kuperbush_front_page_nonce'); ?>
-                
-                <p>
-                    <label>
-                        <input type="checkbox" name="kuperbush_apply_front_page" value="1">
-                        Apply front page settings (change WordPress settings to use this page as front page)
-                    </label>
-                </p>
-                
-                <p><input type="submit" class="button button-primary" value="Setup Front Page"></p>
-            </form>
-            
-            <p class="description" style="margin-top: 1em;">
-                <strong>Note:</strong> If you don't check the "Apply front page settings" box, 
-                pages will be created but your current homepage settings will not be changed.
-            </p>
+        <div class="notice notice-info">
+            <p><strong>Front Page Setup has moved!</strong> Front page settings are now available in the <a href="<?php echo admin_url('themes.php?page=kuperbush-options'); ?>">Theme Options</a> page under the General tab.</p>
         </div>
+        <?php
+        
+        // Auto-redirect after 5 seconds
+        ?>
+        <script>
+        setTimeout(function() {
+            window.location.href = '<?php echo esc_url(admin_url('themes.php?page=kuperbush-options')); ?>';
+        }, 5000);
+        </script>
         <?php
     }
 }
-
-/**
- * Register a custom admin page for front page tools if needed
- */
-if (!function_exists('kuperbush_register_front_page_tools')) {
-    function kuperbush_register_front_page_tools() {
-        if (!function_exists('kuperbush_admin_tools_page')) {
-            // If the main tools page doesn't exist, create our own
-            add_menu_page(
-                'Front Page Setup',
-                'Front Page',
-                'manage_options',
-                'kuperbush-front-page',
-                'kuperbush_front_page_tools_page',
-                'dashicons-admin-home',
-                80
-            );
-        }
-    }
-}
-add_action('admin_menu', 'kuperbush_register_front_page_tools');
-
-/**
- * Output the stand-alone front page tools page if needed
- */
-if (!function_exists('kuperbush_front_page_tools_page')) {
-    function kuperbush_front_page_tools_page() {
-        ?>
-        <div class="wrap">
-            <h1>Kuperbush Front Page Setup</h1>
-            <?php kuperbush_front_page_section_callback(); ?>
-        </div>
-        <?php
-    }
-}
-
-/**
- * Add our section to the main Kuperbush admin tools page
- */
-function kuperbush_add_to_admin_tools() {
-    if (function_exists('kuperbush_front_page_section_callback')) {
-        kuperbush_front_page_section_callback();
-    }
-}
-add_action('kuperbush_admin_tools_sections', 'kuperbush_add_to_admin_tools');
+add_action('admin_notices', 'kuperbush_front_page_admin_notice');

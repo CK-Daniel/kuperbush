@@ -265,6 +265,17 @@ input:checked + .kuperbush-toggle-slider:before,
     transform: translateX(18px);
 }
 
+/* Saved Highlight Effect */
+.kuperbush-saved-highlight {
+    animation: kuperbush-saved-pulse 1.5s ease-in-out;
+}
+
+@keyframes kuperbush-saved-pulse {
+    0% { box-shadow: 0 0 0 0 rgba(34, 113, 177, 0.7); }
+    50% { box-shadow: 0 0 0 8px rgba(34, 113, 177, 0.2); }
+    100% { box-shadow: 0 0 0 0 rgba(34, 113, 177, 0); }
+}
+
 /* Disabled fields */
 .kuperbush-field-disabled {
     opacity: 0.7;

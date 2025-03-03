@@ -64,34 +64,46 @@
             const settingsUpdated = urlParams.get('settings-updated');
             
             if (settingsUpdated === 'true') {
-                // If there's no success message already displayed (WordPress might have added one)
-                if ($('.notice-success').length === 0) {
-                    // Add a success message
-                    const successMessage = $('<div class="notice notice-success is-dismissible"><p>' + 
-                                           'Settings saved successfully!' + 
-                                           '</p><button type="button" class="notice-dismiss"></button></div>');
-                    
-                    // Add it at the top of the form
-                    $('.kuperbush-admin-module-header').before(successMessage);
-                    
-                    // Make it dismissible
-                    successMessage.find('.notice-dismiss').on('click', function() {
-                        successMessage.fadeOut(300, function() { $(this).remove(); });
-                    });
-                    
-                    // Auto-dismiss after 5 seconds
-                    setTimeout(function() {
-                        successMessage.fadeOut(300, function() { $(this).remove(); });
-                    }, 5000);
-                    
-                    // Remove the settings-updated parameter from URL without refreshing
-                    if (window.history && window.history.replaceState) {
-                        // Remove the parameter but keep the other ones
-                        urlParams.delete('settings-updated');
-                        const newUrl = window.location.pathname + (urlParams.toString() ? '?' + urlParams.toString() : '');
-                        window.history.replaceState({}, document.title, newUrl);
-                    }
+                // Force add our own success message for better visibility - even if WordPress added one
+                // Create a custom success message with more styling
+                const successMessage = $('<div class="kuperbush-success-message">' +
+                                       '<span class="dashicons dashicons-yes-alt"></span>' +
+                                       '<span class="message-text">Settings saved successfully!</span>' +
+                                       '<span class="kuperbush-success-message-close dashicons dashicons-no-alt"></span>' +
+                                       '</div>');
+                
+                // Add it at the top of the form
+                $('.kuperbush-admin-module-header').before(successMessage);
+                
+                // Make it dismissible
+                successMessage.find('.kuperbush-success-message-close').on('click', function() {
+                    successMessage.fadeOut(300, function() { $(this).remove(); });
+                });
+                
+                // Auto-dismiss after 5 seconds
+                setTimeout(function() {
+                    successMessage.fadeOut(300, function() { $(this).remove(); });
+                }, 5000);
+                
+                // Remove the settings-updated parameter from URL without refreshing
+                if (window.history && window.history.replaceState) {
+                    // Remove the parameter but keep the other ones
+                    urlParams.delete('settings-updated');
+                    const newUrl = window.location.pathname + (urlParams.toString() ? '?' + urlParams.toString() : '');
+                    window.history.replaceState({}, document.title, newUrl);
                 }
+                
+                // Highlight saved fields for visual feedback - especially important for checkboxes
+                $('.kuperbush-field-checkbox input[type="checkbox"]').each(function() {
+                    const checkbox = $(this);
+                    const toggleSlider = checkbox.next('.kuperbush-toggle-slider');
+                    
+                    // Add a brief highlight effect to show the saved state
+                    toggleSlider.addClass('kuperbush-saved-highlight');
+                    setTimeout(function() {
+                        toggleSlider.removeClass('kuperbush-saved-highlight');
+                    }, 1500);
+                });
             }
         },
         

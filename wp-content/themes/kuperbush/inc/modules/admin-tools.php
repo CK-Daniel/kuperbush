@@ -255,6 +255,30 @@ function kuperbush_process_options() {
         }
     }
     
+    // Special handling for general tab - explicitly identify these fields
+    if ($active_tab === 'general') {
+        // These are the main options in the general tab that need special handling
+        $general_tab_fields = array(
+            'kuperbush_disable_gutenberg',
+            'kuperbush_show_template_name',
+            'kuperbush_enable_custom_login'
+        );
+        
+        // Add post type specific fields
+        $post_types = get_post_types(array('public' => true), 'objects');
+        foreach ($post_types as $post_type) {
+            $general_tab_fields[] = 'kuperbush_disable_gutenberg_' . $post_type->name;
+        }
+        
+        // Add these to the current tab fields
+        foreach ($general_tab_fields as $field_id) {
+            $current_tab_fields[$field_id] = true;
+            if ($debug) {
+                file_put_contents($log_file, "Added general tab field: $field_id\n", FILE_APPEND);
+            }
+        }
+    }
+    
     if ($debug && isset($modules[$active_tab]['sections'])) {
         file_put_contents($log_file, "Found sections for tab $active_tab: " . print_r(array_keys($modules[$active_tab]['sections']), true) . "\n", FILE_APPEND);
         
@@ -284,12 +308,15 @@ function kuperbush_process_options() {
             continue;
         }
         
-        // If we're on the general tab with front page custom section, handle all options
-        $special_handling = ($active_tab === 'general' && 
-                             !empty($modules[$active_tab]['sections']['front_page']['custom_content']) &&
-                             $modules[$active_tab]['sections']['front_page']['custom_content'] === 'kuperbush_front_page_options_form');
+        // Special handling for the General tab
+        $special_handling = false;
         
-        // Only update fields in the current tab or if we're in the special general tab case
+        // Either it's in the current tab fields or it's in the general tab
+        if ($active_tab === 'general') {
+            $special_handling = true;
+        }
+        
+        // Only update fields in the current tab or if we're in the general tab
         if (isset($current_tab_fields[$option_name]) || $special_handling) {
             // For checkboxes, set value to false if not in $_POST
             if (isset($option_data['type']) && $option_data['type'] === 'boolean') {
@@ -311,12 +338,19 @@ function kuperbush_process_options() {
             continue;
         }
         
-        // If we're on the general tab with front page custom section, handle all options
-        $special_handling = ($active_tab === 'general' && 
-                             !empty($modules[$active_tab]['sections']['front_page']['custom_content']) &&
-                             $modules[$active_tab]['sections']['front_page']['custom_content'] === 'kuperbush_front_page_options_form');
+        // Special handling for the General tab
+        $special_handling = false;
         
-        // Only update fields in the current tab or if we're in the special general tab case
+        // Either it's in the current tab fields or it's in the general tab
+        if ($active_tab === 'general') {
+            $special_handling = true;
+            
+            if ($debug) {
+                file_put_contents($log_file, "General tab handling for option: $option_name\n", FILE_APPEND);
+            }
+        }
+        
+        // Only update fields in the current tab or if we're in the general tab
         if (isset($current_tab_fields[$option_name]) || $special_handling) {
             // Log special case
             if ($debug && $special_handling) {
@@ -730,6 +764,16 @@ function kuperbush_admin_notices() {
     
     // Only show notices on our settings page
     if ($screen && $screen->id === 'appearance_page_kuperbush-options') {
+        // Debug log - only enabled in debug mode
+        $debug = defined('WP_DEBUG') && WP_DEBUG;
+        $log_file = WP_CONTENT_DIR . '/kuperbush-debug.log';
+        
+        if ($debug) {
+            file_put_contents($log_file, "Admin Notices - Current Screen: " . $screen->id . "\n", FILE_APPEND);
+            file_put_contents($log_file, "Settings Updated Query Param: " . (isset($_GET['settings-updated']) ? $_GET['settings-updated'] : 'not set') . "\n", FILE_APPEND);
+            file_put_contents($log_file, "Current Tab: " . (isset($_GET['tab']) ? $_GET['tab'] : 'not set') . "\n", FILE_APPEND);
+        }
+        
         // Show settings errors
         if (isset($_GET['settings-updated']) && $_GET['settings-updated'] === 'true') {
             add_settings_error(
@@ -738,10 +782,20 @@ function kuperbush_admin_notices() {
                 __('Settings saved successfully.', 'kuperbush'),
                 'success'
             );
+            
+            if ($debug) {
+                file_put_contents($log_file, "Added success message via admin_notices\n", FILE_APPEND);
+            }
         }
         
         // Display all errors and success messages
         settings_errors('kuperbush_options');
+        
+        if ($debug) {
+            $errors = get_settings_errors('kuperbush_options');
+            file_put_contents($log_file, "Settings Errors Count: " . count($errors) . "\n", FILE_APPEND);
+            file_put_contents($log_file, "Settings Errors: " . print_r($errors, true) . "\n", FILE_APPEND);
+        }
     }
 }
 add_action('admin_notices', 'kuperbush_admin_notices');

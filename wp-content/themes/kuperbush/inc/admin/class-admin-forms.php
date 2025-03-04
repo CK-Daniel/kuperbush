@@ -102,21 +102,54 @@ class Kuperbush_Admin_Forms {
                 </tr>
             </table>
             
-            <form method="post" action="<?php echo admin_url( 'admin-post.php' ); ?>" style="margin-top: 1em;" class="kuperbush-front-page-form">
+            <div class="front-page-settings-container" style="margin-top: 1em;">
                 <?php wp_nonce_field( 'kuperbush_front_page_action', 'kuperbush_front_page_nonce' ); ?>
-                <input type="hidden" name="active_tab" value="<?php echo isset( $_GET['tab'] ) ? esc_attr( sanitize_key( $_GET['tab'] ) ) : 'general'; ?>">
-                <input type="hidden" name="option_page" value="kuperbush_options">
-                <input type="hidden" name="action" value="options">
+                <!-- These fields will be used by JavaScript to submit via the main form -->
                 
                 <p>
                     <label>
-                        <input type="checkbox" name="kuperbush_apply_front_page" value="1">
+                        <input type="checkbox" name="kuperbush_apply_front_page" value="1" id="kuperbush_apply_front_page">
                         <?php _e( 'Apply front page settings (change WordPress settings to use this page as front page)', 'kuperbush' ); ?>
                     </label>
                 </p>
                 
-                <p><input type="submit" class="button button-primary" value="<?php _e( 'Setup Front Page', 'kuperbush' ); ?>"></p>
-            </form>
+                <p><button type="button" class="button button-secondary kuperbush-setup-front-page" data-action="setup_front_page"><?php _e( 'Setup Front Page', 'kuperbush' ); ?></button></p>
+            </div>
+            
+            <script>
+                jQuery(document).ready(function($) {
+                    // Handle the front page setup button click
+                    $('.kuperbush-setup-front-page').on('click', function(e) {
+                        e.preventDefault();
+                        
+                        // Get main form
+                        const mainForm = $(this).closest('form.kuperbush-admin-form');
+                        
+                        // Set special field to indicate front page setup
+                        if (!mainForm.find('input[name="kuperbush_setup_front_page"]').length) {
+                            mainForm.append('<input type="hidden" name="kuperbush_setup_front_page" value="1">');
+                        }
+                        
+                        // Check if apply checkbox is checked
+                        const applyChecked = $('#kuperbush_apply_front_page').is(':checked');
+                        if (applyChecked) {
+                            if (!mainForm.find('input[name="kuperbush_apply_front_page"]').length) {
+                                mainForm.append('<input type="hidden" name="kuperbush_apply_front_page" value="1">');
+                            }
+                        }
+                        
+                        // Copy over the nonce
+                        const frontPageNonce = $('input[name="kuperbush_front_page_nonce"]').val();
+                        if (frontPageNonce && !mainForm.find('input[name="kuperbush_front_page_nonce"]').length) {
+                            mainForm.append('<input type="hidden" name="kuperbush_front_page_nonce" value="' + frontPageNonce + '">');
+                        }
+                        
+                        // Submit the main form
+                        console.log('Front page setup: Submitting main form');
+                        mainForm.submit();
+                    });
+                });
+            </script>
             
             <p class="description" style="margin-top: 1em;">
                 <strong><?php _e( 'Note:', 'kuperbush' ); ?></strong> 
@@ -135,15 +168,40 @@ class Kuperbush_Admin_Forms {
         $active_tab = isset( $_GET['tab'] ) ? sanitize_key( $_GET['tab'] ) : 'tools';
         ?>
         <div class="kuperbush-form-container">
-            <form method="post" action="<?php echo admin_url( 'admin-post.php' ); ?>" class="kuperbush-template-pages-form">
+            <div class="template-pages-settings-container">
                 <?php wp_nonce_field( 'kuperbush_create_pages_nonce' ); ?>
-                <input type="hidden" name="kuperbush_create_pages" value="1">
-                <input type="hidden" name="active_tab" value="<?php echo esc_attr( $active_tab ); ?>">
-                <input type="hidden" name="option_page" value="kuperbush_options">
-                <input type="hidden" name="action" value="options">
+                <!-- These fields will be used by JavaScript to submit via the main form -->
+                
                 <p><?php _e( 'This tool will create pages for your template files if they don\'t exist.', 'kuperbush' ); ?></p>
-                <button type="submit" class="button button-primary"><?php _e( 'Create Template Pages', 'kuperbush' ); ?></button>
-            </form>
+                <button type="button" class="button button-secondary kuperbush-create-template-pages" data-action="create_template_pages"><?php _e( 'Create Template Pages', 'kuperbush' ); ?></button>
+            </div>
+            
+            <script>
+                jQuery(document).ready(function($) {
+                    // Handle the template pages button click
+                    $('.kuperbush-create-template-pages').on('click', function(e) {
+                        e.preventDefault();
+                        
+                        // Get main form
+                        const mainForm = $(this).closest('form.kuperbush-admin-form');
+                        
+                        // Set special field to indicate template pages creation
+                        if (!mainForm.find('input[name="kuperbush_create_pages"]').length) {
+                            mainForm.append('<input type="hidden" name="kuperbush_create_pages" value="1">');
+                        }
+                        
+                        // Copy over the nonce
+                        const pagesNonce = $('input[name="_wpnonce"]').val();
+                        if (pagesNonce && !mainForm.find('input[name="kuperbush_pages_nonce"]').length) {
+                            mainForm.append('<input type="hidden" name="kuperbush_pages_nonce" value="' + pagesNonce + '">');
+                        }
+                        
+                        // Submit the main form
+                        console.log('Template pages: Submitting main form');
+                        mainForm.submit();
+                    });
+                });
+            </script>
         </div>
         <?php
         // Get template pages table

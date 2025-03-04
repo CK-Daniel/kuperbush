@@ -17,32 +17,32 @@ if (!function_exists('kuperbush_template_registry')) {
      */
     function kuperbush_template_registry() {
         return array(
-            'tmp-brand.php' => array(
+            'templates/tmp-brand.php' => array(
                 'title' => 'Brand',
                 'slug'  => 'brand',
                 'content' => '<!-- Brand page content created automatically -->'
             ),
-            'tmp-design.php' => array(
+            'templates/tmp-design.php' => array(
                 'title' => 'Design',
                 'slug'  => 'design',
                 'content' => '<!-- Design page content created automatically -->'
             ),
-            'tmp-downloads.php' => array(
+            'templates/tmp-downloads.php' => array(
                 'title' => 'Downloads',
                 'slug'  => 'downloads',
                 'content' => '<!-- Downloads page content created automatically -->'
             ),
-            'tmp-history.php' => array(
+            'templates/tmp-history.php' => array(
                 'title' => 'History',
                 'slug'  => 'history',
                 'content' => '<!-- History page content created automatically -->'
             ),
-            'tmp-in-the-world.php' => array(
+            'templates/tmp-in-the-world.php' => array(
                 'title' => 'In The World',
                 'slug'  => 'in-the-world',
                 'content' => '<!-- In The World page content created automatically -->'
             ),
-            'tmp-service.php' => array(
+            'templates/tmp-service.php' => array(
                 'title' => 'Service',
                 'slug'  => 'service',
                 'content' => '<!-- Service page content created automatically -->'

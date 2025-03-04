@@ -26,18 +26,11 @@ add_action('wp_enqueue_scripts', 'kuperbush_enqueue_main_scripts');
  */
 if (!function_exists('kuperbush_template_specific_assets')) {
     function kuperbush_template_specific_assets() {
-        global $post;
-        $template_file = '';
-        
-        // Get the current template file using post meta - most reliable method
-        if (is_object($post)) {
-            $template_file = get_post_meta($post->ID, '_wp_page_template', true);
-            // For debugging
-            error_log('Template file detected: ' . $template_file);
-        }
+        // Get the current template file
+        $template_file = basename(get_page_template());
         
         // Brand template specific assets - Matching the original brand/index.html
-        if ($template_file === 'templates/tmp-brand.php' || $template_file === 'tmp-brand.php') {
+        if ($template_file === 'tmp-brand.php') {
             // CSS files in exact order from original HTML, with original IDs
             wp_enqueue_style('main-css', get_template_directory_uri() . '/css/main.css');
             wp_enqueue_style('wp-pagenavi-css', get_template_directory_uri() . '/css/pagenavi-css.css');
@@ -83,7 +76,7 @@ if (!function_exists('kuperbush_template_specific_assets')) {
         }
         
         // Design template specific assets
-        if ($template_file === 'templates/tmp-design.php' || $template_file === 'tmp-design.php') {
+        if ($template_file === 'tmp-design.php') {
             // Maintain similar loading order for design template
             wp_enqueue_style('main-css', get_template_directory_uri() . '/css/main.css');
             wp_enqueue_style('wp-pagenavi-css', get_template_directory_uri() . '/css/pagenavi-css.css');
@@ -98,7 +91,7 @@ if (!function_exists('kuperbush_template_specific_assets')) {
         }
         
         // Downloads template specific assets
-        if ($template_file === 'templates/tmp-downloads.php' || $template_file === 'tmp-downloads.php') {
+        if ($template_file === 'tmp-downloads.php') {
             // Add downloads template specific CSS
             wp_enqueue_style('downloads-template-css', get_template_directory_uri() . '/css/templates/downloads.css', array(), '1.0');
             
@@ -107,7 +100,7 @@ if (!function_exists('kuperbush_template_specific_assets')) {
         }
         
         // In The World template specific assets
-        if ($template_file === 'templates/tmp-in-the-world.php' || $template_file === 'tmp-in-the-world.php') {
+        if ($template_file === 'tmp-in-the-world.php') {
             // Add in-the-world template specific CSS
             wp_enqueue_style('in-the-world-template-css', get_template_directory_uri() . '/css/templates/in-the-world.css', array(), '1.0');
             
@@ -116,7 +109,7 @@ if (!function_exists('kuperbush_template_specific_assets')) {
         }
         
         // Service template specific assets
-        if ($template_file === 'templates/tmp-service.php' || $template_file === 'tmp-service.php') {
+        if ($template_file === 'tmp-service.php') {
             // Add service template specific CSS
             wp_enqueue_style('service-template-css', get_template_directory_uri() . '/css/templates/service.css', array(), '1.0');
             
@@ -125,7 +118,7 @@ if (!function_exists('kuperbush_template_specific_assets')) {
         }
         
         // History template specific assets
-        if ($template_file === 'templates/tmp-history.php' || $template_file === 'tmp-history.php') {
+        if ($template_file === 'tmp-history.php') {
             // Add Historia CSS files from the original template
             wp_enqueue_style('normalize-css', get_template_directory_uri() . '/css/historia/normalize.min.css', array(), '1.0');
             wp_enqueue_style('swiper-css', get_template_directory_uri() . '/css/historia/swiper.min.css', array(), '1.0');

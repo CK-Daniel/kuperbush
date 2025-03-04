@@ -1,6 +1,9 @@
 <?php
 /**
  * The front page template file
+ * 
+ * This template is designed to exactly match the static index.html in the root directory.
+ * It includes slider content and proper implementation of WordPress menus.
  */
 
 get_header();
@@ -25,7 +28,7 @@ get_header();
                                     </div>
                                 </div>
                                 <span class="et_pb_section_video_bg et_pb_section_video_bg_desktop_tablet">
-                                    <video loop autoplay="autoplay" playsinline muted="muted" preload="auto">
+                                    <video loop="loop" autoplay playsinline muted>
                                         <source type="video/mp4" src="<?php echo get_template_directory_uri(); ?>/video/KPH_WebVideo_PlacasCampanaIntegrada.mp4" />
                                     </video>
                                 </span>
@@ -43,7 +46,7 @@ get_header();
                                     </div>
                                 </div>
                                 <span class="et_pb_section_video_bg et_pb_section_video_bg_desktop_tablet">
-                                    <video loop autoplay="autoplay" playsinline muted="muted" preload="auto">
+                                    <video loop="loop" autoplay playsinline muted>
                                         <source type="video/mp4" src="<?php echo get_template_directory_uri(); ?>/video/KPH_WebVideo_GraphiteDesignLine_Kitchen.mp4" />
                                     </video>
                                 </span>
@@ -60,7 +63,7 @@ get_header();
                                     </div>
                                 </div>
                                 <span class="et_pb_section_video_bg et_pb_section_video_bg_desktop_tablet">
-                                    <video loop autoplay="autoplay" playsinline muted="muted" preload="auto">
+                                    <video loop="loop" autoplay playsinline muted>
                                         <source type="video/mp4" src="<?php echo get_template_directory_uri(); ?>/video/KPH_WebVideo_MattBlackDesignLine_Kitchen.mp4" />
                                     </video>
                                 </span>

@@ -131,12 +131,9 @@ if (!function_exists('kuperbush_footer_about_menu_fallback')) {
     }
 }
 
-if (!function_exists('kuperbush_footer_brand_info_fallback')) {
-    function kuperbush_footer_brand_info_fallback() {
-        echo '<div id="media_image-2" class="fwidget et_pb_widget widget_media_image">
-            <img class="image" src="' . get_template_directory_uri() . '/img/kuppersbusch-white.svg" alt="" width="300" height="37" decoding="async" loading="lazy" />
-        </div>
-        <div id="custom_html-3" class="widget_text fwidget et_pb_widget widget_custom_html">
+if (!function_exists('kuperbush_footer_social_menu_fallback')) {
+    function kuperbush_footer_social_menu_fallback() {
+        echo '<div id="custom_html-3" class="widget_text fwidget et_pb_widget widget_custom_html">
             <div class="textwidget custom-html-widget">
                 <a href="https://www.youtube.com/channel/UCaRoMAFkv5XWgWDPwObus4g" target="_blank" align="right">
                     <img src="' . get_template_directory_uri() . '/img/uploads/KPH-youtube-.png">
@@ -149,6 +146,17 @@ if (!function_exists('kuperbush_footer_brand_info_fallback')) {
                 </a>
             </div>
         </div>';
+    }
+}
+
+if (!function_exists('kuperbush_footer_brand_info_fallback')) {
+    function kuperbush_footer_brand_info_fallback() {
+        echo '<div id="media_image-2" class="fwidget et_pb_widget widget_media_image">
+            <img class="image" src="' . get_template_directory_uri() . '/img/kuppersbusch-white.svg" alt="" width="300" height="37" decoding="async" loading="lazy" />
+        </div>';
+        
+        // Add the social links
+        kuperbush_footer_social_menu_fallback();
     }
 }
 

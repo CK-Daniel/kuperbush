@@ -19,6 +19,7 @@ if (!function_exists('kuperbush_setup')) {
             'primary' => esc_html__('Primary Menu', 'kuperbush'),
             'footer-products' => esc_html__('Footer Products Menu', 'kuperbush'),
             'footer-about' => esc_html__('Footer About Menu', 'kuperbush'),
+            'footer-social' => esc_html__('Footer Social Menu', 'kuperbush'),
             'legal' => esc_html__('Legal Menu', 'kuperbush'),
         ));
 

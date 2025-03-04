@@ -31,7 +31,23 @@
                     if (is_active_sidebar('footer-3')) {
                         dynamic_sidebar('footer-3');
                     } else {
-                        kuperbush_footer_brand_info_fallback();
+                        // Show the brand logo image
+                        echo '<div id="media_image-2" class="fwidget et_pb_widget widget_media_image">
+                            <img class="image" src="' . get_template_directory_uri() . '/img/kuppersbusch-white.svg" alt="" width="300" height="37" decoding="async" loading="lazy" />
+                        </div>';
+                        
+                        // Show social menu if available, otherwise fallback
+                        if (has_nav_menu('footer-social')) {
+                            wp_nav_menu(array(
+                                'theme_location' => 'footer-social',
+                                'container' => 'div',
+                                'container_class' => 'widget_text fwidget et_pb_widget widget_custom_html',
+                                'container_id' => 'custom_html-3',
+                                'menu_class' => 'textwidget custom-html-widget',
+                            ));
+                        } else {
+                            kuperbush_footer_social_menu_fallback();
+                        }
                     }
                     ?>
                 </div> <!-- end .footer-widget -->

@@ -13,7 +13,7 @@ if (!function_exists('kuperbush_front_page_scripts')) {
     function kuperbush_front_page_scripts() {
         if (is_front_page()) {
             // Add required styles for the home slider
-           wp_enqueue_style('main-css', get_template_directory_uri() . '/css/main.css');
+            wp_enqueue_style('main-css', get_template_directory_uri() . '/css/main.css');
             wp_enqueue_style('wp-mediaelement', get_template_directory_uri() . '/css/wp-mediaelement.min.css');
             wp_enqueue_style('mediaelement-legacy', get_template_directory_uri() . '/css/mediaelementplayer-legacy.min.css');
             

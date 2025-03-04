@@ -85,7 +85,7 @@ if (!function_exists('kuperbush_front_page_scripts')) {
             ));
             
             wp_localize_script('wp-mediaelement', '_wpmejsSettings', array(
-                "pluginPath" => "/global/wp-includes/js/mediaelement/",
+                "pluginPath" => "/js/mediaelement/",
                 "classPrefix" => "mejs-",
                 "stretching" => "responsive",
                 "audioShortcodeLibrary" => "mediaelement",

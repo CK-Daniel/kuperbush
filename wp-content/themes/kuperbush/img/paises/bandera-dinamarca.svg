@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Capa_1" xmlns:serif="http://www.serif.com/"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1103 1080"
+	 style="enable-background:new 0 0 1103 1080;" xml:space="preserve">
+<style type="text/css">
+	.st0{clip-path:url(#SVGID_2_);}
+	.st1{fill:#D80028;}
+	.st2{fill:#FFFFFF;}
+	.st3{fill:none;stroke:#515151;stroke-width:33.75;stroke-linecap:square;stroke-miterlimit:67.5;}
+</style>
+<g>
+	<g>
+		<g>
+			<g>
+				<defs>
+					<circle id="SVGID_1_" cx="551.5" cy="542.4" r="506.3"/>
+				</defs>
+				<clipPath id="SVGID_2_">
+					<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+				</clipPath>
+				<g class="st0">
+					<rect x="40.2" y="33.1" class="st1" width="1029.7" height="1001.5"/>
+					<polygon class="st2" points="1069.9,408 578.6,408 578.6,33.1 326,33.1 326,408 40.2,408 40.2,660 326,660 326,1049.7 
+						578.6,1049.7 578.6,660 1069.9,660 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<circle class="st3" cx="551.5" cy="542.4" r="506.3"/>
+</g>
+</svg>
